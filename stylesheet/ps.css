@@ -1,0 +1,798 @@
+html {
+	height: 100%;
+}
+
+img {
+	border: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+body {
+	font-family: arial, sans-serif;
+	margin: 0pt;
+	padding: 0pt;
+	width: 100%;
+	height: 100%;
+}
+
+.monat {
+	font-family: arial, sans-serif;
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+.artikelZeit {
+	vertical-align: top;
+	margin-bottom: 5px;
+}
+
+.featureListZeitTable {
+	margin-bottom: 15px;
+}
+
+.featureText {
+	font-size: 1.2em;
+	margin-left: 10px;
+}
+
+.richPanelLink {
+	text-decoration: underline;
+}
+
+.richPanelLink:visited {
+	text-decoration: underline;
+}
+
+.mainHeader {
+	width: 100%;
+	margin-top: 25px;
+}
+
+.singleColumnPanelGrid {
+	width: 816px;
+	margin-left: 50px;
+}
+
+.singleColumnPanelGridNoMargin {
+	width: 816px;
+}
+
+.singleColumnPanelGridHeader {
+	margin-left: 50px;
+}
+.dr-table-subheadercell {
+	text-align: left;
+}
+
+.dr-table-headercell {
+	text-align: left;
+}
+                      
+.singleColumnPanelGridImage {
+	margin-right: 20px;
+}
+.smallSingleColumnPanelGridImage {
+	
+}
+.adminSingleColumnLink {
+	font-weight: bold;
+}
+.buttonDownUnder {
+	vertical-align: bottom;
+}
+
+.singleColumnPanelGridLinkTd {
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+.singleColumnPanelUKGridLinkTd {
+	vertical-align: top;
+}
+
+.singleColumnPanelUKGridLinkTdText {
+	vertical-align: top;
+	width: 100%;
+}
+
+.mainButtonsTbl {
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
+.mainButtonsTblCell {
+	border: none;
+	position: relative;
+}
+
+.aktionPanelGrid {
+	width:800px;
+}
+
+.aktionenTbl {
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
+.aktionenSubTbl {
+	margin-bottom: 10px;
+	border: none;
+}
+
+.aktionImgCell {
+	width:100px;
+}
+.aktionTextCell {
+	width:600px;
+}	
+.aktionenTblCell {
+	border: none;
+	position: relative;
+}
+
+.featureListTable {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	border: none;
+}
+ 
+.aktionPanel {
+	position: absolute; 
+	top: 40px; 
+	left: 800px;
+	text-align:left;
+	max-height: 50px;
+}
+
+.featureListIcon {
+	width: 25px;
+}
+
+.featureListText {
+	width: 100%;
+}
+
+.unterKategorieZeit {
+	margin-right: 5px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+.unterKategorieZeit {
+	width: 60px;
+}
+
+.unterKategorieBeschreibung {
+	width: 100%;
+}
+
+.unterKategorieAuswaehlen {
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+}
+
+.unterKategorieBeschreibungTbl {
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	border: none;
+}
+
+.artikelContainer {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.mainButtonsImg {
+	
+}
+
+.contactImg {
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.contactTxt {
+	margin-top: 20px;
+	font-size: 0.8em;
+	min-height: 100%;
+}
+
+.anfahrtsplan {
+	margin-top: 25px;
+	margin-bottom : 25px;
+}
+
+.anfahrtsplanText {
+	margin-top: 25px;
+	margin-left: 10px;
+}
+
+.mitarbeiterText {
+	margin-left: 25px;
+	margin-right: 25px;
+	width: 400px;
+}
+
+.top {
+	width: 100%;
+}
+
+.container {
+	background-color: #B81214;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	min-height: 100%;
+	position: relative;
+	float: left;
+}
+
+.anschriftTitel {
+	font-weight: 900;
+	float: left;
+	margin-top: 40px;
+	margin-left: 5px;
+}
+
+.psLogo {
+	float: left;
+}
+
+.headerLinks {
+	float: right;
+	vertical-align: top;
+	width: 500px;
+	margin-bottom: 40px;
+	margin-right: 14px;
+	text-align: right;
+	font-size: 0.9em;
+}
+
+.footer {
+	float: left;
+	position: absolute;
+	bottom: 0;
+}
+
+.hand {
+	
+}
+
+.left {
+	float: left;
+	position: relative;
+	padding-bottom: 200px;
+}
+
+.fullWidthTable {
+	width: 100%;
+}
+
+.content {
+	padding-bottom: 90px;
+	float: left;
+	width: 100%;
+}
+
+.navbar {
+	float: left;
+	width: 250px;
+}
+
+.main {
+	float: left;
+	width: 1000px;
+}
+
+.einfachSchnellContainer {
+	float: left;
+	width: 1000px;
+	position: absolute;
+	bottom: 25px;
+	margin-left: 250px;
+}
+
+.einfachSchnell {
+	margin-left: auto;
+	margin-right: auto;
+	width: 353px;
+}
+
+.navbarAngebote {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	border-bottom: 2px dotted;
+	width: 198px;
+	display: block;
+	margin-bottom: 4px;
+	margin-left: 27px;
+	margin-top: 20px;
+	
+}
+.navbarItemTopLevel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	border-bottom: 2px dotted;
+	width: 198px;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.navbarItemSubLevel {
+	font-family: Arial, Helvetica, sans-serif;
+	display: block;
+	margin-left: 10px;
+}
+
+.navbarTable {
+	margin-left: 24px;
+}
+
+.text1 {
+	width: 30px;
+}
+
+.text2 {
+	width: 50px;
+}
+
+.text3 {
+	width: 70px;
+}
+
+.text4 {
+	width: 90px;
+}
+
+.inputReadOnly {
+
+}
+
+label.name {
+	width: 120px;
+	float: left;
+}
+
+div.prop {
+	width: 100%;
+}
+
+span.value {
+	
+}
+
+span.spacer {
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+.unterKategorieLink {
+	font-size: 1.4em;
+	font-weight: bold;
+	border-bottom: 1px dotted;
+	margin-top: 2px;
+	color: white;
+}
+
+.artikelTitel {
+	font-weight: bold;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.artikelLink {
+	font-weight: bold;
+	border-bottom: 1px dotted;
+	margin-top: 2px;
+	color: white;
+}
+
+.artikelBeschreibung {
+	font-size: 0.8em;
+	color: white;
+}
+
+.beschreibung {
+	font-size: 1.2em;
+	color: white;
+}
+
+.zeit1 {
+	top: 15px;
+	left: 15px;
+	z-index: 9;
+	position: absolute;
+}
+
+.zeit2 {
+	top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 9;
+	position: absolute;
+}
+
+.zeit3 {
+	top: 15px;
+	right: 15px;
+	z-index: 9;
+	position: absolute;
+}
+
+.zeit4 {
+	vertical-align: middle;
+	left: 15px;
+	z-index: 9;
+	position: absolute;
+}
+
+.zeit5 {
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 9;
+	position: absolute;
+}
+
+.zeit6 {
+	vertical-align: middle;
+	right: 15px;
+	z-index: 9;
+	position: absolute;
+}
+
+.zeit7 {
+	bottom: 15px;
+	left: 15px;
+	z-index: 9;
+	position: absolute;
+}
+
+.zeit8 {
+	bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 9;
+	position: absolute;
+}
+
+.zeit9 {
+	bottom: 15px;
+	right: 15px;
+	z-index: 9;
+	position: absolute;
+}
+
+.anfrageColumn {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	vertical-align: top;
+}
+
+.t2c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 48px;
+	margin-right: 8px;
+}
+
+.t3c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 79px;
+	margin-right: 8px;
+}
+
+.t4c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 110px;
+	margin-right: 8px;
+}
+
+.t5c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 141px;
+	margin-right: 8px;
+}
+
+.t6c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 172px;
+	margin-right: 8px;
+}
+
+.t7c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 203px;
+	margin-right: 8px;
+}
+
+.t8c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 234px;
+	margin-right: 8px;
+}
+
+.t9c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 265px;
+	margin-right: 8px;
+}
+
+.t10c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 296px;
+	margin-right: 8px;
+}
+
+
+.t11c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 327px;
+	margin-right: 8px;
+}
+
+.t12c {
+	display: block;
+	float: left;
+	height: auto;
+	margin-bottom: 4px;
+	padding-left: 8px;
+	text-align: right;
+	width: 358px;
+	margin-right: 8px;
+}
+
+.i2c {
+	width: 52px;
+}
+
+.i3c {
+	width: 83px;
+}
+
+.i4c {
+	width: 114px;
+}
+
+.i5c {
+	width: 145px;
+}
+
+.i6c {
+	width: 176px;
+}
+
+.i7c {
+	width: 207px;
+}
+
+.i8c {
+	width: 238px;
+}
+
+.i9c {
+	width: 269px;
+}
+
+.i10c {
+	width: 300px;
+}
+
+.i11c {
+	width: 331px;
+}
+
+.i12c {
+	width: 362px;
+}
+
+.i13c {
+	width: 393px;
+}
+
+.i14c {
+	width: 424px;
+}
+
+.i15c {
+	width: 455px;
+}
+
+.i16c {
+	width: 486px;
+}
+
+.i17c {
+	width: 517px;
+}
+
+.i18c {
+	width: 548px;
+}
+
+.i19c {
+	width: 579px;
+}
+
+.i20c {
+	width: 610px;
+}
+
+.i21c {
+	width: 641px;
+}
+
+.s2c {
+	width: 58px;
+}
+
+.s3c {
+	width: 89px;
+}
+
+.s4c {
+	width: 120px;
+}
+
+.s5c {
+	width: 151px;
+}
+
+.s6c {
+	width: 182px;
+}
+
+.s7c {
+	width: 213px;
+}
+
+.s8c {
+	width: 244px;
+}
+
+.s9c {
+	width: 275px;
+}
+
+.s10c {
+	width: 303px;
+}
+
+.b2c {
+	width: 38px;
+	margin-right: 16px;
+}
+
+.b3c {
+	width: 69px;
+	margin-right: 16px;
+}
+
+.b4c {
+	width: 100px;
+	margin-right: 16px;
+}
+
+.b5c {
+	width: 131px;
+	margin-right: 16px;
+}
+
+.b6c {
+	width: 162px;
+	margin-right: 16px;
+}
+
+.b7c {
+	width: 193px;
+	margin-right: 16px;
+}
+
+.buttonsrechts {
+	margin-left: 0;
+	margin-right: 14px;
+	text-align: right;
+}
+
+.buttonslinks {
+	display: inline;
+	float: left;
+	margin-left: 0;
+}
+
+.ta150 {
+	width: 362px;
+	height: 150px;
+}
+
+.ta300 {
+	width: 362px;
+	height: 300px;
+}
+
+
+.formSpacer {
+	display: block;
+	margin-left: 4px;
+	margin-right: 4px;
+	font-size: 1.2em;
+	width: 8px;
+}
+
+.anfrageLink {
+	font-size:0.6em;
+	text-decoration: underline;
+}
+
+.anfrageLink:visited {
+	font-size:0.6em;
+	text-decoration: underline;	
+}
