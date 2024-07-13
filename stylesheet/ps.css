@@ -235,16 +235,6 @@ body {
 	width: 100%;
 }
 
-.container {
-	background-color: #B81214;
-	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	min-height: 100%;
-	position: relative;
-	float: left;
-}
-
 .anschriftTitel {
 	font-weight: 900;
 	float: left;
