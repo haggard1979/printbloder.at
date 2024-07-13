@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<!DOCTYPE html>
 <html lang="de" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta content="Willkommen bei Printshop Bloder.       Informieren Sie sich &uuml;ber unsere Angebote!       Wir fertigen Stempel Visitkarten T-Shirts Digitaldruck Textildruck und vieles mehr - einfach, schnell und g&uuml;nstig!"
@@ -11,35 +10,15 @@
     <title>Printshop Bloder - Shopping City Seiersberg - Visitkarten | Stempel | Textildruck | Digitaldruck</title>
     <link href="stylesheet/ps.css" rel="stylesheet" type="text/css"/>
     <link href="stylesheet/ps_color.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/includeHTML.js"></script>
 </head>
 <body>
-
 
 <div class="container">
 
     <div class="content">
-        <table class="fullWidthTable">
-            <tbody>
-            <tr>
-                <td>
-                    <table class="top">
-                        <tbody>
-                        <tr>
-                            <td><a href="home.html" id="j_id3:j_id9"><img class="psLogo" src="img/pslogo.gif"/></a><span
-                                    class="anschriftTitel">Shopping City Seiersberg, Graz</span></td>
-                            <td></td>
-                            <td><span class="headerLinks"><a href="home.html" id="j_id3:j_id14">Home</a> | <a
-                                    href="top/kontakt.html" id="j_id3:j_id16">Kontakt</a> | <a href="top/anfahrt.html"
-                                                                                               id="j_id3:j_id18">Anfahrt</a> | <a
-                                    href="top/unternehmen.html" id="j_id3:j_id20">Unternehmen</a> | <a
-                                    href="top/impressum.html" id="j_id3:j_id22">Impressum</a></span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+
+        <div w3-include-html="top/header.html" style="heigth:79px"></div>
 
         <div class="leftAndMainBox">
 
@@ -533,8 +512,8 @@
         </div>
     </div>
     <div class="footer">
-        <div class="hand"><a href="top/kontakt.html" id="j_id3:j_id135"><img height="250px" src="img/hand.png"
-                                                                             width="250px"/></a>
+        <div class="hand"><a href="kontakt.html" id="j_id3:j_id135"><img height="250px" src="img/hand.png"
+                                                                         width="250px"/></a>
         </div>
         <div class="einfachSchnellContainer">
             <div class="einfachSchnell"><img src="img/einfachSchnell.png"/>
@@ -546,6 +525,8 @@
 
 </div>
 
-
+<script>
+    includeHTML();
+</script>
 </body>
 </html>
