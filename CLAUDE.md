@@ -135,9 +135,7 @@ automatisch auf GitHub Pages veröffentlicht (nur wenn `npm test` grün ist). Pa
   Tabellen ab 3 Preisspalten nehmen die ganze Zeile (`.price-box:has(...)`).
 - `index.html` ist nur eine Weiterleitung auf `home.html`.
 
-## Offene Punkte
+## Offene Aufgaben
 
-- Impressum fehlt (Link „Kontakt & Impressum“ existiert) – Angaben vom Inhaber nötig.
-- Übersetzungen (v. a. sl, uk) von Muttersprachlern gegenlesen lassen.
-- Öffnungszeiten fehlen; Kategoriebilder enthalten eingebrannten Text (neue Fotos wären besser).
-- Ungenutzte Produktbilder (Fototasche, Fotoshirt, Flexkappe) – evtl. frühere/geplante Produkte.
+Stehen in **`TODO.md`** – dort pflegen (abhaken, ergänzen). Vor neuer Arbeit kurz
+hineinschauen; Erledigtes im selben Pull Request abhaken.
