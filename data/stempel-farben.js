@@ -3,8 +3,8 @@
  * Preise in Euro inkl. 20 % MwSt. Preisänderung = nur hier eine Zahl ändern.
  */
 window.PRODUCTS = [
-    {name: 'Handstempelkissen 9052 – 11 × 7 cm', image: 'img/artikel/stempel/stempelkissen.png', price: 8.90},
-    {name: 'Handstempelkissen 9053 – 16 × 9 cm', image: 'img/artikel/stempel/stempelkissen.png', price: 11.90},
-    {name: 'Stempelfarbe 25 ml \'Schnelltrocknend\'', image: 'img/artikel/stempel/stempelfarbe.png', price: 16.90},
-    {name: 'Stempelfarbe 28 ml', image: 'img/artikel/stempel/stempelfarbe.png', price: 7.50}
+    {name: {de: 'Handstempelkissen 9052 – 11 × 7 cm', en: 'Hand stamp pad 9052 – 11 × 7 cm', sl: 'Blazinica za žige 9052 – 11 × 7 cm', uk: 'Штемпельна подушка 9052 – 11 × 7 см'}, image: 'img/artikel/stempel/stempelkissen.png', price: 8.90},
+    {name: {de: 'Handstempelkissen 9053 – 16 × 9 cm', en: 'Hand stamp pad 9053 – 16 × 9 cm', sl: 'Blazinica za žige 9053 – 16 × 9 cm', uk: 'Штемпельна подушка 9053 – 16 × 9 см'}, image: 'img/artikel/stempel/stempelkissen.png', price: 11.90},
+    {name: {de: 'Stempelfarbe 25 ml „Schnelltrocknend“', en: 'Stamp ink 25 ml, quick-drying', sl: 'Barva za žige 25 ml, hitrosušeča', uk: 'Штемпельна фарба 25 мл, швидковисихаюча'}, image: 'img/artikel/stempel/stempelfarbe.png', price: 16.90},
+    {name: {de: 'Stempelfarbe 28 ml', en: 'Stamp ink 28 ml', sl: 'Barva za žige 28 ml', uk: 'Штемпельна фарба 28 мл'}, image: 'img/artikel/stempel/stempelfarbe.png', price: 7.50}
 ];
