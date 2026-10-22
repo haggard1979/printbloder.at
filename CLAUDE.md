@@ -114,7 +114,10 @@ verwenden:
 
 Fehlschlag nie durch Abschwächen der Tests beheben. Schnappschüsse nur nach geprüfter,
 gewollter Änderung mit `npm run test:update` erneuern. Die Browser-Prüfung misst Breiten
-mit „DejaVu Sans“ (breite Schrift, wie auf GitHub) – lokal grün heißt dann auch dort grün.
+mit der Testschrift aus `tests/fonts/` (DejaVu Sans, breit) – unabhängig von installierten
+Schriften; lokal grün heißt dann auch auf GitHub grün. Auf GitHub laufen die Tests im
+Docker-Paket `mcr.microsoft.com/playwright:v<Version>-noble`; beim Aktualisieren von
+Playwright die Version in `package.json` und `.github/workflows/website.yml` gleich halten.
 
 ## Veröffentlichen
 

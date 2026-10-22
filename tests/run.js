@@ -274,7 +274,20 @@ async function inspect(page) {
     });
 }
 
-const WIDE_FONT = '* { font-family: "DejaVu Sans", Verdana, sans-serif !important; }';
+// Testschrift liegt im Projekt (tests/fonts/), damit das Ergebnis nicht von den
+// auf dem Rechner installierten Schriften abhängt
+const WIDE_FONT = '@font-face { font-family: TestWide; src: url(/__tests/fonts/DejaVuSans.ttf); }'
+    + '@font-face { font-family: TestWide; font-weight: 600 900; src: url(/__tests/fonts/DejaVuSans-Bold.ttf); }'
+    + '* { font-family: TestWide !important; }';
+
+async function useWideFont(page) {
+    await page.addStyleTag({content: WIDE_FONT});
+    const loaded = await page.evaluate(() => Promise.all([document.fonts.load('16px TestWide'), document.fonts.load('bold 16px TestWide')])
+        .then(r => r.every(list => list.length > 0)));
+    if (!loaded) {
+        throw new Error('Testschrift tests/fonts/DejaVuSans*.ttf konnte nicht geladen werden');
+    }
+}
 
 // Größenänderung abwarten (der Browser meldet sie erst beim nächsten Bildaufbau)
 async function resize(page, width, height) {
@@ -301,7 +314,7 @@ async function checkBrowser(browser, base) {
             await page.goto(base + label, {waitUntil: 'load'});
             // Breiten immer mit einer breiten Schrift messen (ungünstigster Fall),
             // damit das Ergebnis nicht von den installierten Schriften abhängt
-            await page.addStyleTag({content: WIDE_FONT});
+            await useWideFont(page);
             const r = await inspect(page);
             results[lang + '/' + name] = r;
             if (r.emptyTables) problems.push(`${r.emptyTables} Preistabelle(n) leer`);

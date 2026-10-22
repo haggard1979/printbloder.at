@@ -1,5 +1,6 @@
 /*
  * Minimaler Webserver für die Tests: liefert die Dateien des Projektordners aus.
+ * Zusätzlich liegen unter /__tests/fonts/ die Testschriften (tests/fonts/).
  */
 const http = require('http');
 const fs = require('fs');
@@ -12,14 +13,18 @@ const TYPES = {
     '.png': 'image/png',
     '.gif': 'image/gif',
     '.jpg': 'image/jpeg',
-    '.svg': 'image/svg+xml'
+    '.svg': 'image/svg+xml',
+    '.ttf': 'font/ttf'
 };
+
+const FONTS = path.join(__dirname, 'fonts');
 
 function start(root) {
     const server = http.createServer((req, res) => {
         const urlPath = decodeURIComponent(new URL(req.url, 'http://x').pathname);
-        const file = path.join(root, urlPath.endsWith('/') ? urlPath + 'index.html' : urlPath);
-        if (!file.startsWith(root) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
+        const fontPath = urlPath.startsWith('/__tests/fonts/') ? path.join(FONTS, urlPath.slice('/__tests/fonts/'.length)) : null;
+        const file = fontPath || path.join(root, urlPath.endsWith('/') ? urlPath + 'index.html' : urlPath);
+        if (!file.startsWith(fontPath ? FONTS : root) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
             res.writeHead(404);
             res.end('not found');
             return;

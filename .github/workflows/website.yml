@@ -19,14 +19,15 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
+    # Fertiges Playwright-Paket mit Browser und Systembibliotheken: spart die
+    # Installation bei jedem Lauf (die dauerte je nach Paketquelle bis zu 8 Minuten).
+    # Version muss zu "playwright" in package.json passen.
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble
+      options: --user 1001
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
       - run: npm test
 
   deploy:
