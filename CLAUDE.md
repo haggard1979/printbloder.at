@@ -24,7 +24,8 @@ site/
   en/ sl/ uk/             Übersetzungen, Ressourcen dort mit ../ (../assets/…, ../img/…)
   assets/css/site.css     gesamtes Design; Farben als Variablen in :root
   assets/js/layout.js     <site-header>/<site-footer>: Kopfzeile, Menü, Fußzeile, Kontaktdaten,
-                          Sprachumschalter, Darkmode-Umschalter, UI-Texte je Sprache (TEXT)
+                          Sprachauswahl (Flaggen als SVG, Deutsch = Österreich), Darkmode-
+                          Umschalter, UI-Texte je Sprache (TEXT)
   assets/js/products.js   Produktkarten aus window.PRODUCTS (#product-list), Sortierung,
                           Anfrage-Mail; Übersetzung der Datenbezeichnungen (TEXT[lang].words)
   assets/js/prices.js     Preistabellen aus window.PRICE_TABLES in <table data-table="N">,

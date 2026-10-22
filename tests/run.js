@@ -337,12 +337,21 @@ async function checkBrowser(browser, base) {
     if (bgReload !== bgLight) fail(S, 'Darkmode: Wahl wird nach dem Neuladen nicht beibehalten');
     await ctx.close();
 
-    // Sprachumschalter und Handy-Menü
+    // Sprachauswahl (Flaggen) und Handy-Menü
     const p = await browser.newPage({viewport: {width: 390, height: 800}});
     await p.goto(base + 'stempelPrinty.html');
+    if (await p.isVisible('.lang-list')) fail(S, 'Sprachauswahl ist beim Laden schon offen');
+    await p.click('.lang-toggle');
+    if (!(await p.isVisible('.lang-list'))) fail(S, 'Sprachauswahl öffnet sich nicht');
+    await p.keyboard.press('Escape');
+    if (await p.isVisible('.lang-list')) fail(S, 'Sprachauswahl schließt nicht mit Esc');
+    await p.click('.lang-toggle');
+    await p.mouse.click(20, 400);
+    if (await p.isVisible('.lang-list')) fail(S, 'Sprachauswahl schließt nicht bei Klick daneben');
     for (const lang of LANGS) {
         await p.goto(base + 'stempelPrinty.html');
-        await p.click(`.lang-switch a[hreflang="${lang}"]`);
+        await p.click('.lang-toggle');
+        await p.click(`.lang-list a[hreflang="${lang}"]`);
         const now = await p.evaluate(() => [location.pathname, document.documentElement.lang]);
         if (now[0] !== '/' + langDir(lang) + 'stempelPrinty.html' || now[1] !== lang) {
             fail(S, `Sprachumschalter ${lang}: landet auf ${now[0]} (lang=${now[1]})`);

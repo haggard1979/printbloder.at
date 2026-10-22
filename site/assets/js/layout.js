@@ -13,8 +13,8 @@
  */
 (function () {
     var LANGS = ['de', 'en', 'sl', 'uk'];
-    // Anzeige im Sprachumschalter ("UK" würde mit Großbritannien verwechselt)
-    var LANG_LABELS = {de: 'DE', en: 'EN', sl: 'SL', uk: 'UA'};
+    // Sprachnamen in der eigenen Sprache (Sprachauswahl in der Kopfzeile)
+    var LANG_NAMES = {de: 'Deutsch', en: 'English', sl: 'Slovenščina', uk: 'Українська'};
     var LANG = LANGS.indexOf(document.documentElement.lang) >= 0 ? document.documentElement.lang : 'de';
     // Pfad zum Hauptordner (für Bilder, CSS, Daten und den Sprachwechsel)
     var ROOT = LANG === 'de' ? '' : '../';
@@ -149,16 +149,53 @@
         return file.replace(/\.html$/, '');
     }
 
-    function languageLinks() {
+    /*
+     * Flaggen als SVG (Emoji-Flaggen zeigt Windows nur als Buchstaben an).
+     * Deutsch = Österreich (Standort des Geschäfts), Englisch = Großbritannien.
+     */
+    var flagCount = 0;
+
+    function flag(lang) {
+        var id = 'flag' + (++flagCount);
+        var body = {
+            de: '<rect width="30" height="20" fill="#c8102e"/><rect y="6.67" width="30" height="6.67" fill="#fff"/>',
+            en: '<clipPath id="' + id + 'a"><rect width="30" height="20"/></clipPath>'
+                + '<clipPath id="' + id + 'b"><path d="M15,10h15v10zv10h-15zh-15v-10zv-10h15z"/></clipPath>'
+                + '<g clip-path="url(#' + id + 'a)"><g transform="translate(-5 0) scale(.6667)">'
+                + '<rect width="60" height="30" fill="#012169"/>'
+                + '<path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/>'
+                + '<path d="M0,0L60,30M60,0L0,30" stroke="#c8102e" stroke-width="4" clip-path="url(#' + id + 'c)"/>'
+                + '<clipPath id="' + id + 'c"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath>'
+                + '<path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/>'
+                + '<path d="M30,0v30M0,15h60" stroke="#c8102e" stroke-width="6"/></g></g>',
+            sl: '<rect width="30" height="20" fill="#fff"/><rect y="6.67" width="30" height="6.67" fill="#005ce5"/>'
+                + '<rect y="13.33" width="30" height="6.67" fill="#ed1c24"/>'
+                + '<path d="M6,3h6v4.6q0,3.1-3,4.2q-3-1.1-3-4.2z" fill="#005ce5" stroke="#ed1c24" stroke-width=".6"/>'
+                + '<path d="M6.6,8.6l1.1-1.9l.6.8l.7-1.3l.7,1.3l.6-.8l1.1,1.9q-1.2,1.6-2.4,2q-1.2-.4-2.4-2z" fill="#fff"/>'
+                + '<circle cx="7.9" cy="4.4" r=".5" fill="#ffdd00"/><circle cx="10.1" cy="4.4" r=".5" fill="#ffdd00"/>'
+                + '<circle cx="9" cy="5.6" r=".5" fill="#ffdd00"/>',
+            uk: '<rect width="30" height="10" fill="#0057b7"/><rect y="10" width="30" height="10" fill="#ffd700"/>'
+        }[lang];
+        return '<svg class="flag" viewBox="0 0 30 20" width="24" height="16" aria-hidden="true">' + body
+            + '<rect width="30" height="20" fill="none" stroke="rgba(0,0,0,.2)" stroke-width="1"/></svg>';
+    }
+
+    function languageMenu() {
         var file = currentPage() + '.html';
         if (file === 'index.html') {
             file = 'home.html';
         }
-        return LANGS.map(function (lang) {
+        var items = LANGS.map(function (lang) {
             var href = ROOT + (lang === 'de' ? '' : lang + '/') + file;
             var current = lang === LANG ? ' aria-current="true"' : '';
-            return '<a href="' + href + '" hreflang="' + lang + '" lang="' + lang + '"' + current + '>' + LANG_LABELS[lang] + '</a>';
+            return '<li><a href="' + href + '" hreflang="' + lang + '" lang="' + lang + '"' + current + '>'
+                + flag(lang) + '<span>' + LANG_NAMES[lang] + '</span></a></li>';
         }).join('');
+        return '<div class="lang-menu">'
+            + '<button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-list"'
+            + ' aria-label="' + T.language + ': ' + LANG_NAMES[LANG] + '" title="' + T.language + '">' + flag(LANG) + '</button>'
+            + '<ul id="lang-list" class="lang-list" hidden>' + items + '</ul>'
+            + '</div>';
     }
 
     function isActive(item, page) {
@@ -186,7 +223,6 @@
                 '    <span class="topbar__contact">' +
                 '      <a href="' + SHOP.phoneHref + '">' + SHOP.phone + '</a>' +
                 '      <a href="mailto:' + SHOP.email + '">' + SHOP.email + '</a>' +
-                '      <span class="lang-switch" role="group" aria-label="' + T.language + '">' + languageLinks() + '</span>' +
                 '    </span>' +
                 '  </div>' +
                 '</div>' +
@@ -199,6 +235,7 @@
                 '    <nav id="site-nav" class="nav" aria-label="' + T.mainNav + '">' +
                 '      <ul>' + links + '</ul>' +
                 '    </nav>' +
+                '    ' + languageMenu() +
                 '    <button class="theme-toggle" type="button"></button>' +
                 '  </div>' +
                 '</header>';
@@ -224,6 +261,29 @@
                 var open = toggle.getAttribute('aria-expanded') === 'true';
                 toggle.setAttribute('aria-expanded', String(!open));
                 nav.classList.toggle('is-open', !open);
+            });
+
+            // Sprachauswahl auf- und zuklappen (schließt bei Klick daneben und mit Esc)
+            var langToggle = this.querySelector('.lang-toggle');
+            var langList = this.querySelector('.lang-list');
+            function setLangOpen(open) {
+                langToggle.setAttribute('aria-expanded', String(open));
+                langList.hidden = !open;
+            }
+            langToggle.addEventListener('click', function (event) {
+                event.stopPropagation();
+                setLangOpen(langList.hidden);
+            });
+            document.addEventListener('click', function (event) {
+                if (!langList.hidden && !langList.contains(event.target)) {
+                    setLangOpen(false);
+                }
+            });
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && !langList.hidden) {
+                    setLangOpen(false);
+                    langToggle.focus();
+                }
             });
 
             var themeToggle = this.querySelector('.theme-toggle');
