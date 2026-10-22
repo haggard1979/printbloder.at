@@ -4,9 +4,9 @@
  */
 
 :root {
-    --brand: #b81214;
-    --brand-dark: #8f0d0f;
-    --brand-tint: #fbeaea;
+    --brand: #1a4fa8;
+    --brand-dark: #123a7d;
+    --brand-tint: #e7eefa;
     --ink: #1f1f23;
     --ink-muted: #5c5c66;
     --bg: #f6f5f3;
@@ -666,7 +666,7 @@ main {
 .price-grid {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
     align-items: start;
     margin-top: 20px;
 }
