@@ -349,6 +349,21 @@ async function checkBrowser(browser, base) {
         }
     }
     await p.goto(base + 'home.html');
+    // Kopfzeile klebt beim Scrollen oben; Aufklappen des Menüs verschiebt den Inhalt nicht
+    await p.evaluate(() => scrollTo(0, 800));
+    await resize(p, 390, 800);
+    const pos = () => p.evaluate(() => [Math.round(scrollY), Math.round(document.querySelector('main').getBoundingClientRect().top),
+        Math.round(document.querySelector('.header').getBoundingClientRect().top)]);
+    const before = await pos();
+    if (before[2] !== 0) fail(S, `Kopfzeile bleibt beim Scrollen nicht oben (top=${before[2]})`);
+    await p.evaluate(() => document.querySelector('.nav-toggle').click());
+    await resize(p, 390, 800);
+    const after = await pos();
+    if (after[0] !== before[0] || after[1] !== before[1]) {
+        fail(S, `Aufklappen des Handy-Menüs verschiebt die Seite (scrollY ${before[0]}→${after[0]}, Inhalt ${before[1]}→${after[1]})`);
+    }
+    await p.evaluate(() => document.querySelector('.nav-toggle').click());
+    await p.evaluate(() => scrollTo(0, 0));
     await p.click('.nav-toggle');
     if (!(await p.isVisible('.nav a'))) fail(S, 'Handy-Menü öffnet sich nicht');
     if (!(await p.isVisible('.nav__extra a[href="kontakt.html"]'))) fail(S, 'Kontakt fehlt im Handy-Menü');
