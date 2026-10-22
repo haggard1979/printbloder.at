@@ -14,31 +14,38 @@
 
     function inquiryLink(product) {
         var subject = 'Anfrage: ' + product.name;
-        var body = 'Hallo,\n\nich interessiere mich für den ' + product.name + '.\n\nText für die Stempelplatte:\n\n\nName und Telefonnummer:\n';
+        var body = 'Hallo,\n\nich interessiere mich für: ' + product.name + '.\n\nMeine Wünsche (Text, Motiv, Menge):\n\n\nName und Telefonnummer:\n';
         return 'mailto:' + window.SHOP.email +
             '?subject=' + encodeURIComponent(subject) +
             '&body=' + encodeURIComponent(body);
     }
 
+    /*
+     * Produktformat:
+     *   name    Produktname
+     *   image   Bildpfad
+     *   specs   {Bezeichnung: Wert} - z. B. {'Druckfläche': '26 × 9 mm'}
+     *   price   Preis in Euro (Zahl)
+     *   from    true = Preis wird als "ab ..." angezeigt
+     *   extras  {Bezeichnung: Preis in Euro} - z. B. {'Nur Stempelplatte': 18.20}
+     *   note    optionaler Zusatztext
+     */
     function card(p) {
-        var extras = '';
-        if (p.plate != null) {
-            extras += '<li>Nur Stempelplatte: ' + euro.format(p.plate) + '</li>';
-        }
-        if (p.pad != null) {
-            extras += '<li>Nur Stempelkissen: ' + euro.format(p.pad) + '</li>';
-        }
+        var specs = Object.keys(p.specs || {}).map(function (label) {
+            return '<dt>' + escapeHtml(label) + '</dt><dd>' + escapeHtml(p.specs[label]) + '</dd>';
+        }).join('');
+        var extras = Object.keys(p.extras || {}).map(function (label) {
+            return '<li>' + escapeHtml(label) + ': ' + euro.format(p.extras[label]) + '</li>';
+        }).join('');
 
         return '<article class="product">' +
-            '<div class="product__media"><img src="' + p.image + '" alt="' + escapeHtml(p.name) + ' mit Musterabdruck" loading="lazy" width="387" height="149"></div>' +
+            '<div class="product__media"><img src="' + p.image + '" alt="' + escapeHtml(p.name) + '" loading="lazy"></div>' +
             '<div class="product__body">' +
             '  <h3>' + escapeHtml(p.name) + '</h3>' +
-            '  <dl class="product__specs">' +
-            '    <dt>Druckfläche</dt><dd>' + escapeHtml(p.area) + '</dd>' +
-            '    <dt>Zeilen</dt><dd>max. ' + p.lines + '</dd>' +
-            '  </dl>' +
-            '  <p class="product__price">' + euro.format(p.price) + '</p>' +
-            '  <ul class="product__extras">' + extras + '</ul>' +
+            (specs ? '  <dl class="product__specs">' + specs + '</dl>' : '') +
+            (p.note ? '  <p class="product__note">' + escapeHtml(p.note) + '</p>' : '') +
+            '  <p class="product__price">' + (p.from ? '<small>ab</small> ' : '') + euro.format(p.price) + '</p>' +
+            (extras ? '  <ul class="product__extras">' + extras + '</ul>' : '') +
             '  <a class="btn btn--outline" href="' + inquiryLink(p) + '">Jetzt anfragen</a>' +
             '</div>' +
             '</article>';
@@ -47,8 +54,7 @@
     var SORTERS = {
         default: null,
         priceAsc: function (a, b) { return a.price - b.price; },
-        priceDesc: function (a, b) { return b.price - a.price; },
-        lines: function (a, b) { return b.lines - a.lines || a.price - b.price; }
+        priceDesc: function (a, b) { return b.price - a.price; }
     };
 
     function render() {
