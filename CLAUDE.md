@@ -78,6 +78,15 @@ Startseite verlinken (ggf. Menü in `layout.js`: `NAV` + `TEXT[lang].nav`), `npm
 
 **Telefon, E-Mail, Adresse:** nur in `layout.js` (`SHOP`, `TEXT[lang].location`).
 
+## Skills (`.claude/skills/`)
+
+Für wiederkehrende Aufgaben gibt es Schritt-für-Schritt-Anleitungen – bei passender Aufgabe
+verwenden:
+- `preis-aendern` – Preise ändern, Auswirkung prüfen, Schnappschüsse erneuern
+- `neue-seite` – neue Produkt-/Kategorieseite in allen vier Sprachen
+- `uebersetzen` – Texte in en/sl/uk übertragen bzw. nachziehen
+- `veroeffentlichen` – Pull Request, Prüfungen abwarten, zusammenführen, Veröffentlichung kontrollieren
+
 ## Konventionen
 
 - Kopf jeder Seite: `charset`, `viewport`, eigener `<title>`, eigene `meta description`,
