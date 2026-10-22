@@ -362,6 +362,17 @@ site-header, site-footer {
     padding: 12px;
 }
 
+.nav__extra {
+    display: none;
+}
+
+.header.is-compact .nav__extra {
+    display: block;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, .25);
+}
+
 /* ---------- Hauptbereich ---------- */
 
 main,

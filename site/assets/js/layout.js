@@ -22,7 +22,6 @@
     var TEXT = {
         de: {
             location: 'Shopping City Seiersberg, 1. Stock über Primark',
-            contactLink: 'Kontakt &amp; Anfahrt',
             skip: 'Zum Inhalt springen',
             menu: 'Menü',
             mainNav: 'Hauptnavigation',
@@ -38,7 +37,6 @@
         },
         en: {
             location: 'Shopping City Seiersberg, 1st floor above Primark',
-            contactLink: 'Contact &amp; directions',
             skip: 'Skip to content',
             menu: 'Menu',
             mainNav: 'Main navigation',
@@ -54,7 +52,6 @@
         },
         sl: {
             location: 'Shopping City Seiersberg, 1. nadstropje nad Primarkom',
-            contactLink: 'Kontakt in dostop',
             skip: 'Preskoči na vsebino',
             menu: 'Meni',
             mainNav: 'Glavna navigacija',
@@ -70,7 +67,6 @@
         },
         uk: {
             location: 'Shopping City Seiersberg, 1-й поверх над Primark',
-            contactLink: 'Контакти та як дістатися',
             skip: 'Перейти до вмісту',
             menu: 'Меню',
             mainNav: 'Головна навігація',
@@ -178,6 +174,9 @@
                 var active = isActive(item, page) ? ' aria-current="page"' : '';
                 return '<li><a href="' + item.href + '"' + active + '>' + T.nav[i] + '</a></li>';
             }).join('');
+            // Kontakt & Impressum: nur im aufgeklappten Menü (sonst in der Fußzeile)
+            links += '<li class="nav__extra"><a href="kontakt.html"' + (page === 'kontakt' ? ' aria-current="page"' : '')
+                + '>' + T.infoLink + '</a></li>';
 
             this.innerHTML =
                 '<a class="skip-link" href="#main">' + T.skip + '</a>' +
@@ -187,7 +186,6 @@
                 '    <span class="topbar__contact">' +
                 '      <a href="' + SHOP.phoneHref + '">' + SHOP.phone + '</a>' +
                 '      <a href="mailto:' + SHOP.email + '">' + SHOP.email + '</a>' +
-                '      <a href="kontakt.html">' + T.contactLink + '</a>' +
                 '      <span class="lang-switch" role="group" aria-label="' + T.language + '">' + languageLinks() + '</span>' +
                 '    </span>' +
                 '  </div>' +
