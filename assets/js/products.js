@@ -6,7 +6,8 @@
 (function () {
     var SITE = window.SITE || {lang: 'de', root: ''};
     var LOCALES = {de: 'de-AT', en: 'en-IE', sl: 'sl-SI', uk: 'uk-UA'};
-    var euro = new Intl.NumberFormat(LOCALES[SITE.lang] || 'de-AT', {style: 'currency', currency: 'EUR'});
+    // narrowSymbol: immer "€" (Ukrainisch würde sonst "EUR" schreiben)
+    var euro = new Intl.NumberFormat(LOCALES[SITE.lang] || 'de-AT', {style: 'currency', currency: 'EUR', currencyDisplay: 'narrowSymbol'});
 
     /*
      * Übersetzungen für die Produktkarten. Bezeichnungen und Werte in den

@@ -37,6 +37,33 @@ Texte von Kopf-/Fußzeile und Produktkarten: `assets/js/layout.js` bzw.
 **Neue Seite** – eine ähnliche Seite kopieren und anpassen:
 `stempel.html` (Kategorie), `stempelPrinty.html` (Produktkarten), `digitaldruckFarb.html` (Preistabellen).
 
+## Prüfungen
+
+Nach Änderungen einmal ausführen (benötigt [Node.js](https://nodejs.org)):
+
+```
+npm install                      # einmalig
+npx playwright install chromium  # einmalig, lädt den Testbrowser
+npm test
+```
+
+Geprüft werden alle Seiten in allen vier Sprachen:
+
+1. **Daten** – Produkt- und Preisdateien lesbar, vollständig übersetzt, Bilder vorhanden
+2. **HTML** – Titel, Beschreibung, genau eine Überschrift, keine kaputten Links/Bilder, alt-Texte
+3. **Browser** – keine Fehler, kein seitliches Scrollen am Handy, keine abgeschnittenen
+   Tabellen, Menü einzeilig, Darkmode, Sprachumschalter, Handy-Menü
+4. **Sprachen** – en/sl/uk haben dieselben Tabellen, Links und Preise wie Deutsch
+5. **Schnappschuss** – der sichtbare Text jeder Seite wird mit `tests/snapshots/` verglichen.
+   Jede Text- oder Preisänderung fällt so auf. War sie gewollt: `npm run test:update`
+   ausführen und die geänderten Schnappschüsse mit committen – im Git-Verlauf sieht man
+   dann genau, welcher Preis sich wo geändert hat.
+
+Bei jedem Push laufen die Prüfungen auch automatisch auf GitHub (Reiter „Actions“).
+
+**Nicht auf den Webserver hochladen:** `tests/`, `node_modules/`, `.github/`, `package.json`,
+`package-lock.json`, `README.md` – sie gehören nicht zur Website.
+
 ## Lokal ansehen
 
 Doppelklick auf `home.html` genügt. Oder mit Webserver: `python3 -m http.server` und

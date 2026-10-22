@@ -820,6 +820,9 @@ main.wrap {
 }
 
 .price-table thead th {
+    white-space: normal;
+    hyphens: auto;
+    vertical-align: bottom;
     font-size: .8125rem;
     font-weight: 600;
     text-transform: uppercase;
