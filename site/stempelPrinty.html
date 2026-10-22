@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trodat Printy Stempel – Printshop Bloder, Shopping City Seiersberg</title>
+    <meta name="description" content="Trodat Printy Selbstfärbestempel mit individueller Textplatte – fertig ab 1 Stunde. Alle Modelle mit Druckfläche, Zeilenanzahl und Preis.">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script src="assets/js/layout.js"></script>
+    <script src="data/stempel-printy.js" defer></script>
+    <script src="assets/js/products.js" defer></script>
+</head>
+<body>
+<site-header></site-header>
+
+<main id="main" class="wrap">
+    <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+        <a href="home.html">Start</a> › <a href="stempel.html">Stempel</a> › Trodat Printy
+    </nav>
+
+    <section class="product-intro">
+        <div>
+            <div class="page-head">
+                <img src="img/buttons/stempel/printy.png" alt="" width="131" height="100">
+                <div>
+                    <h1>Trodat Printy</h1>
+                </div>
+            </div>
+            <p class="product-intro__lead">Der handliche Trodat Printy eignet sich nicht nur fürs Büro, sondern auch
+                ausgezeichnet für unterwegs.</p>
+            <p><span class="badge">⏱ Fertig ab 1 Stunde</span></p>
+        </div>
+        <ul class="checklist">
+            <li>Individuell gestaltbar</li>
+            <li>Firmenlogo oder Symbole sind kein Problem</li>
+            <li>Positionierungsfenster</li>
+            <li>Ergonomisches Design</li>
+            <li>Textplatte und Farbkissen austauschbar</li>
+            <li>Weltweit über 150 Millionen Mal verkauft</li>
+        </ul>
+    </section>
+
+    <section class="section" aria-labelledby="modelle-titel">
+        <div class="toolbar">
+            <h2 id="modelle-titel">Unsere Stempelmodelle</h2>
+            <label>Sortieren:
+                <select id="product-sort">
+                    <option value="default">Standard</option>
+                    <option value="priceAsc">Preis aufsteigend</option>
+                    <option value="priceDesc">Preis absteigend</option>
+                </select>
+            </label>
+        </div>
+
+        <div id="product-list" class="product-list"></div>
+        <noscript><p>Bitte aktivieren Sie JavaScript, um die Modellliste zu sehen, oder rufen Sie uns an.</p></noscript>
+
+        <p class="note">Alle Preise inkl. 20&nbsp;% MwSt. Stempelplatte und Stempelkissen sind auch einzeln erhältlich.</p>
+    </section>
+</main>
+
+<site-footer></site-footer>
+</body>
+</html>

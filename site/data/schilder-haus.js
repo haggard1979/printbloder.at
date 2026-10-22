@@ -1,0 +1,9 @@
+/*
+ * Hausschilder - Produktdaten.
+ * Preise in Euro inkl. 20 % MwSt. Preisänderung = nur hier eine Zahl ändern.
+ */
+window.PRODUCTS = [
+    {name: {de: 'Hausschild Aluminium', en: 'Aluminium house sign', sl: 'Hišna tablica iz aluminija', uk: 'Алюмінієва табличка з номером будинку'}, image: 'img/artikel/schilder/haus.png', specs: {'Fläche': '247 × 163 mm', 'Material': 'Aluminium-Verbundplatte 2 mm'}, price: 37.90},
+    {name: {de: 'Hausschild Aluminium groß', en: 'Aluminium house sign, large', sl: 'Hišna tablica iz aluminija, velika', uk: 'Алюмінієва табличка з номером будинку, велика'}, image: 'img/artikel/schilder/haus.png', specs: {'Fläche': '330 × 230 mm', 'Material': 'Aluminium-Verbundplatte 2 mm'}, price: 43.90},
+    {name: {de: 'Straßenschild Aluminium', en: 'Aluminium street sign', sl: 'Ulična tablica iz aluminija', uk: 'Алюмінієва вулична табличка'}, image: 'img/artikel/schilder/strasse.png', specs: {'Fläche': '495 × 130 mm', 'Material': 'Aluminium-Verbundplatte 2 mm'}, price: 45.90}
+];
