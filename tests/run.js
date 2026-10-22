@@ -267,6 +267,8 @@ async function inspect(page) {
     });
 }
 
+const WIDE_FONT = '* { font-family: "DejaVu Sans", Verdana, sans-serif !important; }';
+
 // Größenänderung abwarten (der Browser meldet sie erst beim nächsten Bildaufbau)
 async function resize(page, width, height) {
     await page.setViewportSize({width, height});
@@ -290,6 +292,9 @@ async function checkBrowser(browser, base) {
             problems = [];
             await resize(page, 1280, 900);
             await page.goto(base + label, {waitUntil: 'load'});
+            // Breiten immer mit einer breiten Schrift messen (ungünstigster Fall),
+            // damit das Ergebnis nicht von den installierten Schriften abhängt
+            await page.addStyleTag({content: WIDE_FONT});
             const r = await inspect(page);
             results[lang + '/' + name] = r;
             if (r.emptyTables) problems.push(`${r.emptyTables} Preistabelle(n) leer`);

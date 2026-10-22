@@ -809,7 +809,7 @@ main.wrap {
 }
 
 .price-table th:first-child, .price-table td:first-child {
-    min-width: 6.5em;
+    min-width: 7.5em;
     text-align: left;
     white-space: normal;
 }
@@ -822,11 +822,10 @@ main.wrap {
 .price-table thead th {
     white-space: normal;
     hyphens: auto;
+    overflow-wrap: break-word;
     vertical-align: bottom;
-    font-size: .8125rem;
+    font-size: .875rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: .03em;
     color: var(--ink-muted);
     border-bottom: 2px solid var(--line);
 }
@@ -932,7 +931,7 @@ main.wrap {
 
 .sub-item h3 {
     margin-bottom: 4px;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
 }
 
 .sub-item p {
