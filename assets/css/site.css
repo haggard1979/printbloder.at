@@ -703,8 +703,14 @@ main {
 }
 
 .price-table th:first-child, .price-table td:first-child {
+    min-width: 6.5em;
     text-align: left;
     white-space: normal;
+}
+
+/* Breite Tabellen (ab 3 Preisspalten) über die ganze Zeile */
+.price-box:has(thead th:nth-child(4)) {
+    grid-column: 1 / -1;
 }
 
 .price-table thead th {
@@ -722,6 +728,25 @@ main {
 
 .price-table tbody tr:hover {
     background: var(--bg);
+}
+
+@media (max-width: 600px) {
+    .price-box {
+        padding: 16px 10px;
+    }
+
+    .price-table {
+        font-size: .875rem;
+    }
+
+    .price-table th, .price-table td {
+        padding: 7px 6px;
+    }
+
+    .price-table thead th {
+        font-size: .6875rem;
+        letter-spacing: 0;
+    }
 }
 
 /* Hinweise (Mindestauftrag, Mengenrabatt, ...) */

@@ -1,68 +1,52 @@
 <!DOCTYPE html>
-<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="de">
 <head>
-    <meta name="description" content="Willkommen bei Printshop Bloder.       Informieren Sie sich &uuml;ber unsere Angebote!       Wir fertigen Stempel Visitkarten T-Shirts Digitaldruck Textildruck und vieles mehr - einfach, schnell und g&uuml;nstig!" />
-	<meta name="author" content="Printshop Bloder" />
-	<meta name="keywords" content="Stempel Visitkarten T-Shirts Textildruck Digitaldruck Poster Trodat Printy Beschriftung" />
-	    
-    <title>Printshop Bloder - Shopping City Seiersberg - Visitkarten | Stempel | Textildruck | Digitaldruck</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="stylesheet/ps.css" rel="stylesheet" type="text/css" />
-   	<link href="stylesheet/ps_color.css" rel="stylesheet" type="text/css" />
-	<script src="scripts/includeHTML.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schilder – Printshop Bloder, Shopping City Seiersberg</title>
+    <meta name="description" content="Hausschilder, Alu-Dibond-Verbundschilder und Funschilder – individuell gestaltet in der Shopping City Seiersberg.">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script src="assets/js/layout.js"></script>
 </head>
 <body>
-<div class="container-fluid bg-primary text-white min-vh-100">
-	<div style="heigth:79px" w3-include-html="top/header.html"></div>
-	<script>
-		includeHTML();
-	</script>
-	<div class="row">
-		<div class="col-sm-2 d-none d-md-none d-lg-block d-sm-none" w3-include-html="top/nav.html"></div>
-		<div class="col">
-			<div class="d-flex row mt-4 justify-content-center">
-				Unser Sortiment
-			</div>
-			<div class="d-flex row mt-4 justify-content-center">
-				<div class="d-flex col-sm-2 m-3 justify-content-center">
-					<a href="schilderHaus.html">
-						<img src="img/buttons/schilder/hausschilder.png" class="img-fluid"/>
-					</a>
-				</div>
-				<div class="col justify-content-left mt-3">
-					<a href="schilderHaus.html"><strong>Hausschilder</strong></a>
-					<br/>
-					<br/>
-					<span class="beschreibung">Wenn Besuch Sie wieder einmal nicht anfindet ... fehlt Ihnen vielleich ein PrintBloder-Hausschild. Erh&auml;tlich als Hausnummern oder Strassenschild.</span>
-				</div>
-			</div>
-			<div class="d-flex row mt-4 justify-content-center">
-				<div class="d-flex col-sm-2 m-3 justify-content-center">
-					<a href="schilderAlu.html">
-						<img src="img/buttons/schilder/aluschilder.png" class="img-fluid"/>
-					</a>
-				</div>
-				<div class="col justify-content-left mt-3">
-					<a href="schilderAlu.html"><strong>Alu-Dibond Verbundschilder mit 6 Farben Latexdruck</strong></a>
-					<br/>
-					<br/>
-					<span class="beschreibung">Individuell gestaltbare Schilder aus hochwertigem Alu-Dibond Verbundmaterial, bezogen mit 6 Farben Latexdruck</span>
-				</div>
-			</div>
-			<div class="d-flex row mt-4 justify-content-center">
-				<div class="d-flex col-sm-2 m-3 justify-content-center">
-					<a href="geschenkeFunschilder.html">
-						<img src="img/buttons/schilder/funschilder.png" class="img-fluid"/>
-					</a>
-				</div>
-				<div class="col justify-content-left mt-3">
-					<a href="geschenkeFunschilder.html"><strong>Funschilder</strong></a>
-					<br/>
-					<br/>
-					<span class="beschreibung">Das individuelle Fun-Schild z.B. f&uuml;r die LKW-Windschutzscheibe oder als Geburtstagsgag.</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<site-header></site-header>
+
+<main id="main" class="wrap">
+    <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+        <a href="home.html">Start</a> › Schilder
+    </nav>
+
+    <section class="section section--first">
+        <h1>Schilder</h1>
+        <p class="section__intro">Unser Sortiment</p>
+
+        <div class="sub-list">
+            <a class="sub-item" href="schilderHaus.html">
+                <img src="img/buttons/schilder/hausschilder.png" alt="" width="131" height="100">
+                <div>
+                    <h3>Hausschilder</h3>
+                    <p>Wenn Besuch Sie wieder einmal nicht findet ... fehlt Ihnen vielleicht ein PrintBloder-Hausschild.
+                        Erhältlich als Hausnummern oder Straßenschild.</p>
+                </div>
+            </a>
+            <a class="sub-item" href="schilderAlu.html">
+                <img src="img/buttons/schilder/aluschilder.png" alt="" width="131" height="100">
+                <div>
+                    <h3>Alu-Dibond Verbundschilder mit 6 Farben Latexdruck</h3>
+                    <p>Individuell gestaltbare Schilder aus hochwertigem Alu-Dibond Verbundmaterial, bezogen mit 6 Farben Latexdruck.</p>
+                </div>
+            </a>
+            <a class="sub-item" href="geschenkeFunschilder.html">
+                <img src="img/buttons/schilder/funschilder.png" alt="" width="131" height="100">
+                <div>
+                    <h3>Funschilder</h3>
+                    <p>Das individuelle Fun-Schild z. B. für die LKW-Windschutzscheibe oder als Geburtstagsgag.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+
+<site-footer></site-footer>
 </body>
+</html>
