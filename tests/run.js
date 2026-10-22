@@ -21,7 +21,8 @@ const vm = require('vm');
 const {chromium} = require('playwright');
 const server = require('./static-server');
 
-const ROOT = path.resolve(__dirname, '..');
+// Die Website selbst liegt in site/
+const ROOT = path.resolve(__dirname, '..', 'site');
 const LANGS = ['de', 'en', 'sl', 'uk'];
 const SNAPSHOTS = path.join(__dirname, 'snapshots');
 const UPDATE = process.argv.includes('--update-snapshots');
