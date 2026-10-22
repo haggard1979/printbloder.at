@@ -475,6 +475,17 @@ main {
     }
 }
 
+.contact-card {
+    margin-bottom: 12px;
+    font-style: normal;
+}
+
+.contact-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 /* Produktseite: Kopf */
 
 .product-intro {
