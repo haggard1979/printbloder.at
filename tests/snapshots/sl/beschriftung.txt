@@ -12,7 +12,7 @@ Krivulje oz. vektorske grafike (cdr, ai itd.)
 Idealno za besedilo in logotipe
 Cene
 Nalepljene črke
-VIŠINA ČRK	CENA NA ČRKO
+Višina črk	Cena na črko
 do 50 mm	0,51 €
 do 75 mm	0,70 €
 do 100 mm	0,95 €
@@ -22,7 +22,7 @@ do 350 mm	3,20 €
 do 550 mm	3,50 €
 do 650 mm	4,30 €
 Simboli, logotipi pri širini folije 57 cm
-DOLŽINA	CENA
+Dolžina	Cena
 10 cm	20,00 €
 20 cm	24,00 €
 30 cm	29,00 €
@@ -34,7 +34,7 @@ DOLŽINA	CENA
 90 cm	59,00 €
 100 cm	64,00 €
 Dodatne storitve
-STORITEV	CENA
+Storitev	Cena
 Vektorizacija logotipov (15 min)	16,90 €
 Ura montaže	59,00 €
 Zaradi stroškov priprave znaša minimalno naročilo 15,00 €

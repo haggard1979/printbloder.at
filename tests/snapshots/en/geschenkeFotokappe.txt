@@ -13,11 +13,11 @@ Curves or vector graphics (cdr, ai etc.)
 Ideal for photos, including with text
 Prices
 Photo cap
-QUANTITY	WHITE CAP	DARK CAP
+Quantity	White cap	Dark cap
 1 pc	€19.90	€24.90
 From 3 pcs	€16.90	€18.90
 Additional services
-SERVICE	PRICE
+Service	Price
 Text print added to photo	+€3.00
 Typesetting (15 min)	€16.90
 Quantity discounts apply to the repeated production of the same print.

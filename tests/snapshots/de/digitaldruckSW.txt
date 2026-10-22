@@ -16,7 +16,7 @@ Gefertigt mit Canon imagePress
 Druck auf 80 g Standard-Kopierpapier
 Preise
 Schwarz-Weiss Druck
-MENGE	A4-DRUCK	A3-DRUCK
+Menge	A4-Druck	A3-Druck
 ab 1 Stk.	0,50 €	1,00 €
 ab 2 Stk.	0,35 €	0,70 €
 ab 5 Stk.	0,20 €	0,40 €
@@ -27,7 +27,7 @@ ab 100 Stk.	0,11 €	0,22 €
 ab 500 Stk.	0,08 €	0,16 €
 ab 1000 Stk.	0,06 €	0,12 €
 Einzelzusatzleistungen
-LEISTUNG	AUFPREIS
+Leistung	Aufpreis
 A4 Papier 160 g	+0,15 €
 A4 Papier 200 g	+0,25 €
 A4 Papier 250 g	+0,45 €

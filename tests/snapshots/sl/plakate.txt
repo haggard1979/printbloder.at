@@ -14,27 +14,27 @@ Krivulje oz. vektorske grafike (cdr, ai itd.)
 Idealno za vaše počitniške fotografije
 Cene
 DIN A2 (420 × 594 mm)
-KOLIČINA	SIJAJNI PAPIR	SAMOLEPILNA FOLIJA
+Količina	Sijajni papir	Samolepilna folija
 1 kos	19,90 €	29,00 €
 od 2 kos	16,40 €	26,00 €
 od 5 kos	12,90 €	22,00 €
 od 10 kos	11,90 €	21,00 €
 od 25 kos	10,40 €	20,00 €
 DIN A1 (594 × 840 mm)
-KOLIČINA	SIJAJNI PAPIR	SAMOLEPILNA FOLIJA
+Količina	Sijajni papir	Samolepilna folija
 1 kos	29,90 €	38,00 €
 od 2 kos	24,40 €	34,00 €
 od 5 kos	20,90 €	30,00 €
 od 10 kos	18,40 €	28,00 €
 od 25 kos	14,90 €	24,00 €
 DIN A0 (840 × 1189 mm)
-KOLIČINA	SIJAJNI PAPIR
+Količina	Sijajni papir
 1 kos	49,90 €
 od 2 kos	39,60 €
 od 5 kos	34,80 €
 od 10 kos	34,80 €
 Dodatne možnosti
-STORITEV	CENA
+Storitev	Cena
 Transparent do 2 m²	59,90 € na m²
 Transparent od 2 m²	49,90 € na m²
 Obroček za transparent	0,50 € na kos

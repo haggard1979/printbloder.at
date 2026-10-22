@@ -16,7 +16,7 @@ Hochwertige Textilien
 Bis 60 Grad problemlos waschbar
 Preise
 Inkl. T-Shirt
-MENGE	EINSEITIG	BEIDSEITIG	NUR LOGO	+LOGO	+A3
+Menge	einseitig	beidseitig	nur Logo	+Logo	+A3
 1 Stk.	29,90 €	33,90 €	24,90 €	+5,90 €	+9,00 €
 Ab 2 Stk.	26,90 €	29,90 €	19,90 €	+5,90 €	+8,00 €
 Ab 5 Stk.	22,90 €	26,90 €	17,90 €	+4,90 €	+7,00 €
@@ -24,7 +24,7 @@ Ab 10 Stk.	18,90 €	23,90 €	15,90 €	+4,50 €	+6,50 €
 Ab 25 Stk.	15,90 €	21,90 €	13,90 €	+3,50 €	+6,50 €
 Ab 50 Stk.	14,50 €	19,90 €	12,90 €	+3,00 €	+6,50 €
 Nur Druck
-MENGE	EINSEITIG	BEIDSEITIG	NUR LOGO	+LOGO	+A3
+Menge	einseitig	beidseitig	nur Logo	+Logo	+A3
 1 Stk.	23,90 €	29,90 €	19,90 €	+5,90 €	+9,00 €
 Ab 2 Stk.	19,90 €	26,90 €	17,00 €	+5,90 €	+8,00 €
 Ab 5 Stk.	16,90 €	22,90 €	14,90 €	+4,90 €	+7,00 €
@@ -32,7 +32,7 @@ Ab 10 Stk.	14,90 €	20,90 €	12,90 €	+4,50 €	+6,50 €
 Ab 25 Stk.	12,90 €	17,90 €	10,90 €	+3,50 €	+6,50 €
 Ab 50 Stk.	10,90 €	16,90 €	7,90 €	+3,00 €	+6,50 €
 Zusatzleistungen
-ZUSATZLEISTUNG	PREIS
+Zusatzleistung	Preis
 zusätzlicher Textaufdruck	+3,00 €
 Damenshirt	+4,00 €
 Polo	+12,90 €

@@ -11,7 +11,7 @@ Firmenlogo oder Symbole sind kein Problem
 Kurven bzw. Vektorgrafiken (cdr, ai usw.)
 Preise
 Funschilder
-ARTIKEL	PREIS
+Artikel	Preis
 Funschild groß (52x11cm)	33,90 €
 Funschild Bobbycar	27,90 €
 

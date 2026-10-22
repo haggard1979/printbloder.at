@@ -13,11 +13,11 @@ Curves or vector graphics (cdr, ai etc.)
 Ideal for photos, including with text
 Prices
 Teddy bear
-QUANTITY	SMALL TEDDY	LARGE TEDDY
+Quantity	Small teddy	Large teddy
 1 pc	€24.90	€32.90
 From 3 pcs	€19.90	€27.90
 Additional services
-SERVICE	PRICE
+Service	Price
 Text print added to photo	+€3.00
 Typesetting (15 min)	€16.90
 Quantity discounts apply to the repeated production of the same print.

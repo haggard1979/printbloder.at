@@ -16,7 +16,7 @@ Izdelano s Canon imagePress
 Tisk na kakovostnem papirju za digitalni tisk
 Cene
 Barvni tisk – cena na stran
-KOLIČINA	A4	A3
+Količina	A4	A3
 od 1 kos	0,90 €	1,80 €
 od 5 kos	0,75 €	1,50 €
 od 10 kos	0,70 €	1,40 €
@@ -27,7 +27,7 @@ od 250 kos	0,45 €	0,90 €
 od 500 kos	0,40 €	0,80 €
 od 1000 kos	0,38 €	0,76 €
 Posamezne dodatne storitve – doplačilo na list
-PAPIR	DOPLAČILO
+Papir	Doplačilo
 A4 papir 160 g	+0,15 €
 A4 papir 200 g	+0,25 €
 A4 papir 250 g	+0,45 €

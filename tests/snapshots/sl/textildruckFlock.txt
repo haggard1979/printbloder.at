@@ -16,7 +16,7 @@ Kakovostni tekstil
 Brez težav pralno do 60 stopinj
 Cene
 Vključno z majico
-KOLIČINA	ENOSTRANSKO	OBOJESTRANSKO	SAMO LOGOTIP	+LOGOTIP	+A3
+Količina	enostransko	obojestransko	samo logotip	+logotip	+A3
 1 kos	29,90 €	33,90 €	24,90 €	+5,90 €	+9,00 €
 od 2 kos	26,90 €	29,90 €	19,90 €	+5,90 €	+8,00 €
 od 5 kos	22,90 €	26,90 €	17,90 €	+4,90 €	+7,00 €
@@ -24,7 +24,7 @@ od 10 kos	18,90 €	23,90 €	15,90 €	+4,50 €	+6,50 €
 od 25 kos	15,90 €	21,90 €	13,90 €	+3,50 €	+6,50 €
 od 50 kos	14,50 €	19,90 €	12,90 €	+3,00 €	+6,50 €
 Samo tisk
-KOLIČINA	ENOSTRANSKO	OBOJESTRANSKO	SAMO LOGOTIP	+LOGOTIP	+A3
+Količina	enostransko	obojestransko	samo logotip	+logotip	+A3
 1 kos	23,90 €	29,90 €	19,90 €	+5,90 €	+9,00 €
 od 2 kos	19,90 €	26,90 €	17,00 €	+5,90 €	+8,00 €
 od 5 kos	16,90 €	22,90 €	14,90 €	+4,90 €	+7,00 €
@@ -32,7 +32,7 @@ od 10 kos	14,90 €	20,90 €	12,90 €	+4,50 €	+6,50 €
 od 25 kos	12,90 €	17,90 €	10,90 €	+3,50 €	+6,50 €
 od 50 kos	10,90 €	16,90 €	7,90 €	+3,00 €	+6,50 €
 Dodatne storitve
-DODATNA STORITEV	CENA
+Dodatna storitev	Cena
 dodatno besedilo	+3,00 €
 Ženska majica	+4,00 €
 Polo majica	+12,90 €

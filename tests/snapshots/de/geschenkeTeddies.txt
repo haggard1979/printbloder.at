@@ -13,11 +13,11 @@ Kurven bzw. Vektorgrafiken (cdr, ai usw.)
 Ideal für Fotos, auch mit Text
 Preise
 Teddybär
-MENGE	TEDDY KLEIN	TEDDY GROSS
+Menge	Teddy klein	Teddy groß
 1 Stk.	24,90 €	32,90 €
 ab 3 Stk.	19,90 €	27,90 €
 Zusatzleistungen
-LEISTUNG	PREIS
+Leistung	Preis
 Textaufdruck zu Foto	+3,00 €
 Satzkosten (15min)	16,90 €
 Mengenrabatte beziehen sich auf die mehrfache Anfertigung desselben Aufdrucks.

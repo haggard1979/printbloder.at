@@ -13,12 +13,12 @@ Curves or vector graphics (cdr, ai etc.)
 Ideal for photos, including with text
 Prices
 Cushion 40 × 40
-QUANTITY	SINGLE-SIDED A4	DOUBLE-SIDED A4	SINGLE-SIDED A3	DOUBLE-SIDED A3
+Quantity	single-sided A4	double-sided A4	single-sided A3	double-sided A3
 1 pc	€27.90	€32.90	€32.90	€39.90
 From 3 pcs	€24.90	€29.90	€28.90	€34.90
 From 5 pcs	€21.90	€25.90	€25.90	€29.90
 Additional services
-SERVICE	PRICE
+Service	Price
 Heart-shaped cushion	+€5.00
 Text print added to photo	+€3.00
 Typesetting (15 min)	€16.90

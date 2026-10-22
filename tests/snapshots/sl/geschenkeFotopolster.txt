@@ -13,12 +13,12 @@ Krivulje oz. vektorske grafike (cdr, ai itd.)
 Idealno za fotografije, tudi z besedilom
 Cene
 Blazina 40x40
-KOLIČINA	ENOSTRANSKO A4	OBOJESTRANSKO A4	ENOSTRANSKO A3	OBOJESTRANSKO A3
+Količina	enostransko A4	obojestransko A4	enostransko A3	obojestransko A3
 1 kos	27,90 €	32,90 €	32,90 €	39,90 €
 od 3 kos	24,90 €	29,90 €	28,90 €	34,90 €
 od 5 kos	21,90 €	25,90 €	25,90 €	29,90 €
 Dodatne storitve
-STORITEV	CENA
+Storitev	Cena
 Blazina v obliki srca	+5,00 €
 Besedilo k fotografiji	+3,00 €
 Stroški priprave (15 min)	16,90 €

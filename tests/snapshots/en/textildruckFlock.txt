@@ -16,7 +16,7 @@ High-quality textiles
 Washable up to 60 °C without any problems
 Prices
 Including T-shirt
-QUANTITY	SINGLE-SIDED	DOUBLE-SIDED	LOGO ONLY	+LOGO	+A3
+Quantity	single-sided	double-sided	logo only	+logo	+A3
 1 pc	€29.90	€33.90	€24.90	+€5.90	+€9.00
 From 2 pcs	€26.90	€29.90	€19.90	+€5.90	+€8.00
 From 5 pcs	€22.90	€26.90	€17.90	+€4.90	+€7.00
@@ -24,7 +24,7 @@ From 10 pcs	€18.90	€23.90	€15.90	+€4.50	+€6.50
 From 25 pcs	€15.90	€21.90	€13.90	+€3.50	+€6.50
 From 50 pcs	€14.50	€19.90	€12.90	+€3.00	+€6.50
 Printing only
-QUANTITY	SINGLE-SIDED	DOUBLE-SIDED	LOGO ONLY	+LOGO	+A3
+Quantity	single-sided	double-sided	logo only	+logo	+A3
 1 pc	€23.90	€29.90	€19.90	+€5.90	+€9.00
 From 2 pcs	€19.90	€26.90	€17.00	+€5.90	+€8.00
 From 5 pcs	€16.90	€22.90	€14.90	+€4.90	+€7.00
@@ -32,7 +32,7 @@ From 10 pcs	€14.90	€20.90	€12.90	+€4.50	+€6.50
 From 25 pcs	€12.90	€17.90	€10.90	+€3.50	+€6.50
 From 50 pcs	€10.90	€16.90	€7.90	+€3.00	+€6.50
 Additional services
-ADDITIONAL SERVICE	PRICE
+Additional service	Price
 additional text print	+€3.00
 Women's T-shirt	+€4.00
 Polo shirt	+€12.90

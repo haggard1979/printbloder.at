@@ -12,7 +12,7 @@ Kurven bzw. Vektorgrafiken (cdr, ai usw.)
 Ideal für Text und Logos
 Preise
 Klebebuchstaben
-BUCHSTABENHÖHE	PREIS PRO BUCHSTABE
+Buchstabenhöhe	Preis pro Buchstabe
 bis 50 mm	0,51 €
 bis 75 mm	0,70 €
 bis 100 mm	0,95 €
@@ -22,7 +22,7 @@ bis 350 mm	3,20 €
 bis 550 mm	3,50 €
 bis 650 mm	4,30 €
 Symbole, Logos bei Folienbreite 57 cm
-LAUFLÄNGE	PREIS
+Lauflänge	Preis
 10 cm	20,00 €
 20 cm	24,00 €
 30 cm	29,00 €
@@ -34,7 +34,7 @@ LAUFLÄNGE	PREIS
 90 cm	59,00 €
 100 cm	64,00 €
 Zusatzleistungen
-LEISTUNG	PREIS
+Leistung	Preis
 Vektorisierung von Logos (15 min)	16,90 €
 Montagestunde	59,00 €
 Aufgrund von Setup-Kosten beträgt der Mindestauftrag 15,00 €

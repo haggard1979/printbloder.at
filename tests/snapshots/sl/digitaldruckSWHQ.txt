@@ -16,7 +16,7 @@ Izdelano s Canon imagePress
 Tisk na standardni kopirni papir 80 g
 Cene
 Črno-beli tisk visoke kakovosti
-KOLIČINA	A4 TISK	A3 TISK
+Količina	A4 tisk	A3 tisk
 od 1 kos	0,50 €	1,00 €
 od 5 kos	0,40 €	0,80 €
 od 10 kos	0,35 €	0,70 €
@@ -26,7 +26,7 @@ od 100 kos	0,20 €	0,40 €
 od 250 kos	0,16 €	0,32 €
 od 500 kos	0,13 €	0,26 €
 Posamezne dodatne storitve
-STORITEV	DOPLAČILO
+Storitev	Doplačilo
 A4 papir 160 g	+0,15 €
 A4 papir 200 g	+0,25 €
 A4 papir 250 g	+0,45 €

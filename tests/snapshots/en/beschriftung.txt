@@ -12,7 +12,7 @@ Curves or vector graphics (cdr, ai etc.)
 Ideal for text and logos
 Prices
 Adhesive letters
-LETTER HEIGHT	PRICE PER LETTER
+Letter height	Price per letter
 up to 50 mm	€0.51
 up to 75 mm	€0.70
 up to 100 mm	€0.95
@@ -22,7 +22,7 @@ up to 350 mm	€3.20
 up to 550 mm	€3.50
 up to 650 mm	€4.30
 Symbols and logos at film width 57 cm
-LENGTH	PRICE
+Length	Price
 10 cm	€20.00
 20 cm	€24.00
 30 cm	€29.00
@@ -34,7 +34,7 @@ LENGTH	PRICE
 90 cm	€59.00
 100 cm	€64.00
 Additional services
-SERVICE	PRICE
+Service	Price
 Vectorising logos (15 min)	€16.90
 Installation hour	€59.00
 Due to set-up costs, the minimum order is €15.00

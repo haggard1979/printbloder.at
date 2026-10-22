@@ -15,11 +15,11 @@ Kakovostni tekstil
 Prevleka brez težav pralna do 30 stopinj
 Cene
 Podloga za miško – cena na kos
-KOLIČINA	CENA
+Količina	Cena
 1 kos	19,90 €
 od 3 kos	12,90 €
 Dodatne storitve
-STORITEV	CENA
+Storitev	Cena
 Besedilo k fotografiji	+3,00 €
 Stroški priprave (15 min)	16,90 €
 Količinski popusti veljajo za večkratno izdelavo istega potiska.

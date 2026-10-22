@@ -16,7 +16,7 @@ Made with Canon imagePress
 Printed on 80 g standard copier paper
 Prices
 Black-and-white printing High Quality
-QUANTITY	A4 PRINT	A3 PRINT
+Quantity	A4 print	A3 print
 from 1 pc	€0.50	€1.00
 from 5 pcs	€0.40	€0.80
 from 10 pcs	€0.35	€0.70
@@ -26,7 +26,7 @@ from 100 pcs	€0.20	€0.40
 from 250 pcs	€0.16	€0.32
 from 500 pcs	€0.13	€0.26
 Individual extras
-SERVICE	SURCHARGE
+Service	Surcharge
 A4 paper 160 g	+€0.15
 A4 paper 200 g	+€0.25
 A4 paper 250 g	+€0.45

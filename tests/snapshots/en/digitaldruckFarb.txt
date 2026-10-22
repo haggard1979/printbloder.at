@@ -16,7 +16,7 @@ Made with Canon imagePress
 Printed on high-quality digital printing paper
 Prices
 Colour printing – price per page
-QUANTITY	A4	A3
+Quantity	A4	A3
 from 1 pc	€0.90	€1.80
 from 5 pcs	€0.75	€1.50
 from 10 pcs	€0.70	€1.40
@@ -27,7 +27,7 @@ from 250 pcs	€0.45	€0.90
 from 500 pcs	€0.40	€0.80
 from 1,000 pcs	€0.38	€0.76
 Individual extras – surcharge per sheet
-PAPER	SURCHARGE
+Paper	Surcharge
 A4 paper 160 g	+€0.15
 A4 paper 200 g	+€0.25
 A4 paper 250 g	+€0.45
