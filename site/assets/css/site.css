@@ -103,6 +103,9 @@ a:hover {
 h1, h2, h3 {
     line-height: 1.2;
     margin: 0 0 .5em;
+    /* lange Wörter (z. B. "Stempelkugelschreiber") am Handy umbrechen statt überstehen */
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 h1 {
@@ -288,6 +291,17 @@ site-footer {
 
 .logo img {
     width: 195px;
+}
+
+/* schmale Handys: kleineres Logo, damit Logo und die drei Knöpfe in eine Zeile passen */
+@media (max-width: 400px) {
+    .logo img {
+        width: 150px;
+    }
+
+    .header.is-compact .header__inner {
+        gap: 6px;
+    }
 }
 
 .nav {
@@ -678,6 +692,10 @@ main.wrap {
     padding-top: 24px;
 }
 
+.product-intro > * {
+    min-width: 0;
+}
+
 .product-intro__lead {
     font-size: 1.125rem;
     color: var(--ink-muted);
@@ -967,6 +985,7 @@ main.wrap {
 
 .page-head > div {
     flex: 1 1 280px;
+    min-width: 0;
 }
 
 /* Unterkategorien als Liste mit Bild */

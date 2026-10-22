@@ -269,7 +269,8 @@ async function inspect(page) {
             truncatedTables: [...document.querySelectorAll('.price-box')]
                 .filter(b => b.scrollWidth > b.clientWidth + 1)
                 .map(b => (b.querySelector('caption') || {}).textContent || 'ohne Überschrift'),
-            overflow: document.documentElement.scrollWidth > window.innerWidth
+            overflow: document.documentElement.scrollWidth > window.innerWidth,
+            headerHeight: header ? header.offsetHeight : 0
         };
     });
 }
@@ -329,8 +330,12 @@ async function checkBrowser(browser, base) {
                 if (t.truncatedTables.length) problems.push(`Tabelle abgeschnitten bei ${width} px: ${t.truncatedTables.join(', ')}`);
                 if (t.navWrapped) problems.push(`Menü bricht bei ${width} px um`);
             }
-            await resize(page, 390, 800);
-            if ((await inspect(page)).overflow) problems.push('seitliches Scrollen bei 390 px (Handy)');
+            for (const phone of [390, 360]) {
+                await resize(page, phone, 800);
+                const t = await inspect(page);
+                if (t.overflow) problems.push(`seitliches Scrollen bei ${phone} px (Handy)`);
+                if (t.headerHeight > 72) problems.push(`Kopfzeile zweizeilig bei ${phone} px (${t.headerHeight} px hoch)`);
+            }
             problems.forEach(p => fail(S, `${label}: ${p}`));
         }
     }
