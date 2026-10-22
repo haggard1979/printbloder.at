@@ -7,6 +7,8 @@
     <meta name="description" content="Individualni napisi z visokozmogljivo folijo za avto, izložbe in drugo – s cenami za nalepljene črke, simbole in dodatne storitve.">
     <link rel="stylesheet" href="../assets/css/site.css">
     <script src="../assets/js/layout.js"></script>
+    <script src="../data/preise/beschriftung.js" defer></script>
+    <script src="../assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -41,61 +43,20 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Nalepljene črke</caption>
-                    <thead>
-                    <tr><th scope="col">Višina črk</th><th scope="col">Cena na črko</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">do 50 mm</th><td>0,51 €</td></tr>
-                    <tr><th scope="row">do 75 mm</th><td>0,70 €</td></tr>
-                    <tr><th scope="row">do 100 mm</th><td>0,95 €</td></tr>
-                    <tr><th scope="row">do 150 mm</th><td>1,40 €</td></tr>
-                    <tr><th scope="row">do 250 mm</th><td>2,18 €</td></tr>
-                    <tr><th scope="row">do 350 mm</th><td>3,20 €</td></tr>
-                    <tr><th scope="row">do 550 mm</th><td>3,50 €</td></tr>
-                    <tr><th scope="row">do 650 mm</th><td>4,30 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Simboli, logotipi pri širini folije 57 cm</caption>
-                    <thead>
-                    <tr><th scope="col">Dolžina</th><th scope="col">Cena</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">10 cm</th><td>20 €</td></tr>
-                    <tr><th scope="row">20 cm</th><td>24 €</td></tr>
-                    <tr><th scope="row">30 cm</th><td>29 €</td></tr>
-                    <tr><th scope="row">40 cm</th><td>34 €</td></tr>
-                    <tr><th scope="row">50 cm</th><td>39 €</td></tr>
-                    <tr><th scope="row">60 cm</th><td>44 €</td></tr>
-                    <tr><th scope="row">70 cm</th><td>49 €</td></tr>
-                    <tr><th scope="row">80 cm</th><td>54 €</td></tr>
-                    <tr><th scope="row">90 cm</th><td>59 €</td></tr>
-                    <tr><th scope="row">100 cm</th><td>64 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Dodatne storitve</caption>
-                    <thead>
-                    <tr><th scope="col">Storitev</th><th scope="col">Cena</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">Vektorizacija logotipov (15 min)</th><td>16,90 €</td></tr>
-                    <tr><th scope="row">Ura montaže</th><td>59,00 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="2"></table>
             </div>
         </div>
 
         <ul class="info-list">
-            <li>Zaradi stroškov priprave znaša minimalno naročilo 15 €</li>
+            <li>Zaradi stroškov priprave znaša minimalno naročilo <span data-price="mindestauftrag"></span></li>
             <li>Montaža na zahtevo in glede na razpoložljivost</li>
             <li>Druge dolžine na zahtevo</li>
         </ul>

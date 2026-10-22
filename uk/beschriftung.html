@@ -7,6 +7,8 @@
     <meta name="description" content="Індивідуальні написи з високоякісної плівки для авто, вітрин та іншого – з цінами на клейкі літери, символи та додаткові послуги.">
     <link rel="stylesheet" href="../assets/css/site.css">
     <script src="../assets/js/layout.js"></script>
+    <script src="../data/preise/beschriftung.js" defer></script>
+    <script src="../assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -41,61 +43,20 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Клейкі літери</caption>
-                    <thead>
-                    <tr><th scope="col">Висота літери</th><th scope="col">Ціна за літеру</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">до 50 мм</th><td>0,51 €</td></tr>
-                    <tr><th scope="row">до 75 мм</th><td>0,70 €</td></tr>
-                    <tr><th scope="row">до 100 мм</th><td>0,95 €</td></tr>
-                    <tr><th scope="row">до 150 мм</th><td>1,40 €</td></tr>
-                    <tr><th scope="row">до 250 мм</th><td>2,18 €</td></tr>
-                    <tr><th scope="row">до 350 мм</th><td>3,20 €</td></tr>
-                    <tr><th scope="row">до 550 мм</th><td>3,50 €</td></tr>
-                    <tr><th scope="row">до 650 мм</th><td>4,30 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Символи, логотипи при ширині плівки 57 см</caption>
-                    <thead>
-                    <tr><th scope="col">Довжина</th><th scope="col">Ціна</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">10 cm</th><td>20 €</td></tr>
-                    <tr><th scope="row">20 cm</th><td>24 €</td></tr>
-                    <tr><th scope="row">30 cm</th><td>29 €</td></tr>
-                    <tr><th scope="row">40 cm</th><td>34 €</td></tr>
-                    <tr><th scope="row">50 cm</th><td>39 €</td></tr>
-                    <tr><th scope="row">60 cm</th><td>44 €</td></tr>
-                    <tr><th scope="row">70 cm</th><td>49 €</td></tr>
-                    <tr><th scope="row">80 cm</th><td>54 €</td></tr>
-                    <tr><th scope="row">90 cm</th><td>59 €</td></tr>
-                    <tr><th scope="row">100 cm</th><td>64 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Додаткові послуги</caption>
-                    <thead>
-                    <tr><th scope="col">Послуга</th><th scope="col">Ціна</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">Векторизація логотипів (15 хв)</th><td>16,90 €</td></tr>
-                    <tr><th scope="row">Година монтажу</th><td>59,00 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="2"></table>
             </div>
         </div>
 
         <ul class="info-list">
-            <li>Через витрати на налаштування мінімальне замовлення становить 15 €</li>
+            <li>Через витрати на налаштування мінімальне замовлення становить <span data-price="mindestauftrag"></span></li>
             <li>Монтаж – за запитом і залежно від доступності</li>
             <li>Інші довжини – за запитом</li>
         </ul>

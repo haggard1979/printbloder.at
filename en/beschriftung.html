@@ -7,6 +7,8 @@
     <meta name="description" content="Custom lettering with high-performance vinyl for cars, shop windows and more – with prices for adhesive letters, symbols and additional services.">
     <link rel="stylesheet" href="../assets/css/site.css">
     <script src="../assets/js/layout.js"></script>
+    <script src="../data/preise/beschriftung.js" defer></script>
+    <script src="../assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -41,61 +43,20 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Adhesive letters</caption>
-                    <thead>
-                    <tr><th scope="col">Letter height</th><th scope="col">Price per letter</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">up to 50 mm</th><td>€0.51</td></tr>
-                    <tr><th scope="row">up to 75 mm</th><td>€0.70</td></tr>
-                    <tr><th scope="row">up to 100 mm</th><td>€0.95</td></tr>
-                    <tr><th scope="row">up to 150 mm</th><td>€1.40</td></tr>
-                    <tr><th scope="row">up to 250 mm</th><td>€2.18</td></tr>
-                    <tr><th scope="row">up to 350 mm</th><td>€3.20</td></tr>
-                    <tr><th scope="row">up to 550 mm</th><td>€3.50</td></tr>
-                    <tr><th scope="row">up to 650 mm</th><td>€4.30</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Symbols and logos at film width 57 cm</caption>
-                    <thead>
-                    <tr><th scope="col">Length</th><th scope="col">Price</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">10 cm</th><td>€20.00</td></tr>
-                    <tr><th scope="row">20 cm</th><td>€24.00</td></tr>
-                    <tr><th scope="row">30 cm</th><td>€29.00</td></tr>
-                    <tr><th scope="row">40 cm</th><td>€34.00</td></tr>
-                    <tr><th scope="row">50 cm</th><td>€39.00</td></tr>
-                    <tr><th scope="row">60 cm</th><td>€44.00</td></tr>
-                    <tr><th scope="row">70 cm</th><td>€49.00</td></tr>
-                    <tr><th scope="row">80 cm</th><td>€54.00</td></tr>
-                    <tr><th scope="row">90 cm</th><td>€59.00</td></tr>
-                    <tr><th scope="row">100 cm</th><td>€64.00</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Additional services</caption>
-                    <thead>
-                    <tr><th scope="col">Service</th><th scope="col">Price</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">Vectorising logos (15 min)</th><td>€16.90</td></tr>
-                    <tr><th scope="row">Installation hour</th><td>€59.00</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="2"></table>
             </div>
         </div>
 
         <ul class="info-list">
-            <li>Due to set-up costs, the minimum order is €15</li>
+            <li>Due to set-up costs, the minimum order is <span data-price="mindestauftrag"></span></li>
             <li>Installation on request and subject to availability</li>
             <li>Other lengths on request</li>
         </ul>

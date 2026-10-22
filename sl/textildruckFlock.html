@@ -7,6 +7,8 @@
     <meta name="description" content="Fleks in flok tisk na tekstil s količinskimi cenami – gotovo že v 1 uri v Shopping City Seiersberg.">
     <link rel="stylesheet" href="../assets/css/site.css">
     <script src="../assets/js/layout.js"></script>
+    <script src="../data/preise/textildruckFlock.js" defer></script>
+    <script src="../assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -45,57 +47,15 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Vključno z majico</caption>
-                    <thead>
-                    <tr><th scope="col">Količina</th><th scope="col">enostransko</th><th scope="col">obojestransko</th><th scope="col">samo logotip</th><th scope="col">+logotip</th><th scope="col">+A3</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 kos</th><td>29,90 €</td><td>33,90 €</td><td>24,90 €</td><td>+5,90 €</td><td>+9,00 €</td></tr>
-                    <tr><th scope="row">od 2 kos</th><td>26,90 €</td><td>29,90 €</td><td>19,90 €</td><td>+5,90 €</td><td>+8,00 €</td></tr>
-                    <tr><th scope="row">od 5 kos</th><td>22,90 €</td><td>26,90 €</td><td>17,90 €</td><td>+4,90 €</td><td>+7,00 €</td></tr>
-                    <tr><th scope="row">od 10 kos</th><td>18,90 €</td><td>23,90 €</td><td>15,90 €</td><td>+4,50 €</td><td>+6,50 €</td></tr>
-                    <tr><th scope="row">od 25 kos</th><td>15,90 €</td><td>21,90 €</td><td>13,90 €</td><td>+3,50 €</td><td>+6,50 €</td></tr>
-                    <tr><th scope="row">od 50 kos</th><td>14,50 €</td><td>19,90 €</td><td>12,90 €</td><td>+3,00 €</td><td>+6,50 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Samo tisk</caption>
-                    <thead>
-                    <tr><th scope="col">Količina</th><th scope="col">enostransko</th><th scope="col">obojestransko</th><th scope="col">samo logotip</th><th scope="col">+logotip</th><th scope="col">+A3</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 kos</th><td>23,90 €</td><td>29,90 €</td><td>19,90 €</td><td>+5,90 €</td><td>+9,00 €</td></tr>
-                    <tr><th scope="row">od 2 kos</th><td>19,90 €</td><td>26,90 €</td><td>17,00 €</td><td>+5,90 €</td><td>+8,00 €</td></tr>
-                    <tr><th scope="row">od 5 kos</th><td>16,90 €</td><td>22,90 €</td><td>14,90 €</td><td>+4,90 €</td><td>+7,00 €</td></tr>
-                    <tr><th scope="row">od 10 kos</th><td>14,90 €</td><td>20,90 €</td><td>12,90 €</td><td>+4,50 €</td><td>+6,50 €</td></tr>
-                    <tr><th scope="row">od 25 kos</th><td>12,90 €</td><td>17,90 €</td><td>10,90 €</td><td>+3,50 €</td><td>+6,50 €</td></tr>
-                    <tr><th scope="row">od 50 kos</th><td>10,90 €</td><td>16,90 €</td><td>7,90 €</td><td>+3,00 €</td><td>+6,50 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Dodatne storitve</caption>
-                    <thead>
-                    <tr><th scope="col">Dodatna storitev</th><th scope="col">Cena</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">dodatno besedilo</th><td>+3,00 €</td></tr>
-                    <tr><th scope="row">Ženska majica</th><td>+4,00 €</td></tr>
-                    <tr><th scope="row">Polo majica</th><td>+12,90 €</td></tr>
-                    <tr><th scope="row">Stroški priprave (15 min)</th><td>16,90 €</td></tr>
-                    <tr><th scope="row">Fleks/flok 2 barvi</th><td>+30 %</td></tr>
-                    <tr><th scope="row">Fleks/flok 3 barve</th><td>+50 %</td></tr>
-                    <tr><th scope="row">Fleks/flok 4 barve</th><td>+80 %</td></tr>
-                    <tr><th scope="row">Fleks/flok 5 barv</th><td>+100 %</td></tr>
-                    <tr><th scope="row">Fleks/flok 6 barv</th><td>+170 %</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="2"></table>
             </div>
         </div>
 

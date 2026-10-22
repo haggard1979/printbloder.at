@@ -7,6 +7,8 @@
     <meta name="description" content="Schwarz-Weiss Druck von Ihrer Vorlage auf 80 g Standard-Kopierpapier mit Staffelpreisen für A4 und A3 – sofort zum Mitnehmen.">
     <link rel="stylesheet" href="assets/css/site.css">
     <script src="assets/js/layout.js"></script>
+    <script src="data/preise/digitaldruckSW.js" defer></script>
+    <script src="assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -45,54 +47,11 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Schwarz-Weiss Druck</caption>
-                    <thead>
-                    <tr><th scope="col">Menge</th><th scope="col">A4-Druck</th><th scope="col">A3-Druck</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">ab 1 Stk.</th><td>0,50 €</td><td>1,00 €</td></tr>
-                    <tr><th scope="row">ab 2 Stk.</th><td>0,35 €</td><td>0,70 €</td></tr>
-                    <tr><th scope="row">ab 5 Stk.</th><td>0,20 €</td><td>0,40 €</td></tr>
-                    <tr><th scope="row">ab 10 Stk.</th><td>0,15 €</td><td>0,30 €</td></tr>
-                    <tr><th scope="row">ab 25 Stk.</th><td>0,13 €</td><td>0,26 €</td></tr>
-                    <tr><th scope="row">ab 50 Stk.</th><td>0,12 €</td><td>0,24 €</td></tr>
-                    <tr><th scope="row">ab 100 Stk.</th><td>0,11 €</td><td>0,22 €</td></tr>
-                    <tr><th scope="row">ab 500 Stk.</th><td>0,08 €</td><td>0,16 €</td></tr>
-                    <tr><th scope="row">ab 1000 Stk.</th><td>0,06 €</td><td>0,12 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Einzelzusatzleistungen</caption>
-                    <thead>
-                    <tr><th scope="col">Leistung</th><th scope="col">Aufpreis</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">A4 Papier 160 g</th><td>+0,15 €</td></tr>
-                    <tr><th scope="row">A4 Papier 200 g</th><td>+0,25 €</td></tr>
-                    <tr><th scope="row">A4 Papier 250 g</th><td>+0,45 €</td></tr>
-                    <tr><th scope="row">A4 Papier 300 g</th><td>+0,65 €</td></tr>
-                    <tr><th scope="row">A4 Papier 350 g</th><td>+0,75 €</td></tr>
-                    <tr><th scope="row">A4 Etikettenpapier</th><td>+1,50 €</td></tr>
-                    <tr><th scope="row">A4 Overheadfolie</th><td>+0,95 €</td></tr>
-                    <tr><th scope="row">A4 Farbpapier 80 g</th><td>+0,08 €</td></tr>
-                    <tr><th scope="row">A4 Farbpapier 160 g</th><td>+0,25 €</td></tr>
-                    <tr><th scope="row">A4 Marmorkarton 160 g</th><td>+0,90 €</td></tr>
-                    <tr><th scope="row">A4 Visitenkartenpapier</th><td>+4,50 €</td></tr>
-                    <tr><th scope="row">A4 Fotopapier 250 g</th><td>+1,50 €</td></tr>
-                    <tr><th scope="row">A4 PVC Etiketten</th><td>+5,80 €</td></tr>
-                    <tr><th scope="row">A4 Metallic 290 g</th><td>+1,35 €</td></tr>
-                    <tr><th scope="row">A4 Digital Canvas 350 g</th><td>+1,15 €</td></tr>
-                    <tr><th scope="row">A4 Digital Canvas 250 g</th><td>+0,95 €</td></tr>
-                    <tr><th scope="row">A4 Rives Tradition</th><td>+0,95 €</td></tr>
-                    <tr><th scope="row">A4 einseitig Silber 240 g</th><td>+1,25 €</td></tr>
-                    <tr><th scope="row">A4 einseitig Gold 240 g</th><td>+1,25 €</td></tr>
-                    <tr><th scope="row">A3 (sofern verfügbar)</th><td>Preis A4 × 2</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
         </div>
 

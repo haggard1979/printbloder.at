@@ -7,6 +7,8 @@
     <meta name="description" content="Plakati, transparenti in samolepilna folija v 6-barvnem lateks tisku v formatih A2, A1 in A0 – gotovo že v 1 uri.">
     <link rel="stylesheet" href="../assets/css/site.css">
     <script src="../assets/js/layout.js"></script>
+    <script src="../data/preise/plakate.js" defer></script>
+    <script src="../assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -42,74 +44,24 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>DIN A2 (420 × 594 mm)</caption>
-                    <thead>
-                    <tr><th scope="col">Količina</th><th scope="col">Sijajni papir</th><th scope="col">Samolepilna folija</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 kos</th><td>19,90 €</td><td>29,00 €</td></tr>
-                    <tr><th scope="row">od 2 kos</th><td>16,40 €</td><td>26,00 €</td></tr>
-                    <tr><th scope="row">od 5 kos</th><td>12,90 €</td><td>22,00 €</td></tr>
-                    <tr><th scope="row">od 10 kos</th><td>11,90 €</td><td>21,00 €</td></tr>
-                    <tr><th scope="row">od 25 kos</th><td>10,40 €</td><td>20,00 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>DIN A1 (594 × 840 mm)</caption>
-                    <thead>
-                    <tr><th scope="col">Količina</th><th scope="col">Sijajni papir</th><th scope="col">Samolepilna folija</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 kos</th><td>29,90 €</td><td>38,00 €</td></tr>
-                    <tr><th scope="row">od 2 kos</th><td>24,40 €</td><td>34,00 €</td></tr>
-                    <tr><th scope="row">od 5 kos</th><td>20,90 €</td><td>30,00 €</td></tr>
-                    <tr><th scope="row">od 10 kos</th><td>18,40 €</td><td>28,00 €</td></tr>
-                    <tr><th scope="row">od 25 kos</th><td>14,90 €</td><td>24,00 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>DIN A0 (840 × 1189 mm)</caption>
-                    <thead>
-                    <tr><th scope="col">Količina</th><th scope="col">Sijajni papir</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 kos</th><td>49,90 €</td></tr>
-                    <tr><th scope="row">od 2 kos</th><td>39,60 €</td></tr>
-                    <tr><th scope="row">od 5 kos</th><td>34,80 €</td></tr>
-                    <tr><th scope="row">od 10 kos</th><td>34,80 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="2"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Dodatne možnosti</caption>
-                    <thead>
-                    <tr><th scope="col">Storitev</th><th scope="col">Cena</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">Transparent do 2 m²</th><td>59,90 € na m²</td></tr>
-                    <tr><th scope="row">Transparent od 2 m²</th><td>49,90 € na m²</td></tr>
-                    <tr><th scope="row">Obroček za transparent</th><td>0,50 € na kos</td></tr>
-                    <tr><th scope="row">Samolepilna folija do 2 m²</th><td>69,90 € na m²</td></tr>
-                    <tr><th scope="row">Samolepilna folija od 2 m²</th><td>59,90 € na m²</td></tr>
-                    <tr><th scope="row">Magnetna folija do 2 m²</th><td>119,80 € na m²</td></tr>
-                    <tr><th scope="row">Magnetna folija od 2 m²</th><td>99,90 € na m²</td></tr>
-                    <tr><th scope="row">Magnetna folija – razrez</th><td>8 € na kos</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="3"></table>
             </div>
         </div>
 
         <ul class="info-list">
-            <li>Zaradi stroškov priprave se zaračunajo minimalna naročila: samolepilna folija 25 €, transparent 30 €</li>
+            <li>Zaradi stroškov priprave se zaračunajo minimalna naročila: samolepilna folija <span data-price="mindestauftragKlebefolie"></span>, transparent <span data-price="mindestauftragBanner"></span></li>
             <li>Količinski popusti veljajo za večkratno izdelavo istega motiva</li>
             <li>Posamezni formati na zahtevo</li>
         </ul>

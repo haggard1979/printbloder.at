@@ -7,6 +7,8 @@
     <meta name="description" content="Ihr persönliches Mousepad mit Fotoaufdruck – fertig ab 1 Stunde, ab 3 Stück mit Staffelpreis.">
     <link rel="stylesheet" href="assets/css/site.css">
     <script src="assets/js/layout.js"></script>
+    <script src="data/preise/geschenkeMousepad.js" defer></script>
+    <script src="assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -44,29 +46,11 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Mousepad – Preis pro Stück</caption>
-                    <thead>
-                    <tr><th scope="col">Menge</th><th scope="col">Preis</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 Stk.</th><td>19,90 €</td></tr>
-                    <tr><th scope="row">ab 3 Stk.</th><td>12,90 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Zusatzleistungen</caption>
-                    <thead>
-                    <tr><th scope="col">Leistung</th><th scope="col">Preis</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">Textaufdruck zu Foto</th><td>+3,00 €</td></tr>
-                    <tr><th scope="row">Satzkosten (15min)</th><td>16,90 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
         </div>
 

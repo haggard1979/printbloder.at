@@ -7,6 +7,8 @@
     <meta name="description" content="Плакати, банери та самоклеюча плівка в 6-кольоровому латексному друці у форматах A2, A1 і A0 – готово від 1 години.">
     <link rel="stylesheet" href="../assets/css/site.css">
     <script src="../assets/js/layout.js"></script>
+    <script src="../data/preise/plakate.js" defer></script>
+    <script src="../assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -42,74 +44,24 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>DIN A2 (420 × 594 мм)</caption>
-                    <thead>
-                    <tr><th scope="col">Кількість</th><th scope="col">Глянцевий папір</th><th scope="col">Самоклеюча плівка</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 шт.</th><td>19,90 €</td><td>29,00 €</td></tr>
-                    <tr><th scope="row">від 2 шт.</th><td>16,40 €</td><td>26,00 €</td></tr>
-                    <tr><th scope="row">від 5 шт.</th><td>12,90 €</td><td>22,00 €</td></tr>
-                    <tr><th scope="row">від 10 шт.</th><td>11,90 €</td><td>21,00 €</td></tr>
-                    <tr><th scope="row">від 25 шт.</th><td>10,40 €</td><td>20,00 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>DIN A1 (594 × 840 мм)</caption>
-                    <thead>
-                    <tr><th scope="col">Кількість</th><th scope="col">Глянцевий папір</th><th scope="col">Самоклеюча плівка</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 шт.</th><td>29,90 €</td><td>38,00 €</td></tr>
-                    <tr><th scope="row">від 2 шт.</th><td>24,40 €</td><td>34,00 €</td></tr>
-                    <tr><th scope="row">від 5 шт.</th><td>20,90 €</td><td>30,00 €</td></tr>
-                    <tr><th scope="row">від 10 шт.</th><td>18,40 €</td><td>28,00 €</td></tr>
-                    <tr><th scope="row">від 25 шт.</th><td>14,90 €</td><td>24,00 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>DIN A0 (840 × 1189 мм)</caption>
-                    <thead>
-                    <tr><th scope="col">Кількість</th><th scope="col">Глянцевий папір</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 шт.</th><td>49,90 €</td></tr>
-                    <tr><th scope="row">від 2 шт.</th><td>39,60 €</td></tr>
-                    <tr><th scope="row">від 5 шт.</th><td>34,80 €</td></tr>
-                    <tr><th scope="row">від 10 шт.</th><td>34,80 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="2"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Інші можливості</caption>
-                    <thead>
-                    <tr><th scope="col">Послуга</th><th scope="col">Ціна</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">Банер до 2 м²</th><td>59,90 € за м²</td></tr>
-                    <tr><th scope="row">Банер від 2 м²</th><td>49,90 € за м²</td></tr>
-                    <tr><th scope="row">Люверс для банера</th><td>0,50 € за шт.</td></tr>
-                    <tr><th scope="row">Самоклеюча плівка до 2 м²</th><td>69,90 € за м²</td></tr>
-                    <tr><th scope="row">Самоклеюча плівка від 2 м²</th><td>59,90 € за м²</td></tr>
-                    <tr><th scope="row">Магнітна плівка до 2 м²</th><td>119,80 € за м²</td></tr>
-                    <tr><th scope="row">Магнітна плівка від 2 м²</th><td>99,90 € за м²</td></tr>
-                    <tr><th scope="row">Магнітна плівка, нарізка</th><td>8 € за шт.</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="3"></table>
             </div>
         </div>
 
         <ul class="info-list">
-            <li>Через витрати на налаштування діє мінімальне замовлення: самоклеюча плівка 25 €, банер 30 €</li>
+            <li>Через витрати на налаштування діє мінімальне замовлення: самоклеюча плівка <span data-price="mindestauftragKlebefolie"></span>, банер <span data-price="mindestauftragBanner"></span></li>
             <li>Знижки за кількість діють на багаторазове виготовлення одного й того самого зображення</li>
             <li>Індивідуальні формати – за запитом</li>
         </ul>

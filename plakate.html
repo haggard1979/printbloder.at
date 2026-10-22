@@ -7,6 +7,8 @@
     <meta name="description" content="Plakate, Banner und Klebefolie im 6-Farben Latex-Druck in den Formaten A2, A1 und A0 – fertig ab 1 Stunde.">
     <link rel="stylesheet" href="assets/css/site.css">
     <script src="assets/js/layout.js"></script>
+    <script src="data/preise/plakate.js" defer></script>
+    <script src="assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -42,74 +44,24 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>DIN A2 (420 × 594 mm)</caption>
-                    <thead>
-                    <tr><th scope="col">Menge</th><th scope="col">Hochglanzpapier</th><th scope="col">Klebefolie</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 Stk.</th><td>19,90 €</td><td>29,00 €</td></tr>
-                    <tr><th scope="row">ab 2 Stk.</th><td>16,40 €</td><td>26,00 €</td></tr>
-                    <tr><th scope="row">ab 5 Stk.</th><td>12,90 €</td><td>22,00 €</td></tr>
-                    <tr><th scope="row">ab 10 Stk.</th><td>11,90 €</td><td>21,00 €</td></tr>
-                    <tr><th scope="row">ab 25 Stk.</th><td>10,40 €</td><td>20,00 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>DIN A1 (594 × 840 mm)</caption>
-                    <thead>
-                    <tr><th scope="col">Menge</th><th scope="col">Hochglanzpapier</th><th scope="col">Klebefolie</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 Stk.</th><td>29,90 €</td><td>38,00 €</td></tr>
-                    <tr><th scope="row">ab 2 Stk.</th><td>24,40 €</td><td>34,00 €</td></tr>
-                    <tr><th scope="row">ab 5 Stk.</th><td>20,90 €</td><td>30,00 €</td></tr>
-                    <tr><th scope="row">ab 10 Stk.</th><td>18,40 €</td><td>28,00 €</td></tr>
-                    <tr><th scope="row">ab 25 Stk.</th><td>14,90 €</td><td>24,00 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>DIN A0 (840 × 1189 mm)</caption>
-                    <thead>
-                    <tr><th scope="col">Menge</th><th scope="col">Hochglanzpapier</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 Stk.</th><td>49,90 €</td></tr>
-                    <tr><th scope="row">ab 2 Stk.</th><td>39,60 €</td></tr>
-                    <tr><th scope="row">ab 5 Stk.</th><td>34,80 €</td></tr>
-                    <tr><th scope="row">ab 10 Stk.</th><td>34,80 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="2"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Weitere Möglichkeiten</caption>
-                    <thead>
-                    <tr><th scope="col">Leistung</th><th scope="col">Preis</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">Banner bis 2 qm</th><td>59,90 € pro qm</td></tr>
-                    <tr><th scope="row">Banner ab 2 qm</th><td>49,90 € pro qm</td></tr>
-                    <tr><th scope="row">Öse für Banner</th><td>0,50 € pro Stk.</td></tr>
-                    <tr><th scope="row">Klebefolie bis 2 qm</th><td>69,90 € pro qm</td></tr>
-                    <tr><th scope="row">Klebefolie ab 2 qm</th><td>59,90 € pro qm</td></tr>
-                    <tr><th scope="row">Magnetfolie bis 2 qm</th><td>119,80 € pro qm</td></tr>
-                    <tr><th scope="row">Magnetfolie ab 2 qm</th><td>99,90 € pro qm</td></tr>
-                    <tr><th scope="row">Magnetfolie Zuschnitt</th><td>8 € pro Stk.</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="3"></table>
             </div>
         </div>
 
         <ul class="info-list">
-            <li>Aufgrund von Setup-Kosten werden Mindestaufträge verrechnet: Klebefolie 25 €, Banner 30 €</li>
+            <li>Aufgrund von Setup-Kosten werden Mindestaufträge verrechnet: Klebefolie <span data-price="mindestauftragKlebefolie"></span>, Banner <span data-price="mindestauftragBanner"></span></li>
             <li>Mengenrabatte beziehen sich auf mehrfache Anfertigung desselben Motivs</li>
             <li>Individuelle Formate auf Anfrage</li>
         </ul>

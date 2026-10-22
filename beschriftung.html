@@ -7,6 +7,8 @@
     <meta name="description" content="Individuelle Beschriftung mit Hochleistungsfolie für Auto, Auslagen und mehr – mit Preisen für Klebebuchstaben, Symbole und Zusatzleistungen.">
     <link rel="stylesheet" href="assets/css/site.css">
     <script src="assets/js/layout.js"></script>
+    <script src="data/preise/beschriftung.js" defer></script>
+    <script src="assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -41,61 +43,20 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Klebebuchstaben</caption>
-                    <thead>
-                    <tr><th scope="col">Buchstabenhöhe</th><th scope="col">Preis pro Buchstabe</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">bis 50 mm</th><td>0,51 €</td></tr>
-                    <tr><th scope="row">bis 75 mm</th><td>0,70 €</td></tr>
-                    <tr><th scope="row">bis 100 mm</th><td>0,95 €</td></tr>
-                    <tr><th scope="row">bis 150 mm</th><td>1,40 €</td></tr>
-                    <tr><th scope="row">bis 250 mm</th><td>2,18 €</td></tr>
-                    <tr><th scope="row">bis 350 mm</th><td>3,20 €</td></tr>
-                    <tr><th scope="row">bis 550 mm</th><td>3,50 €</td></tr>
-                    <tr><th scope="row">bis 650 mm</th><td>4,30 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Symbole, Logos bei Folienbreite 57 cm</caption>
-                    <thead>
-                    <tr><th scope="col">Lauflänge</th><th scope="col">Preis</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">10 cm</th><td>20 €</td></tr>
-                    <tr><th scope="row">20 cm</th><td>24 €</td></tr>
-                    <tr><th scope="row">30 cm</th><td>29 €</td></tr>
-                    <tr><th scope="row">40 cm</th><td>34 €</td></tr>
-                    <tr><th scope="row">50 cm</th><td>39 €</td></tr>
-                    <tr><th scope="row">60 cm</th><td>44 €</td></tr>
-                    <tr><th scope="row">70 cm</th><td>49 €</td></tr>
-                    <tr><th scope="row">80 cm</th><td>54 €</td></tr>
-                    <tr><th scope="row">90 cm</th><td>59 €</td></tr>
-                    <tr><th scope="row">100 cm</th><td>64 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Zusatzleistungen</caption>
-                    <thead>
-                    <tr><th scope="col">Leistung</th><th scope="col">Preis</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">Vektorisierung von Logos (15 min)</th><td>16,90 €</td></tr>
-                    <tr><th scope="row">Montagestunde</th><td>59,00 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="2"></table>
             </div>
         </div>
 
         <ul class="info-list">
-            <li>Aufgrund von Setup-Kosten beträgt der Mindestauftrag 15 €</li>
+            <li>Aufgrund von Setup-Kosten beträgt der Mindestauftrag <span data-price="mindestauftrag"></span></li>
             <li>Montage auf Anfrage und nach Verfügbarkeit</li>
             <li>Weitere Lauflängen auf Anfrage</li>
         </ul>

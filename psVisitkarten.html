@@ -7,6 +7,8 @@
     <meta name="description" content="Standard-Visitenkarten mit über 100 Vorlagen, Schwarzweißdruck und Laminierung – fertig ab 25 Minuten in der Shopping City Seiersberg.">
     <link rel="stylesheet" href="assets/css/site.css">
     <script src="assets/js/layout.js"></script>
+    <script src="data/preise/psVisitkarten.js" defer></script>
+    <script src="assets/js/prices.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -41,34 +43,11 @@
 
         <div class="price-grid">
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Schwarzweißdruck</caption>
-                    <thead>
-                    <tr><th scope="col">Menge</th><th scope="col">einseitig</th><th scope="col">beidseitig</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">ab 30 Stk.</th><td>16,90 €</td><td>27,90 €</td></tr>
-                    <tr><th scope="row">ab 50 Stk.</th><td>19,90 €</td><td>34,90 €</td></tr>
-                    <tr><th scope="row">ab 100 Stk.</th><td>29,90 €</td><td>48,50 €</td></tr>
-                    <tr><th scope="row">ab 200 Stk.</th><td>39,80 €</td><td>66,50 €</td></tr>
-                    <tr><th scope="row">ab 500 Stk.</th><td>63,50 €</td><td>99,25 €</td></tr>
-                    <tr><th scope="row">ab 1000 Stk.</th><td>89,00 €</td><td>168,50 €</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="0"></table>
             </div>
 
             <div class="price-box">
-                <table class="price-table">
-                    <caption>Zusatzleistungen</caption>
-                    <thead>
-                    <tr><th scope="col">Menge</th><th scope="col">Runden</th><th scope="col">Laminieren</th><th scope="col">Laminieren in Einzeltaschen</th></tr>
-                    </thead>
-                    <tbody>
-                    <tr><th scope="row">1 Stk.</th><td>–</td><td>–</td><td>0,30 €</td></tr>
-                    <tr><th scope="row">100 Stk.</th><td>3,60 €</td><td>19,90 €</td><td>–</td></tr>
-                    <tr><th scope="row">weitere 100 Stk.</th><td>–</td><td>9,90 €</td><td>–</td></tr>
-                    </tbody>
-                </table>
+                <table class="price-table" data-table="1"></table>
             </div>
         </div>
 
