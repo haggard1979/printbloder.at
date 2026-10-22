@@ -32,6 +32,42 @@
 
     window.SHOP = SHOP;
 
+    /*
+     * Hell/Dunkel: ohne gespeicherte Wahl gilt die Geräteeinstellung.
+     * Die Wahl wird sofort (vor dem Zeichnen der Seite) auf <html> gesetzt.
+     */
+    var THEME_KEY = 'printbloder-theme';
+    var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function storedTheme() {
+        try {
+            return localStorage.getItem(THEME_KEY);
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function storeTheme(theme) {
+        try {
+            localStorage.setItem(THEME_KEY, theme);
+        } catch (e) {
+            // z. B. privater Modus - Wahl gilt dann nur für diese Seite
+        }
+    }
+
+    function isDark() {
+        var theme = document.documentElement.getAttribute('data-theme');
+        return theme ? theme === 'dark' : darkQuery.matches;
+    }
+
+    var initialTheme = storedTheme();
+    if (initialTheme === 'dark' || initialTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', initialTheme);
+    }
+
+    var ICON_MOON = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>';
+    var ICON_SUN = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>';
+
     function currentPage() {
         var file = location.pathname.split('/').pop() || 'home.html';
         return file.replace(/\.html$/, '');
@@ -72,6 +108,7 @@
                 '    <nav id="site-nav" class="nav" aria-label="Hauptnavigation">' +
                 '      <ul>' + links + '</ul>' +
                 '    </nav>' +
+                '    <button class="theme-toggle" type="button"></button>' +
                 '  </div>' +
                 '</header>';
 
@@ -82,6 +119,22 @@
                 toggle.setAttribute('aria-expanded', String(!open));
                 nav.classList.toggle('is-open', !open);
             });
+
+            var themeToggle = this.querySelector('.theme-toggle');
+            function updateThemeToggle() {
+                var dark = isDark();
+                themeToggle.innerHTML = dark ? ICON_SUN : ICON_MOON;
+                themeToggle.setAttribute('aria-label', dark ? 'Helle Darstellung' : 'Dunkle Darstellung');
+                themeToggle.title = themeToggle.getAttribute('aria-label');
+            }
+            themeToggle.addEventListener('click', function () {
+                var theme = isDark() ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+                storeTheme(theme);
+                updateThemeToggle();
+            });
+            darkQuery.addEventListener('change', updateThemeToggle);
+            updateThemeToggle();
         }
     }
 

@@ -14,8 +14,59 @@
     --line: #e4e2de;
     --radius: 12px;
     --shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 4px 16px rgba(0, 0, 0, .06);
+    --shadow-hover: 0 2px 4px rgba(0, 0, 0, .06), 0 12px 28px rgba(0, 0, 0, .1);
+    --link: var(--brand);
+    --link-hover: var(--brand-dark);
+    --tint-ink: var(--brand-dark);
+    --media-bg: #eef5fc;
+    --chrome: #1f1f23;
+    --chrome-text: #c9c9cf;
+    color-scheme: light;
     --wrap: 1120px;
     --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/*
+ * Darkmode: folgt der Geräteeinstellung, außer der Besucher hat über den
+ * Umschalter (data-theme auf <html>, siehe layout.js) etwas anderes gewählt.
+ * Beide Blöcke müssen gleich bleiben.
+ */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --brand-tint: #1a2740;
+        --ink: #e6e7eb;
+        --ink-muted: #a2a6b1;
+        --bg: #111317;
+        --surface: #1a1d23;
+        --line: #2c3039;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 4px 16px rgba(0, 0, 0, .3);
+        --shadow-hover: 0 2px 4px rgba(0, 0, 0, .4), 0 12px 28px rgba(0, 0, 0, .5);
+        --link: #8db4ff;
+        --link-hover: #b5ceff;
+        --tint-ink: #b9cdf5;
+        --media-bg: #eef5fc;
+        --chrome: #0a0b0e;
+        --chrome-text: #a2a6b1;
+        color-scheme: dark;
+    }
+}
+
+:root[data-theme="dark"] {
+    --brand-tint: #1a2740;
+    --ink: #e6e7eb;
+    --ink-muted: #a2a6b1;
+    --bg: #111317;
+    --surface: #1a1d23;
+    --line: #2c3039;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 4px 16px rgba(0, 0, 0, .3);
+    --shadow-hover: 0 2px 4px rgba(0, 0, 0, .4), 0 12px 28px rgba(0, 0, 0, .5);
+    --link: #8db4ff;
+    --link-hover: #b5ceff;
+    --tint-ink: #b9cdf5;
+    --media-bg: #eef5fc;
+    --chrome: #0a0b0e;
+    --chrome-text: #a2a6b1;
+    color-scheme: dark;
 }
 
 *, *::before, *::after {
@@ -42,11 +93,11 @@ img {
 }
 
 a {
-    color: var(--brand);
+    color: var(--link);
 }
 
 a:hover {
-    color: var(--brand-dark);
+    color: var(--link-hover);
 }
 
 h1, h2, h3 {
@@ -112,8 +163,8 @@ site-header, site-footer {
 }
 
 .topbar {
-    background: var(--ink);
-    color: #d8d8dc;
+    background: var(--chrome);
+    color: var(--chrome-text);
     font-size: .8125rem;
 }
 
@@ -161,9 +212,13 @@ site-header, site-footer {
     width: 195px;
 }
 
+.nav {
+    margin-left: auto;
+}
+
 .nav ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 2px;
     margin: 0;
     padding: 0;
@@ -172,7 +227,7 @@ site-header, site-footer {
 
 .nav a {
     display: block;
-    padding: 8px 12px;
+    padding: 8px 10px;
     border-radius: 6px;
     color: #fff;
     font-weight: 500;
@@ -182,6 +237,25 @@ site-header, site-footer {
 .nav a:hover, .nav a[aria-current="page"] {
     background: rgba(255, 255, 255, .16);
     color: #fff;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, .16);
 }
 
 .nav-toggle {
@@ -231,9 +305,22 @@ site-header, site-footer {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
     .header__inner {
         flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .nav {
+        order: 10;
+    }
+
+    .nav-toggle {
+        order: 5;
     }
 
     .nav-toggle {
@@ -378,7 +465,7 @@ main {
 }
 
 .btn--light:hover {
-    background: var(--brand-tint);
+    background: #e7eefa;
     color: var(--brand-dark);
 }
 
@@ -393,13 +480,14 @@ main {
 }
 
 .btn--outline {
-    border-color: var(--brand);
-    color: var(--brand);
+    border-color: var(--link);
+    color: var(--link);
     background: transparent;
 }
 
 .btn--outline:hover {
     background: var(--brand-tint);
+    color: var(--link-hover);
 }
 
 /* Kategorie-Karten */
@@ -425,13 +513,13 @@ main {
 
 .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .06), 0 12px 28px rgba(0, 0, 0, .1);
+    box-shadow: var(--shadow-hover);
     color: var(--ink);
 }
 
 .card__media {
     aspect-ratio: 261 / 200;
-    background: #eef5fc;
+    background: var(--media-bg);
 }
 
 .card__media img {
@@ -454,7 +542,7 @@ main {
     display: inline-block;
     margin-top: 10px;
     font-weight: 600;
-    color: var(--brand);
+    color: var(--link);
 }
 
 /* Standort-Block */
@@ -507,7 +595,7 @@ main {
     padding: 6px 14px;
     border-radius: 999px;
     background: var(--brand-tint);
-    color: var(--brand-dark);
+    color: var(--tint-ink);
     font-weight: 600;
     font-size: .9375rem;
 }
@@ -593,7 +681,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 170px;
-    background: #eef5fc;
+    background: var(--media-bg);
 }
 
 .product__media img {
@@ -807,7 +895,7 @@ main {
 
 .sub-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .06), 0 12px 28px rgba(0, 0, 0, .1);
+    box-shadow: var(--shadow-hover);
     color: var(--ink);
 }
 
@@ -835,8 +923,8 @@ main {
 /* ---------- Fußzeile ---------- */
 
 .footer {
-    background: var(--ink);
-    color: #c9c9cf;
+    background: var(--chrome);
+    color: var(--chrome-text);
     font-size: .9375rem;
 }
 
