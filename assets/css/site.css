@@ -364,7 +364,8 @@ site-header, site-footer {
 
 /* ---------- Hauptbereich ---------- */
 
-main {
+main,
+main.wrap {
     display: block;
     margin-bottom: 64px;
 }
@@ -761,6 +762,7 @@ main {
 
 .note {
     margin-top: 32px;
+    margin-bottom: 24px;
     font-size: .875rem;
     color: var(--ink-muted);
 }
@@ -856,7 +858,7 @@ main {
 /* Hinweise (Mindestauftrag, Mengenrabatt, ...) */
 
 .info-list {
-    margin: 24px 0 0;
+    margin: 24px 0;
     padding: 16px 20px 16px 40px;
     border-left: 4px solid var(--brand);
     border-radius: 0 var(--radius) var(--radius) 0;

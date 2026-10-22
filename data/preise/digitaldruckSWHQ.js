@@ -48,3 +48,8 @@ window.PRICE_TABLES = [
         ]
     }
 ];
+
+window.PRICE_VALUES = {
+    // Mindestverrechnung erstes Blatt bei Daten per E-Mail, USB-Stick usw. (Hinweis unter den Tabellen)
+    mindestverrechnungDaten: 2
+};
