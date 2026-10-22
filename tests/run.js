@@ -7,7 +7,8 @@
  *
  * Abschnitte:
  *   1. Daten        data/*.js und data/preise/*.js: Aufbau, Übersetzungen, Bilder
- *   2. HTML         Pflichtangaben, Links/Bilder vorhanden, Sprachversionen, Platzhalter
+ *   2. HTML         Pflichtangaben, Links/Bilder vorhanden, Sprachversionen, Platzhalter,
+ *                   Suchmaschinen-Angaben (canonical, hreflang, sitemap.xml) aktuell
  *   3. Browser      keine Fehler, kein seitliches Scrollen, Tabellen nicht abgeschnitten,
  *                   Kopfzeile einzeilig, Darkmode, Sprachumschalter, Menü
  *   4. Sprachen     en/sl/uk haben gleiche Tabellen, Links und Preise wie Deutsch
@@ -20,6 +21,7 @@ const path = require('path');
 const vm = require('vm');
 const {chromium} = require('playwright');
 const server = require('./static-server');
+const seo = require('../tools/seo');
 
 // Die Website selbst liegt in site/
 const ROOT = path.resolve(__dirname, '..', 'site');
@@ -158,6 +160,11 @@ function checkData() {
 
 function checkHtml() {
     const S = 'HTML';
+    const stale = seo.outdated();
+    if (stale.length) {
+        fail(S, `Suchmaschinen-Angaben veraltet – "npm run seo" ausführen: ${stale.slice(0, 5).join(', ')}`
+            + (stale.length > 5 ? ` und ${stale.length - 5} weitere` : ''));
+    }
     for (const dir of LANGS.filter(l => l !== 'de')) {
         for (const f of fs.readdirSync(path.join(ROOT, dir)).filter(f => f.endsWith('.html'))) {
             if (!PAGES.includes(f.slice(0, -5))) {
@@ -247,7 +254,7 @@ async function inspect(page) {
     return page.evaluate(() => {
         const main = document.querySelector('main');
         const count = sel => main.querySelectorAll(sel).length;
-        const navLinks = [...document.querySelectorAll('.nav a')];
+        const navLinks = [...document.querySelectorAll('.nav a')].filter(a => a.offsetParent !== null);
         const header = document.querySelector('.header');
         return {
             text: main.innerText,
@@ -344,6 +351,10 @@ async function checkBrowser(browser, base) {
     await p.goto(base + 'home.html');
     await p.click('.nav-toggle');
     if (!(await p.isVisible('.nav a'))) fail(S, 'Handy-Menü öffnet sich nicht');
+    if (!(await p.isVisible('.nav__extra a[href="kontakt.html"]'))) fail(S, 'Kontakt fehlt im Handy-Menü');
+    await p.setViewportSize({width: 1440, height: 900});
+    await p.goto(base + 'home.html');
+    if (await p.isVisible('.nav__extra a')) fail(S, 'Kontakt-Link erscheint am Desktop im Menü');
     await p.close();
     return results;
 }

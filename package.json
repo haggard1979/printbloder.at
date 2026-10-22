@@ -4,7 +4,8 @@
   "description": "Prüfungen für die statische Website printbloder.at (nicht Teil der Website selbst)",
   "scripts": {
     "test": "node tests/run.js",
-    "test:update": "node tests/run.js --update-snapshots"
+    "test:update": "node tests/run.js --update-snapshots",
+    "seo": "node tools/seo.js"
   },
   "devDependencies": {
     "playwright": "1.56.1"

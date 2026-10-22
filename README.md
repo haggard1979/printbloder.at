@@ -47,6 +47,10 @@ Alle Preise in `site/data/` gelten automatisch für alle vier Sprachen – jeder
 Texte von Kopf-/Fußzeile und Produktkarten: `site/assets/js/layout.js` bzw.
 `site/assets/js/products.js`.
 
+**Neue oder umbenannte Seite** – danach `npm run seo` ausführen: Das trägt in jeder Seite die
+Verweise auf die Sprachversionen ein (für Suchmaschinen, Adresse `https://www.printbloder.at/`)
+und aktualisiert `site/sitemap.xml`. `npm test` meldet, wenn das vergessen wurde.
+
 **Neue Seite** – eine ähnliche Seite kopieren und anpassen:
 `site/stempel.html` (Kategorie), `site/stempelPrinty.html` (Produktkarten), `site/digitaldruckFarb.html` (Preistabellen).
 
