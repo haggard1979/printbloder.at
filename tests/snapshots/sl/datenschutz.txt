@@ -1,0 +1,49 @@
+Domov › Izjava o zasebnosti
+Izjava o zasebnosti
+
+Varstvo vaših osebnih podatkov nam je pomembno. Tu izveste, kateri podatki se obdelujejo ob obisku tega spletnega mesta in ob stiku z nami. Podlaga sta Splošna uredba o varstvu podatkov (GDPR) in avstrijski Zakon o varstvu podatkov (Datenschutzgesetz, DSG).
+
+Upravljavec
+Printshop Bloder
+SCS Seiersberg
+8054 Graz
+Avstrija
+Telefon: +43 316 24 35 77
+E-pošta: shop@printbloder.at
+Obisk spletnega mesta in gostovanje
+
+To spletno mesto gostuje pri GitHub Pages (GitHub Inc., hčerinska družba podjetja Microsoft, ZDA). Ob obisku strani ponudnik gostovanja obdela tehnično potrebne podatke o povezavi, zlasti vaš naslov IP, datum in uro, obiskano stran ter podatke o vašem brskalniku, da lahko stran dostavi in prepreči zlorabe. Teh podatkov sami ne analiziramo.
+
+Pravna podlaga: zakoniti interes za varno in učinkovito delovanje spletnega mesta (člen 6(1)(f) GDPR).
+Pri tem lahko pride do prenosa podatkov v ZDA. Ponudnik se pri tem opira na okvir EU-ZDA za varstvo podatkov (EU-U.S. Data Privacy Framework) oziroma na standardne pogodbene klavzule Evropske komisije.
+Brez piškotkov, brez analitike, brez oglaševanja
+
+Ne uporabljamo piškotkov, orodij za analitiko ali sledenje in oglaševanja. Pisave in knjižnice se ne nalagajo s tujih strežnikov.
+
+Ko preklopite med svetlim in temnim prikazom, brskalnik to izbiro shrani lokalno na vaši napravi (Local Storage). Izbira se ne prenaša nam ali tretjim osebam in služi le temu, da ob naslednjem obisku ohranimo vašo nastavitev. Izbrišete jo lahko kadar koli v nastavitvah brskalnika.
+
+Zemljevid (Google Zemljevidi)
+
+Na strani »Dostop in kontakt« lahko prikažete zemljevid. Zemljevid se iz Google Zemljevidov naloži šele po vašem kliku na »Prikaži zemljevid« (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irska). Pri tem Google prejme podatke, kot so vaš naslov IP, podatki o vašem brskalniku in obiskana stran; Google lahko te podatke prenese tudi v ZDA.
+
+Pravna podlaga: vaša privolitev s klikom (člen 6(1)(a) GDPR). Če ne kliknete, se Googlu ne prenesejo nobeni podatki. Privolitev lahko prekličete tako, da stran znova naložite.
+Več informacij: Googlova izjava o zasebnosti
+
+Povezavi »Načrtujte pot v Google Zemljevidih« in »Odpri v OpenStreetMap« vodita na spletna mesta tretjih oseb. S klikom zapustite naše spletno mesto; tam veljajo obvestila o zasebnosti posameznega ponudnika.
+
+Stik in povpraševanja
+
+Če nas kontaktirate po e-pošti ali telefonu ali prek gumbov »Povpraševanje« sestavite e-poštno sporočilo, obdelamo vaše podatke (na primer ime, kontaktne podatke, vsebino povpraševanja in priložene slikovne datoteke) za obravnavo vašega povpraševanja in za izvedbo naročil. Gumbi odprejo samo vaš e-poštni program; spletno mesto samo pri tem ne prenese ničesar.
+
+Pravna podlaga: izvajanje pogodbe in predpogodbeni ukrepi (člen 6(1)(b) GDPR), sicer naš zakoniti interes za odgovarjanje na povpraševanja (člen 6(1)(f) GDPR).
+Rok hrambe: toliko časa, kolikor je potrebno za obravnavo; potem le, če obstajajo zakonski roki hrambe (na primer sedem let po § 132 avstrijskega zakona o davčnem postopku (Bundesabgabenordnung, BAO)).
+Podatke posredujemo tretjim osebam le, če je to potrebno za izvedbo naročila ali zakonsko predpisano.
+Vaše pravice
+
+Imate pravico do dostopa, popravka, izbrisa, omejitve obdelave, prenosljivosti podatkov in ugovora. Dano privolitev lahko kadar koli prekličete z učinkom za naprej. V ta namen se obrnite na shop@printbloder.at.
+
+Če menite, da obdelava vaših podatkov krši zakonodajo o varstvu podatkov, se lahko pritožite pri nadzornem organu: Avstrijski organ za varstvo podatkov (Datenschutzbehörde), Barichgasse 40–42, 1030 Dunaj, www.dsb.gv.at, e-pošta: dsb@dsb.gv.at.
+
+Spremembe
+
+To izjavo o zasebnosti prilagodimo, če se spremeni spletno mesto ali pravni predpisi. Stanje: oktober 2026.

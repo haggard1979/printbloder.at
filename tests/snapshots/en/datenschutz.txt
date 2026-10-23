@@ -1,0 +1,49 @@
+Home › Privacy policy
+Privacy policy
+
+The protection of your personal data is important to us. Here you can find out which data is processed when you visit this website and when you contact us. The basis is the General Data Protection Regulation (GDPR) and the Austrian Data Protection Act (Datenschutzgesetz, DSG).
+
+Controller
+Printshop Bloder
+SCS Seiersberg
+8054 Graz
+Austria
+Telephone: +43 316 24 35 77
+Email: shop@printbloder.at
+Visiting the website and hosting
+
+This website is hosted by GitHub Pages (GitHub Inc., a subsidiary of Microsoft, USA). When a page is accessed, the hosting provider processes technically necessary connection data, in particular your IP address, the date and time, the page requested and information about your browser, in order to deliver the page and to prevent misuse. We ourselves do not carry out any analysis of this data.
+
+Legal basis: legitimate interest in the secure and efficient operation of the website (Art. 6(1)(f) GDPR).
+This may involve a transfer to the USA. The provider relies for this on the EU-U.S. Data Privacy Framework or on the standard contractual clauses of the European Commission.
+No cookies, no analytics, no advertising
+
+We do not use cookies, analytics or tracking tools, or advertising. Fonts and libraries are not loaded from external servers.
+
+If you switch between light and dark display, your browser stores this choice locally on your device (Local Storage). The choice is not transmitted to us or to third parties and serves only to keep your setting for your next visit. You can delete it at any time in your browser settings.
+
+Map (Google Maps)
+
+On the “Directions & contact” page you can display a map. The map is loaded from Google Maps only after you click “Show map” (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland). In doing so, Google receives data such as your IP address, information about your browser and the page accessed; Google may also transfer this data to the USA.
+
+Legal basis: your consent given by clicking (Art. 6(1)(a) GDPR). If you do not click, no data is transmitted to Google. You can withdraw your consent by reloading the page.
+Further information: Google’s privacy policy
+
+The links “Plan your route in Google Maps” and “Open in OpenStreetMap” lead to third-party websites. By clicking, you leave our website; the privacy information of the respective provider applies there.
+
+Contacting us and enquiries
+
+If you contact us by email or telephone, or write an email using the “Enquire now” buttons, we process the information you provide (for example name, contact details, content of the enquiry and image files sent with it) in order to handle your enquiry and to process orders. The buttons only open your email program; the website itself transmits nothing in the process.
+
+Legal basis: performance of a contract and pre-contractual measures (Art. 6(1)(b) GDPR), otherwise our legitimate interest in answering enquiries (Art. 6(1)(f) GDPR).
+Storage period: for as long as is necessary for processing; thereafter only where statutory retention periods apply (for example seven years under Section 132 of the Federal Fiscal Code, Bundesabgabenordnung, BAO).
+Data is passed on to third parties only if this is necessary for processing the order or is required by law.
+Your rights
+
+You have the right of access, rectification, erasure, restriction of processing, data portability and objection. You can withdraw any consent you have given at any time with effect for the future. To do so, please contact shop@printbloder.at.
+
+If you believe that the processing of your data violates data protection law, you can lodge a complaint with the supervisory authority: the Austrian Data Protection Authority (Österreichische Datenschutzbehörde), Barichgasse 40–42, 1030 Vienna, www.dsb.gv.at, Email: dsb@dsb.gv.at.
+
+Changes
+
+We will update this privacy policy if the website or the legal requirements change. Last updated: October 2026.

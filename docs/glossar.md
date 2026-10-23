@@ -65,6 +65,12 @@ Regeln:
 | Rückseite S/W | Back side B&W | Zadnja stran č/b | Зворот Ч/Б | Hátoldal f/f | Retro B/N | Poleđina c/b |
 | Runden (Ecken) | Rounded corners | Zaobljenje vogalov | Заокруглення кутів | Sarokgömbölés | Angoli arrotondati | Zaobljeni kutovi |
 | Satzkosten | set-up costs | stroški priprave | вартість підготовки макета | Előkészítési költség | Costi di preparazione | Troškovi pripreme |
-| Anfahrt, Kontakt & Impressum | Directions, contact & legal notice | Dostop, kontakt in impresum | Як дістатися, контакти та вихідні дані | Megközelítés, kapcsolat és impresszum | Come raggiungerci, contatti e note legali | Kako do nas, kontakt i impressum |
+| Anfahrt & Kontakt | Directions & contact | Dostop in kontakt | Як дістатися та контакти | Megközelítés és kapcsolat | Come raggiungerci e contatti | Kako do nas i kontakt |
+| Impressum | Legal notice | Impresum | Вихідні дані | Impresszum | Note legali | Impressum |
+| Datenschutz (Menü) | Privacy policy | Izjava o zasebnosti | Політика конфіденційності | Adatvédelem | Privacy | Zaštita podataka |
+| Datenschutzerklärung (Seite) | Privacy policy | Izjava o zasebnosti | Політика конфіденційності | Adatvédelmi tájékoztató | Informativa sulla privacy | Izjava o zaštiti podataka |
+| DSGVO | GDPR | Splošna uredba o varstvu podatkov (GDPR) | GDPR (Загальний регламент ЄС про захист даних) | GDPR (általános adatvédelmi rendelet) | GDPR (Regolamento generale sulla protezione dei dati) | GDPR (Opća uredba o zaštiti podataka) |
+| Datenschutzbehörde (Österreich) | Austrian Data Protection Authority | Avstrijski organ za varstvo podatkov (Datenschutzbehörde) | Австрійський орган із захисту даних (Datenschutzbehörde) | Osztrák adatvédelmi hatóság (Datenschutzbehörde) | Autorità austriaca per la protezione dei dati (Datenschutzbehörde) | Austrijsko tijelo za zaštitu podataka (Datenschutzbehörde) |
+| UID-Nummer | VAT ID | ID za DDV | ІПН для ПДВ (UID) | Közösségi adószám (UID) | Partita IVA (UID) | PDV identifikacijski broj (UID) |
 | Karte anzeigen | Show map | Prikaži zemljevid | Показати карту | Térkép megjelenítése | Mostra la mappa | Prikaži kartu |
 | Karte & Route | Map & directions | Zemljevid in pot | Карта й маршрут | Térkép és útvonal | Mappa e percorso | Karta i ruta |

@@ -454,6 +454,12 @@ site-footer {
     border-top: 1px solid rgba(255, 255, 255, .25);
 }
 
+.header.is-compact .nav__extra + .nav__extra {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
 /* ---------- Hauptbereich ---------- */
 
 main,
@@ -670,6 +676,36 @@ main.wrap {
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
+}
+
+.legal {
+    max-width: 760px;
+    padding: 28px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.legal h2 {
+    margin: 28px 0 8px;
+    font-size: 1.25rem;
+}
+
+.legal > :first-child {
+    margin-top: 0;
+}
+
+.legal address {
+    font-style: normal;
+}
+
+.legal ul {
+    margin: 0 0 12px;
+    padding-left: 22px;
+}
+
+.legal li {
+    margin-bottom: 6px;
 }
 
 .map-title {

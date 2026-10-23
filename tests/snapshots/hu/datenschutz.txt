@@ -1,0 +1,49 @@
+Főoldal › Adatvédelmi tájékoztató
+Adatvédelmi tájékoztató
+
+Fontos számunkra személyes adatainak védelme. Itt tájékozódhat arról, hogy a weboldal meglátogatásakor és a kapcsolatfelvételkor milyen adatokat kezelünk. Az alapot a GDPR (általános adatvédelmi rendelet) és az osztrák adatvédelmi törvény (DSG) jelenti.
+
+Adatkezelő
+Printshop Bloder
+SCS Seiersberg
+8054 Graz
+Ausztria
+Telefon: +43 316 24 35 77
+E-mail: shop@printbloder.at
+A weboldal meglátogatása és tárhelyszolgáltatás
+
+Ez a weboldal a GitHub Pages szolgáltatáson fut (GitHub Inc., a Microsoft leányvállalata, USA). Egy oldal megnyitásakor a tárhelyszolgáltató technikailag szükséges kapcsolati adatokat kezel, különösen az Ön IP-címét, a dátumot és az időpontot, a megnyitott oldalt és a böngészőjére vonatkozó adatokat, hogy kiszolgálhassa az oldalt és megelőzhesse a visszaéléseket. Mi magunk nem végzünk értékelést ezekkel az adatokkal.
+
+Jogalap: a weboldal biztonságos és hatékony működtetéséhez fűződő jogos érdek (GDPR 6. cikk (1) bekezdés f) pont).
+Ennek során az adatok az USA-ba is továbbítódhatnak. A szolgáltató ennek érdekében az EU–USA adatvédelmi keretrendszerre (EU-U.S. Data Privacy Framework), illetve az Európai Bizottság általános szerződési feltételeire (standard szerződéses kikötések) támaszkodik.
+Nincsenek sütik, elemzés és reklám
+
+Nem használunk sütiket, elemző vagy nyomkövető eszközöket, és reklámot sem. A betűtípusokat és programkönyvtárakat nem külső szerverekről töltjük be.
+
+Ha a világos és a sötét megjelenítés között vált, a böngészője ezt a választást helyben tárolja az Ön eszközén (Local Storage). A választás nem kerül át hozzánk vagy harmadik felekhez, és kizárólag arra szolgál, hogy a beállítását a következő látogatáskor is megőrizze. Ezt bármikor törölheti a böngésző beállításaiban.
+
+Térkép (Google Térkép)
+
+A „Megközelítés & kapcsolat” oldalon térképet jeleníthet meg. A térképet a Google Térkép csak az Ön kattintása után tölti be, a „Térkép megjelenítése” gombra kattintva (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Írország). Ennek során a Google olyan adatokat kap, mint az Ön IP-címe, a böngészőjére vonatkozó adatok és a megnyitott oldal; a Google ezeket az adatokat az USA-ba is továbbíthatja.
+
+Jogalap: az Ön kattintással megadott hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont). Ha nem kattint, nem kerülnek adatok a Google-hoz. A hozzájárulást az oldal újratöltésével visszavonhatja.
+További információ: A Google adatvédelmi tájékoztatója
+
+Az „Útvonaltervezés a Google Térképen” és a „Megnyitás az OpenStreetMapen” hivatkozások harmadik felek weboldalaira vezetnek. A kattintással elhagyja a weboldalunkat; ott az adott szolgáltató adatvédelmi tájékoztatója érvényes.
+
+Kapcsolatfelvétel és megkeresések
+
+Ha e-mailben vagy telefonon felveszi velünk a kapcsolatot, vagy az „Árajánlatot kérek” gombok segítségével e-mailt ír, kezeljük az Ön megadott adatait (például név, elérhetőségek, a megkeresés tartalma és a mellékelt képfájlok) a megkeresése feldolgozása és a megrendelések lebonyolítása céljából. A gombok csak az Ön e-mail programját nyitják meg; a weboldal maga ennek során semmit nem továbbít.
+
+Jogalap: szerződés teljesítése és szerződéskötést megelőző intézkedések (GDPR 6. cikk (1) bekezdés b) pont), egyébként a megkeresések megválaszolásához fűződő jogos érdekünk (GDPR 6. cikk (1) bekezdés f) pont).
+Tárolási idő: addig, amíg a feldolgozáshoz szükséges; ezt követően csak annyiban, amennyiben törvényi megőrzési kötelezettségek állnak fenn (például hét év a Bundesabgabenordnung (BAO, szövetségi adózási rendtartás) 132. §-a szerint).
+Harmadik félnek csak akkor adjuk át az adatokat, ha ez a megrendelés lebonyolításához szükséges vagy jogszabály előírja.
+Az Ön jogai
+
+Önt megilleti a hozzáférés, a helyesbítés, a törlés, az adatkezelés korlátozása, az adathordozhatóság és a tiltakozás joga. A megadott hozzájárulást bármikor visszavonhatja a jövőre nézve. Ezzel kapcsolatban forduljon a következő címhez: shop@printbloder.at.
+
+Ha úgy véli, hogy személyes adatainak kezelése sérti az adatvédelmi jogszabályokat, panaszt tehet a felügyeleti hatóságnál: Osztrák adatvédelmi hatóság (Datenschutzbehörde), Barichgasse 40–42, 1030 Bécs, www.dsb.gv.at, e-mail: dsb@dsb.gv.at.
+
+Módosítások
+
+Ezt az adatvédelmi tájékoztatót módosítjuk, ha a weboldal vagy a jogszabályi előírások változnak. Állapot: 2026. október.

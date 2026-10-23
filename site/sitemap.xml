@@ -78,6 +78,83 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/beschriftung.html"/>
   </url>
   <url>
+    <loc>https://www.printbloder.at/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/datenschutz.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/en/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/datenschutz.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/sl/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/datenschutz.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/uk/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/datenschutz.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/hu/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/datenschutz.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/it/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/datenschutz.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/hr/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/datenschutz.html"/>
+  </url>
+  <url>
     <loc>https://www.printbloder.at/digitaldruck.html</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/digitaldruck.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/digitaldruck.html"/>
@@ -1077,6 +1154,83 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/home.html"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/home.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/home.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/en/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/sl/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/uk/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/hu/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/it/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://www.printbloder.at/hr/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.printbloder.at/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.printbloder.at/en/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="sl" href="https://www.printbloder.at/sl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.printbloder.at/uk/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.printbloder.at/hu/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.printbloder.at/it/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.printbloder.at/hr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.printbloder.at/impressum.html"/>
   </url>
   <url>
     <loc>https://www.printbloder.at/kontakt.html</loc>

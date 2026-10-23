@@ -1,0 +1,49 @@
+Home › Informativa sulla privacy
+Informativa sulla privacy
+
+La protezione dei Suoi dati personali è importante per noi. Qui trova le informazioni su quali dati vengono trattati durante la visita di questo sito web e in occasione di un contatto. Le basi sono il Regolamento generale sulla protezione dei dati (GDPR) e la legge austriaca sulla protezione dei dati (Datenschutzgesetz, DSG).
+
+Titolare del trattamento
+Printshop Bloder
+SCS Seiersberg
+8054 Graz
+Austria
+Telefono: +43 316 24 35 77
+E-mail: shop@printbloder.at
+Visita del sito web e hosting
+
+Questo sito web è ospitato su GitHub Pages (GitHub Inc., una società controllata da Microsoft, USA). Quando viene richiamata una pagina, il fornitore di hosting tratta i dati di connessione tecnicamente necessari, in particolare il Suo indirizzo IP, la data e l’ora, la pagina richiamata e le informazioni sul Suo browser, per fornire la pagina e prevenire abusi. Noi stessi non effettuiamo alcuna analisi di questi dati.
+
+Base giuridica: legittimo interesse a un funzionamento sicuro ed efficiente del sito web (art. 6, par. 1, lett. f GDPR).
+In tale contesto può avvenire un trasferimento verso gli USA. A tal fine il fornitore si basa sul EU-U.S. Data Privacy Framework ovvero sulle clausole contrattuali tipo della Commissione UE.
+Nessun cookie, nessuna analisi, nessuna pubblicità
+
+Non utilizziamo cookie, strumenti di analisi o di tracciamento né pubblicità. Caratteri e librerie non vengono caricati da server di terzi.
+
+Quando passa dalla visualizzazione chiara a quella scura, il Suo browser memorizza questa scelta localmente sul Suo dispositivo (Local Storage). La scelta non viene trasmessa a noi né a terzi e serve solo a mantenere la Sua impostazione alla visita successiva. Può eliminarla in qualsiasi momento nelle impostazioni del browser.
+
+Mappa (Google Maps)
+
+Nella pagina “Come raggiungerci e contatti” può visualizzare una mappa. La mappa viene caricata da Google Maps solo dopo il Suo clic su “Mostra la mappa” (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irlanda). In tal caso Google riceve dati quali il Suo indirizzo IP, informazioni sul Suo browser e la pagina richiamata; Google può trasferire tali dati anche negli USA.
+
+Base giuridica: il Suo consenso mediante il clic (art. 6, par. 1, lett. a GDPR). Se non clicca, nessun dato viene trasmesso a Google. Può revocare il consenso ricaricando la pagina.
+Ulteriori informazioni: Informativa sulla privacy di Google
+
+I link “Pianifica il percorso con Google Maps” e “Apri in OpenStreetMap” conducono a siti web di terzi. Con il clic lascia il nostro sito web; lì valgono le informazioni sulla protezione dei dati del rispettivo fornitore.
+
+Contatti e richieste
+
+Se ci contatta per e-mail o per telefono oppure scrive un’e-mail tramite i pulsanti “Richiedi un preventivo”, trattiamo i Suoi dati (ad esempio nome, dati di contatto, contenuto della richiesta e file di immagini inviati) per evadere la Sua richiesta e per gestire gli ordini. I pulsanti aprono soltanto il Suo programma di posta elettronica; il sito web stesso non trasmette nulla.
+
+Base giuridica: esecuzione del contratto e misure precontrattuali (art. 6, par. 1, lett. b GDPR), altrimenti il nostro legittimo interesse a rispondere alle richieste (art. 6, par. 1, lett. f GDPR).
+Periodo di conservazione: per il tempo necessario all’evasione della richiesta; successivamente solo nella misura in cui sussistano obblighi legali di conservazione (ad esempio sette anni ai sensi del § 132 del Codice tributario federale austriaco, Bundesabgabenordnung, BAO).
+La comunicazione a terzi avviene solo se necessaria per la gestione dell’ordine o prescritta dalla legge.
+I Suoi diritti
+
+Lei ha il diritto di accesso, rettifica, cancellazione, limitazione del trattamento, portabilità dei dati e opposizione. Un consenso prestato può essere revocato in qualsiasi momento con effetto per il futuro. A tal fine si rivolga a shop@printbloder.at.
+
+Se ritiene che il trattamento dei Suoi dati violi la normativa sulla protezione dei dati, può presentare reclamo all’autorità di controllo: Autorità austriaca per la protezione dei dati (Datenschutzbehörde), Barichgasse 40–42, 1030 Vienna, www.dsb.gv.at, e-mail: dsb@dsb.gv.at.
+
+Modifiche
+
+Adegueremo questa informativa sulla privacy se il sito web o le disposizioni legali cambiano. Aggiornamento: ottobre 2026.
