@@ -376,6 +376,14 @@ async function checkBrowser(browser, base) {
         }
     }
     await p.goto(base + 'home.html');
+    // Obere Leiste am Handy: E-Mail vor Telefon, zentriert
+    const bar = await p.evaluate(() => {
+        const r = sel => document.querySelector(sel).getBoundingClientRect();
+        const email = r('.topbar__email'), phone = r('.topbar__phone');
+        return {emailFirst: email.left < phone.left, left: email.left, right: innerWidth - phone.right};
+    });
+    if (!bar.emailFirst) fail(S, 'Handy: E-Mail steht in der oberen Leiste nicht vor der Telefonnummer');
+    if (Math.abs(bar.left - bar.right) > 2) fail(S, `Handy: obere Leiste nicht zentriert (links ${Math.round(bar.left)} px, rechts ${Math.round(bar.right)} px)`);
     // Kopfzeile klebt beim Scrollen oben; Aufklappen des Menüs verschiebt den Inhalt nicht
     await p.evaluate(() => scrollTo(0, 800));
     await resize(p, 390, 800);
