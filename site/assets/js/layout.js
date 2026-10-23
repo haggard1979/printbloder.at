@@ -34,7 +34,9 @@
             dark: 'Dunkle Darstellung',
             contact: 'Kontakt',
             info: 'Info',
-            infoLink: 'Anfahrt, Kontakt &amp; Impressum',
+            infoLink: 'Anfahrt &amp; Kontakt',
+            imprint: 'Impressum',
+            privacy: 'Datenschutz',
             prices: 'Alle Preise in Euro inkl. 20&nbsp;% MwSt.',
             nav: ['Visitkarten', 'Stempel', 'Textildruck', 'Digitaldruck', 'Schilder', 'Beschriftung', 'Plakate', 'Geschenke']
         },
@@ -52,7 +54,9 @@
             dark: 'Dark mode',
             contact: 'Contact',
             info: 'Info',
-            infoLink: 'Directions, contact &amp; legal notice',
+            infoLink: 'Directions &amp; contact',
+            imprint: 'Legal notice',
+            privacy: 'Privacy policy',
             prices: 'All prices in euros incl. 20&nbsp;% VAT.',
             nav: ['Business cards', 'Stamps', 'Textile printing', 'Digital printing', 'Signs', 'Lettering', 'Posters', 'Gifts']
         },
@@ -70,7 +74,9 @@
             dark: 'Temen prikaz',
             contact: 'Kontakt',
             info: 'Informacije',
-            infoLink: 'Dostop, kontakt in impresum',
+            infoLink: 'Dostop in kontakt',
+            imprint: 'Impresum',
+            privacy: 'Izjava o zasebnosti',
             prices: 'Vse cene v evrih vklj. 20&nbsp;% DDV.',
             nav: ['Vizitke', 'Žigi', 'Tisk na tekstil', 'Digitalni tisk', 'Table', 'Napisi', 'Plakati', 'Darila']
         },
@@ -88,7 +94,9 @@
             dark: 'Темна тема',
             contact: 'Контакти',
             info: 'Інформація',
-            infoLink: 'Як дістатися, контакти та вихідні дані',
+            infoLink: 'Як дістатися та контакти',
+            imprint: 'Вихідні дані',
+            privacy: 'Політика конфіденційності',
             prices: 'Усі ціни в євро з ПДВ 20&nbsp;%.',
             nav: ['Візитки', 'Печатки', 'Друк на текстилі', 'Цифровий друк', 'Таблички', 'Написи', 'Плакати', 'Подарунки']
         },
@@ -106,7 +114,9 @@
             dark: 'Sötét megjelenítés',
             contact: 'Kapcsolat',
             info: 'Információ',
-            infoLink: 'Megközelítés, kapcsolat és impresszum',
+            infoLink: 'Megközelítés és kapcsolat',
+            imprint: 'Impresszum',
+            privacy: 'Adatvédelem',
             prices: 'Minden ár euróban, 20&nbsp;% ÁFÁ-val együtt.',
             nav: ['Névjegykártyák', 'Bélyegzők', 'Textilnyomás', 'Digitális nyomtatás', 'Táblák', 'Feliratok', 'Plakátok', 'Ajándékok']
         },
@@ -124,7 +134,9 @@
             dark: 'Tema scuro',
             contact: 'Contatti',
             info: 'Informazioni',
-            infoLink: 'Come raggiungerci, contatti e note legali',
+            infoLink: 'Come raggiungerci e contatti',
+            imprint: 'Note legali',
+            privacy: 'Privacy',
             prices: 'Tutti i prezzi in euro, IVA del 20&nbsp;% inclusa.',
             nav: ['Biglietti da visita', 'Timbri', 'Stampa su tessuto', 'Stampa digitale', 'Targhe', 'Scritte', 'Poster', 'Regali']
         },
@@ -142,7 +154,9 @@
             dark: 'Tamni prikaz',
             contact: 'Kontakt',
             info: 'Informacije',
-            infoLink: 'Kako do nas, kontakt i impressum',
+            infoLink: 'Kako do nas i kontakt',
+            imprint: 'Impressum',
+            privacy: 'Zaštita podataka',
             prices: 'Sve cijene u eurima, PDV od 20&nbsp;% uključen.',
             nav: ['Posjetnice', 'Pečati', 'Tisak na tekstil', 'Digitalni tisak', 'Ploče', 'Natpisi', 'Plakati', 'Pokloni']
         }
@@ -334,9 +348,11 @@
                 var active = isActive(item, page) ? ' aria-current="page"' : '';
                 return '<li><a href="' + item.href + '"' + active + '>' + T.nav[i] + '</a></li>';
             }).join('');
-            // Kontakt & Impressum: nur im aufgeklappten Menü (sonst in der Fußzeile)
-            links += '<li class="nav__extra"><a href="kontakt.html"' + (page === 'kontakt' ? ' aria-current="page"' : '')
-                + '>' + T.infoLink + '</a></li>';
+            // Kontakt, Impressum, Datenschutz: nur im aufgeklappten Menü (sonst in der Fußzeile)
+            [['kontakt', T.infoLink], ['impressum', T.imprint], ['datenschutz', T.privacy]].forEach(function (extra) {
+                links += '<li class="nav__extra"><a href="' + extra[0] + '.html"' + (page === extra[0] ? ' aria-current="page"' : '')
+                    + '>' + extra[1] + '</a></li>';
+            });
 
             this.innerHTML =
                 '<a class="skip-link" href="#main">' + T.skip + '</a>' +
@@ -443,7 +459,9 @@
                 '    </div>' +
                 '    <div>' +
                 '      <h2 class="footer__title">' + T.info + '</h2>' +
-                '      <p><a href="kontakt.html">' + T.infoLink + '</a></p>' +
+                '      <p><a href="kontakt.html">' + T.infoLink + '</a><br>' +
+                '      <a href="impressum.html">' + T.imprint + '</a><br>' +
+                '      <a href="datenschutz.html">' + T.privacy + '</a></p>' +
                 '    </div>' +
                 '  </div>' +
                 '  <div class="wrap footer__note">' + T.prices + '</div>' +

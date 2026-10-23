@@ -32,6 +32,8 @@ site/
                           600 px) – <sub-nav category="stempel">
   assets/js/products.js   Produktkarten aus window.PRODUCTS (#product-list), Sortierung,
                           Anfrage-Mail; Übersetzung der Datenbezeichnungen (TEXT[lang].words)
+  impressum.html          Impressum und Datenschutzerklärung (Rechtstexte, alle Sprachen; UID-Nummer
+  datenschutz.html        steht nur im Impressum), Links in Fußzeile/Menü (layout.js)
   assets/js/map.js        Karte auf kontakt.html: Google-Maps-Einbettung erst nach Klick (Datenschutz),
                           Adresse/Texte stehen im HTML (data-map-src, data-map-title)
   assets/js/prices.js     Preistabellen aus window.PRICE_TABLES in <table data-table="N">,
@@ -120,7 +122,7 @@ verwenden:
 ## Prüfungen
 
 `npm test` (einmalig `npm install`, lokal ggf. `npx playwright install chromium`) prüft alle
-29 Seiten × 7 Sprachen in ~20 s:
+31 Seiten × 7 Sprachen in ~20 s:
 1. Daten (Format, Übersetzungen vollständig, Bilder vorhanden)
 2. HTML (Pflichtangaben, Links/Bilder existieren, Platzhalter ↔ Daten, SEO-Angaben aktuell)
 3. Browser (keine Fehler, kein seitliches Scrollen bei 390 px, Tabellen nicht abgeschnitten

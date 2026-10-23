@@ -5,11 +5,17 @@ Pull Request entfernen. Neue Punkte unten anfügen.
 
 ## Aufgaben
 
-- [ ] **Impressum erstellen**
-  - Pflichtangaben nach österreichischem Recht (ECG/MedienG/UGB): Firmenname, Rechtsform,
-    Anschrift, Kontakt, ggf. Firmenbuchnummer und -gericht, UID-Nummer, Kammer/Gewerbe,
-    Aufsichtsbehörde – **Angaben vom Inhaber nötig**
-  - in allen Sprachen; der Link „Anfahrt, Kontakt & Impressum“ führt bereits auf `kontakt.html`
+- [ ] **Impressum und Datenschutzerklärung: Angaben vervollständigen und prüfen lassen**
+  - Seiten `impressum.html` und `datenschutz.html` (alle sieben Sprachen) sind angelegt und in
+    Fußzeile und Handy-Menü verlinkt
+  - **UID-Nummer:** ATU64692247 stammt aus dem alten Impressum – vom Inhaber bestätigen lassen,
+    dass sie noch gültig ist (steht in allen sieben `impressum.html`)
+  - **Fehlende Pflichtangaben vom Inhaber** (stehen noch nicht im Impressum): Name des Inhabers bzw.
+    Firmenwortlaut und Rechtsform, ggf. Firmenbuchnummer und -gericht, Gewerbe (Gewerbewortlaut),
+    Mitgliedschaft Wirtschaftskammer, Gewerbebehörde (§ 5 ECG, § 14 UGB, § 63 GewO)
+  - Beide Texte (v. a. Datenschutz: Hosting GitHub Pages, Karte Google Maps, E-Mail-Kontakt) von
+    einer fachkundigen Stelle prüfen lassen (z. B. Wirtschaftskammer, Rechtsanwalt); ändert sich
+    etwas an der Website (neue Dienste, Formulare), die Datenschutzerklärung anpassen
 
 - [x] **Sprachen Ungarisch, Italienisch und Kroatisch einfügen**
   - Ordner `site/hu/`, `site/it/`, `site/hr/`; `LANGS`/`TEXT` in `layout.js` und `products.js`,
@@ -42,9 +48,9 @@ Pull Request entfernen. Neue Punkte unten anfügen.
 - [x] **Anfahrt: echte Karte einbinden bzw. ergänzen**
   - `kontakt.html` (alle Sprachen): Google-Maps-Karte wird erst nach Klick geladen, dazu Links
     „Route in Google Maps planen“ und „In OpenStreetMap öffnen“; Anfahrtsplan bleibt
-  - **Offen:** Datenschutzerklärung nötig (Google Maps nach Klick, Übertragung der IP-Adresse) –
-    gehört zum Punkt „Impressum erstellen“; Pin im Browser kontrollieren (Suche nach
-    „Shopping City Seiersberg“); auf Wunsch OpenStreetMap-Karte mit genauen Koordinaten statt Google
+  - Datenschutzerklärung nennt die Google-Karte (Einwilligung durch Klick)
+  - **Offen:** Pin im Browser kontrollieren (Suche nach „Shopping City Seiersberg“); auf Wunsch
+    OpenStreetMap-Karte mit genauen Koordinaten statt Google
 
 - [x] **Ansprechende Link-Vorschau beim Teilen (Messenger, soziale Netzwerke)**
   - Open-Graph-/Twitter-Card-Angaben in allen Seiten (erzeugt von `tools/seo.js`), Vorschaubild

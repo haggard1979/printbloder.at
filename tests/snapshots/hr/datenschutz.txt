@@ -1,0 +1,49 @@
+Početna › Izjava o zaštiti podataka
+Izjava o zaštiti podataka
+
+Zaštita Vaših osobnih podataka nam je važna. Ovdje saznajte koji se podaci obrađuju prilikom posjeta ovoj web-stranici i prilikom uspostave kontakta. Osnova su Opća uredba o zaštiti podataka (GDPR) i austrijski Zakon o zaštiti podataka (Datenschutzgesetz, DSG).
+
+Voditelj obrade
+Printshop Bloder
+SCS Seiersberg
+8054 Graz
+Austrija
+Telefon: +43 316 24 35 77
+E-pošta: shop@printbloder.at
+Posjet web-stranici i hosting
+
+Ova web-stranica nalazi se na poslužitelju GitHub Pages (GitHub Inc., društvo kći tvrtke Microsoft, SAD). Prilikom otvaranja stranice pružatelj usluge hostinga obrađuje tehnički nužne podatke o vezi, osobito Vašu IP adresu, datum i vrijeme, otvorenu stranicu i podatke o Vašem pregledniku, kako bi stranicu isporučio i spriječio zlouporabu. Mi sami ne izrađujemo nikakve analize tih podataka.
+
+Pravna osnova: legitimni interes za siguran i učinkovit rad web-stranice (čl. 6. st. 1. toč. f GDPR-a).
+Pritom može doći do prijenosa u SAD. Pružatelj se u tu svrhu oslanja na EU-U.S. Data Privacy Framework odnosno na standardne ugovorne klauzule Europske komisije.
+Bez kolačića, bez analitike, bez oglašavanja
+
+Ne koristimo kolačiće, alate za analitiku ili praćenje niti oglašavanje. Fontovi i biblioteke ne učitavaju se s tuđih poslužitelja.
+
+Ako promijenite svijetli ili tamni prikaz, Vaš preglednik taj izbor sprema lokalno na Vašem uređaju (Local Storage). Izbor se ne prenosi nama niti trećim stranama i služi samo za to da se Vaša postavka zadrži prilikom sljedećeg posjeta. Možete ga u svakom trenutku izbrisati u postavkama preglednika.
+
+Karta (Google Maps)
+
+Na stranici „Kako do nas i kontakt“ možete prikazati kartu. Karta se s usluge Google Maps učitava tek nakon Vašeg klika na „Prikaži kartu“ (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irska). Pritom Google prima podatke poput Vaše IP adrese, podataka o Vašem pregledniku i otvorene stranice; Google te podatke može prenijeti i u SAD.
+
+Pravna osnova: Vaša privola davanjem klika (čl. 6. st. 1. toč. a GDPR-a). Ako ne kliknete, Googleu se ne prenose nikakvi podaci. Privolu možete povući ponovnim učitavanjem stranice.
+Dodatne informacije: Googleova izjava o zaštiti podataka
+
+Poveznice „Isplanirajte rutu u Google Kartama“ i „Otvori u OpenStreetMapu“ vode na web-stranice trećih strana. Klikom napuštate našu web-stranicu; tamo vrijede napomene o zaštiti podataka dotičnog pružatelja.
+
+Uspostava kontakta i upiti
+
+Ako nas kontaktirate e-poštom ili telefonom ili putem gumba „Pošaljite upit“ sastavite e-poruku, obrađujemo Vaše podatke (na primjer ime, kontaktne podatke, sadržaj upita i priložene slikovne datoteke) radi obrade Vašeg upita i izvršenja narudžbi. Gumbi samo otvaraju Vaš program za e-poštu; web-stranica pritom sama ništa ne prenosi.
+
+Pravna osnova: izvršenje ugovora i predugovorne mjere (čl. 6. st. 1. toč. b GDPR-a), inače naš legitimni interes za odgovaranje na upite (čl. 6. st. 1. toč. f GDPR-a).
+Rok pohrane: onoliko dugo koliko je potrebno za obradu; nakon toga samo ako postoje zakonski rokovi čuvanja (na primjer sedam godina prema § 132 Saveznog poreznog zakona (Bundesabgabenordnung, BAO)).
+Prosljeđivanje trećim stranama provodi se samo ako je potrebno za izvršenje narudžbe ili je propisano zakonom.
+Vaša prava
+
+Imate pravo na pristup, ispravak, brisanje, ograničenje obrade, prenosivost podataka i prigovor. Danu privolu možete u svakom trenutku povući s učinkom za ubuduće. U tu se svrhu obratite na shop@printbloder.at.
+
+Ako smatrate da obrada Vaših podataka krši propise o zaštiti podataka, možete podnijeti pritužbu nadzornom tijelu: Austrijsko tijelo za zaštitu podataka (Datenschutzbehörde), Barichgasse 40–42, 1030 Beč, www.dsb.gv.at, e-pošta: dsb@dsb.gv.at.
+
+Izmjene
+
+Ovu izjavu o zaštiti podataka prilagodit ćemo ako se promijene web-stranica ili pravni propisi. Stanje: listopad 2026.
