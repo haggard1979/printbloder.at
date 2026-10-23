@@ -627,7 +627,7 @@ main.wrap {
 }
 
 .card__media {
-    aspect-ratio: 261 / 200;
+    aspect-ratio: 261 / 140;
     background: var(--media-bg);
 }
 
@@ -1092,7 +1092,7 @@ sub-nav {
 
 .page-head img {
     flex: none;
-    width: 131px;
+    width: 124px;
     border-radius: 8px;
     box-shadow: var(--shadow);
 }
@@ -1132,7 +1132,7 @@ sub-nav {
 
 .sub-item img {
     flex: none;
-    width: 131px;
+    width: 124px;
     border-radius: 8px;
 }
 
