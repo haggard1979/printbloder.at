@@ -26,7 +26,8 @@ site/
   assets/js/layout.js     <site-header>/<site-footer>: Kopfzeile, Menü, Fußzeile, Kontaktdaten,
                           Sprachauswahl (Flaggen als SVG, Deutsch = Österreich), Darkmode-
                           Umschalter, UI-Texte je Sprache (TEXT); SUBNAV = Unterseiten je
-                          Kategorie für die Reiter (<sub-nav category="stempel">)
+                          Kategorie für Reiter (groß) bzw. Karussell mit Pfeilen (Handy, bis
+                          600 px) – <sub-nav category="stempel">
   assets/js/products.js   Produktkarten aus window.PRODUCTS (#product-list), Sortierung,
                           Anfrage-Mail; Übersetzung der Datenbezeichnungen (TEXT[lang].words)
   assets/js/prices.js     Preistabellen aus window.PRICE_TABLES in <table data-table="N">,
@@ -116,7 +117,8 @@ verwenden:
 3. Browser (keine Fehler, kein seitliches Scrollen bei 390 px, Tabellen nicht abgeschnitten
    bei 1280/1024/768 px, Menü einzeilig, Darkmode, Sprachumschalter, Handy-Menü)
 4. Sprachen und Unterseiten (gleiche Tabellen, Links, Preise wie Deutsch; Reiter der
-   Unterseiten == Liste der Kategorieseite, aktueller Reiter markiert, Wechsel per Klick)
+   Unterseiten == Liste der Kategorieseite, aktueller Reiter markiert, Karussell-Pfeile
+   blättern im Kreis, Wechsel per Klick am Handy und am Desktop)
 5. Schnappschuss (sichtbarer Text == `tests/snapshots/`)
 
 Fehlschlag nie durch Abschwächen der Tests beheben. Schnappschüsse nur nach geprüfter,

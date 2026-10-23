@@ -26,6 +26,8 @@
             menu: 'Menü',
             mainNav: 'Hauptnavigation',
             subNav: 'Weitere Seiten dieser Kategorie',
+            prevPage: 'Vorherige Seite',
+            nextPage: 'Nächste Seite',
             language: 'Sprache',
             home: 'Startseite',
             light: 'Helle Darstellung',
@@ -42,6 +44,8 @@
             menu: 'Menu',
             mainNav: 'Main navigation',
             subNav: 'More in this category',
+            prevPage: 'Previous page',
+            nextPage: 'Next page',
             language: 'Language',
             home: 'Home',
             light: 'Light mode',
@@ -58,6 +62,8 @@
             menu: 'Meni',
             mainNav: 'Glavna navigacija',
             subNav: 'Več v tej kategoriji',
+            prevPage: 'Prejšnja stran',
+            nextPage: 'Naslednja stran',
             language: 'Jezik',
             home: 'Domača stran',
             light: 'Svetel prikaz',
@@ -74,6 +80,8 @@
             menu: 'Меню',
             mainNav: 'Головна навігація',
             subNav: 'Більше в цій категорії',
+            prevPage: 'Попередня сторінка',
+            nextPage: 'Наступна сторінка',
             language: 'Мова',
             home: 'Головна сторінка',
             light: 'Світла тема',
@@ -374,8 +382,10 @@
     }
 
     /*
-     * Reiter zum Wechseln zwischen den Unterseiten einer Kategorie, z. B.
+     * Wechsel zwischen den Unterseiten einer Kategorie, z. B.
      * <sub-nav category="stempel"></sub-nav> direkt unter dem Brotkrümelpfad.
+     * Große Bildschirme: Reiter mit allen Seiten. Handy (CSS, bis 600 px): Karussell mit
+     * Pfeilen links und rechts, in der Mitte die aktuelle Seite; blättert im Kreis.
      */
     class SubNav extends HTMLElement {
         connectedCallback() {
@@ -384,19 +394,36 @@
                 return;
             }
             var page = currentPage();
-            this.innerHTML = '<nav class="subnav" aria-label="' + T.subNav + '"><ul>' + entries.map(function (entry) {
+            var name = function (entry) {
+                return entry.label[LANG] || entry.label.de;
+            };
+            var chips = '<ul class="subnav__chips">' + entries.map(function (entry) {
                 var current = entry.page === page ? ' aria-current="page"' : '';
-                return '<li><a href="' + entry.page + '.html"' + current + '>' + (entry.label[LANG] || entry.label.de) + '</a></li>';
-            }).join('') + '</ul></nav>';
+                return '<li><a href="' + entry.page + '.html"' + current + '>' + name(entry) + '</a></li>';
+            }).join('') + '</ul>';
 
-            // schmale Bildschirme: Reiter scrollen waagerecht, der aktuelle wird in die Mitte gerückt
-            var list = this.querySelector('ul');
-            var active = list.querySelector('[aria-current]');
-            if (active) {
-                requestAnimationFrame(function () {
-                    list.scrollLeft = active.offsetLeft - (list.clientWidth - active.offsetWidth) / 2;
-                });
+            var index = entries.findIndex(function (entry) {
+                return entry.page === page;
+            });
+            var carousel = '';
+            if (index >= 0 && entries.length > 1) {
+                var prev = entries[(index - 1 + entries.length) % entries.length];
+                var next = entries[(index + 1) % entries.length];
+                var arrow = function (entry, label, rel, path) {
+                    return '<a class="subnav__arrow" href="' + entry.page + '.html" rel="' + rel + '" aria-label="' + label + ': '
+                        + name(entry) + '"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="' + path
+                        + '" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';
+                };
+                carousel = '<div class="subnav__carousel">'
+                    + arrow(prev, T.prevPage, 'prev', 'M15 5l-7 7 7 7')
+                    + '<div class="subnav__current"><span class="subnav__name">' + name(entries[index]) + '</span>'
+                    + '<span class="subnav__dots" aria-hidden="true">' + entries.map(function (_, i) {
+                        return '<span class="subnav__dot' + (i === index ? ' subnav__dot--active' : '') + '"></span>';
+                    }).join('') + '</span></div>'
+                    + arrow(next, T.nextPage, 'next', 'M9 5l7 7-7 7')
+                    + '</div>';
             }
+            this.innerHTML = '<nav class="subnav" aria-label="' + T.subNav + '">' + chips + carousel + '</nav>';
         }
     }
 

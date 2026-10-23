@@ -683,14 +683,14 @@ main.wrap {
     list-style: none;
 }
 
-/* Reiter zum Wechseln zwischen den Unterseiten einer Kategorie */
+/* Wechsel zwischen den Unterseiten einer Kategorie: Reiter (groß) / Karussell (Handy) */
 
 sub-nav {
     display: block;
     margin-top: 16px;
 }
 
-.subnav ul {
+.subnav__chips {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -699,7 +699,7 @@ sub-nav {
     list-style: none;
 }
 
-.subnav a {
+.subnav__chips a {
     display: block;
     padding: 8px 16px;
     border: 1px solid var(--line);
@@ -713,34 +713,87 @@ sub-nav {
     white-space: nowrap;
 }
 
-.subnav a:hover {
+.subnav__chips a:hover {
     border-color: var(--link);
     color: var(--link);
 }
 
-.subnav a[aria-current="page"] {
+.subnav__chips a[aria-current="page"] {
     border-color: var(--brand);
     background: var(--brand);
     color: #fff;
     font-weight: 600;
 }
 
-/* Handy: eine Zeile, waagerecht scrollbar (der nächste Reiter ragt an den Rand) */
-@media (max-width: 600px) {
-    .subnav ul {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        margin: 0 -16px;
-        padding: 2px 16px 6px;
-        scrollbar-width: none;
-    }
+.subnav__carousel {
+    display: none;
+}
 
-    .subnav ul::-webkit-scrollbar {
+/* Handy: Karussell mit Pfeilen links und rechts, in der Mitte die aktuelle Seite */
+@media (max-width: 600px) {
+    .subnav__chips {
         display: none;
     }
 
-    .subnav li {
+    .subnav__carousel {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+    }
+
+    .subnav__arrow {
+        display: flex;
         flex: none;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--brand);
+        color: #fff;
+    }
+
+    .subnav__arrow:hover,
+    .subnav__arrow:active {
+        background: var(--brand-dark);
+        color: #fff;
+    }
+
+    .subnav__current {
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .subnav__name {
+        display: block;
+        font-weight: 600;
+        line-height: 1.25;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .subnav__dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 6px;
+    }
+
+    .subnav__dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--line);
+    }
+
+    .subnav__dot--active {
+        background: var(--link);
     }
 }
 
