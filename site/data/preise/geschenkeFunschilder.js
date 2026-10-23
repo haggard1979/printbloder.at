@@ -8,11 +8,11 @@
  */
 window.PRICE_TABLES = [
     {
-        caption: {"de": "Funschilder", "en": "Fun signs", "sl": "Zabavne table", "uk": "Жартівливі таблички"},
-        columns: [{"de": "Artikel", "en": "Item", "sl": "Izdelek", "uk": "Товар"}, {"de": "Preis", "en": "Price", "sl": "Cena", "uk": "Ціна"}],
+        caption: {"de": "Funschilder", "en": "Fun signs", "sl": "Zabavne table", "uk": "Жартівливі таблички", "hu": "Vicces táblák", "it": "Targhe divertenti", "hr": "Zabavne ploče"},
+        columns: [{"de": "Artikel", "en": "Item", "sl": "Izdelek", "uk": "Товар", "hu": "Termék", "it": "Articolo", "hr": "Artikl"}, {"de": "Preis", "en": "Price", "sl": "Cena", "uk": "Ціна", "hu": "Ár", "it": "Prezzo", "hr": "Cijena"}],
         rows: [
-            [{"de": "Funschild groß (52x11cm)", "en": "Large fun sign (52 × 11 cm)", "sl": "Zabavna tabla velika (52x11 cm)", "uk": "Жартівлива табличка велика (52x11 см)"}, 33.9],
-            [{"de": "Funschild Bobbycar", "en": "Bobby car fun sign", "sl": "Zabavna tabla za bobby car", "uk": "Жартівлива табличка для дитячої машинки"}, 27.9]
+            [{"de": "Funschild groß (52x11cm)", "en": "Large fun sign (52 × 11 cm)", "sl": "Zabavna tabla velika (52x11 cm)", "uk": "Жартівлива табличка велика (52x11 см)", "hu": "Vicces tábla, nagy (52 × 11 cm)", "it": "Targa divertente grande (52 × 11 cm)", "hr": "Zabavna ploča, velika (52 × 11 cm)"}, 33.9],
+            [{"de": "Funschild Bobbycar", "en": "Bobby car fun sign", "sl": "Zabavna tabla za bobby car", "uk": "Жартівлива табличка для дитячої машинки", "hu": "Vicces tábla – Bobby Car", "it": "Targa divertente Bobby Car", "hr": "Zabavna ploča Bobby Car"}, 27.9]
         ]
     }
 ];

@@ -11,7 +11,7 @@ Pull Request entfernen. Neue Punkte unten anfügen.
     Aufsichtsbehörde – **Angaben vom Inhaber nötig**
   - in allen Sprachen; der Link „Anfahrt, Kontakt & Impressum“ führt bereits auf `kontakt.html`
 
-- [ ] **Sprachen Ungarisch, Italienisch und Kroatisch einfügen**
+- [x] **Sprachen Ungarisch, Italienisch und Kroatisch einfügen**
   - Ordner `site/hu/`, `site/it/`, `site/hr/`; `LANGS`/`TEXT` in `layout.js` und `products.js`,
     Flaggen (Ungarn, Italien, Kroatien – Kroatien mit Wappen), alle `{de, en, sl, uk}`-Texte in
     `site/data/` um die neuen Sprachen ergänzen, `docs/glossar.md` erweitern
@@ -28,7 +28,7 @@ Pull Request entfernen. Neue Punkte unten anfügen.
     Reiter/Chips mit den Geschwisterseiten; gilt für alle Kategorien mit Unterseiten
     (Visitkarten, Stempel, Textildruck, Digitaldruck, Schilder, Geschenke)
   - am besten zentral erzeugen (Liste der Unterseiten je Kategorie an einer Stelle), damit
-    nicht 4 Sprachen × viele Seiten von Hand gepflegt werden müssen
+    nicht 7 Sprachen × viele Seiten von Hand gepflegt werden müssen
 
 - [ ] **Bilder gegen modernere Varianten austauschen**
   - Kategorie- und Kopfbilder (`site/img/buttons/…`) enthalten eingebrannten Text und
@@ -43,7 +43,7 @@ Pull Request entfernen. Neue Punkte unten anfügen.
 
 ## Weitere offene Punkte
 
-- [ ] Übersetzungen (v. a. Slowenisch, Ukrainisch) von Muttersprachlern gegenlesen lassen
+- [ ] Übersetzungen (v. a. Slowenisch, Ukrainisch, Ungarisch, Italienisch, Kroatisch) von Muttersprachlern gegenlesen lassen
 - [ ] Öffnungszeiten ergänzen (Angaben vom Inhaber nötig)
 - [ ] Ungenutzte Produktbilder (Fototasche, Fotoshirt, Flexkappe) – frühere oder geplante
       Produkte? Entweder Seiten ergänzen oder Bilder entfernen

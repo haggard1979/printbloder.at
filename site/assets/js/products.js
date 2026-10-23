@@ -5,13 +5,13 @@
  */
 (function () {
     var SITE = window.SITE || {lang: 'de', root: ''};
-    var LOCALES = {de: 'de-AT', en: 'en-IE', sl: 'sl-SI', uk: 'uk-UA'};
+    var LOCALES = {de: 'de-AT', en: 'en-IE', sl: 'sl-SI', uk: 'uk-UA', hu: 'hu-HU', it: 'it-IT', hr: 'hr-HR'};
     // narrowSymbol: immer "€" (Ukrainisch würde sonst "EUR" schreiben)
     var euro = new Intl.NumberFormat(LOCALES[SITE.lang] || 'de-AT', {style: 'currency', currency: 'EUR', currencyDisplay: 'narrowSymbol'});
 
     /*
      * Übersetzungen für die Produktkarten. Bezeichnungen und Werte in den
-     * Daten-Dateien sind deutsch; hier steht, wie sie in en/sl lauten.
+     * Daten-Dateien sind deutsch; hier steht, wie sie in den anderen Sprachen lauten.
      * Fehlt eine Übersetzung, wird der deutsche Text angezeigt.
      */
     var TEXT = {
@@ -69,6 +69,54 @@
                 'Nur Stempelkissen': 'Лише штемпельна подушка',
                 'Aluminium-Verbundplatte 2 mm': 'Алюмінієва композитна панель 2 мм'
             }
+        },
+        hu: {
+            from: 'indulóár',
+            inquire: 'Árajánlatot kérek',
+            subject: 'Ajánlatkérés: ',
+            body: 'Üdvözlöm!\n\nÉrdeklődöm a következő iránt: {name}.\n\nKívánságaim (szöveg, motívum, mennyiség):\n\n\nNév és telefonszám:\n',
+            maxLines: 'legfeljebb {n}',
+            words: {
+                'Druckfläche': 'Nyomtatási felület',
+                'Zeilen': 'Sorok',
+                'Fläche': 'Méret',
+                'Material': 'Anyag',
+                'Nur Stempelplatte': 'Csak a bélyegzőlap',
+                'Nur Stempelkissen': 'Csak a festékpárna',
+                'Aluminium-Verbundplatte 2 mm': 'Alumínium kompozit lemez, 2 mm'
+            }
+        },
+        it: {
+            from: 'da',
+            inquire: 'Richiedi un preventivo',
+            subject: 'Richiesta: ',
+            body: 'Buongiorno,\n\nmi interessa: {name}.\n\nLe mie richieste (testo, motivo, quantità):\n\n\nNome e numero di telefono:\n',
+            maxLines: 'fino a {n}',
+            words: {
+                'Druckfläche': 'Area di stampa',
+                'Zeilen': 'Righe',
+                'Fläche': 'Dimensioni',
+                'Material': 'Materiale',
+                'Nur Stempelplatte': 'Solo piastra con il testo',
+                'Nur Stempelkissen': 'Solo cuscinetto',
+                'Aluminium-Verbundplatte 2 mm': 'Pannello composito in alluminio 2 mm'
+            }
+        },
+        hr: {
+            from: 'od',
+            inquire: 'Pošaljite upit',
+            subject: 'Upit: ',
+            body: 'Poštovani,\n\nzanima me: {name}.\n\nMoje želje (tekst, motiv, količina):\n\n\nIme i broj telefona:\n',
+            maxLines: 'najviše {n}',
+            words: {
+                'Druckfläche': 'Površina otiska',
+                'Zeilen': 'Retci',
+                'Fläche': 'Veličina',
+                'Material': 'Materijal',
+                'Nur Stempelplatte': 'Samo pločica s tekstom',
+                'Nur Stempelkissen': 'Samo jastučić',
+                'Aluminium-Verbundplatte 2 mm': 'Aluminijska kompozitna ploča 2 mm'
+            }
         }
     };
     var T = TEXT[SITE.lang] || TEXT.de;
@@ -81,7 +129,7 @@
         return (T.words && T.words[text]) || text;
     }
 
-    // name kann ein Text sein oder {de: '...', en: '...', sl: '...'}
+    // name kann ein Text sein oder {de: '...', en: '...', sl: '...', uk: '...', hu: '...', it: '...', hr: '...'}
     function localName(name) {
         return typeof name === 'string' ? name : (name[SITE.lang] || name.de);
     }

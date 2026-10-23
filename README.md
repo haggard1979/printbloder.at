@@ -28,7 +28,7 @@ Ohne GitHub Pages (eigener Webserver): den **Inhalt** von `site/` hochladen.
 | `site/data/preise/*.js` | Staffelpreise / Preistabellen, eine Datei pro Seite |
 | `site/assets/js/prices.js` | Baut die Preistabellen aus `site/data/preise/` |
 | `site/img/` | Bilder |
-| `site/en/`, `site/sl/`, `site/uk/` | Englische, slowenische und ukrainische Seiten (gleiche Dateinamen wie Deutsch) |
+| `site/en/`, `site/sl/`, `site/uk/`, `site/hu/`, `site/it/`, `site/hr/` | Übersetzungen (Englisch, Slowenisch, Ukrainisch, Ungarisch, Italienisch, Kroatisch; gleiche Dateinamen wie Deutsch) |
 
 ## Häufige Änderungen
 
@@ -42,8 +42,8 @@ steht oben in jeder Datei. Mindestaufträge stehen dort unter `PRICE_VALUES`.
 
 **Telefonnummer, E-Mail, Adresse oder Menüpunkte ändern** – nur in `site/assets/js/layout.js`.
 
-**Sprachen** – Deutsch liegt in `site/`, die Übersetzungen in `site/en/`, `site/sl/` und `site/uk/`.
-Alle Preise in `site/data/` gelten automatisch für alle vier Sprachen – jeder Preis steht nur einmal.
+**Sprachen** – Deutsch liegt in `site/`, die Übersetzungen in `site/en/`, `site/sl/`, `site/uk/`, `site/hu/`, `site/it/` und `site/hr/`.
+Alle Preise in `site/data/` gelten automatisch für alle sieben Sprachen – jeder Preis steht nur einmal.
 Texte von Kopf-/Fußzeile und Produktkarten: `site/assets/js/layout.js` bzw.
 `site/assets/js/products.js`.
 
@@ -64,13 +64,13 @@ npx playwright install chromium  # einmalig, lädt den Testbrowser
 npm test
 ```
 
-Geprüft werden alle Seiten in allen vier Sprachen:
+Geprüft werden alle Seiten in allen sieben Sprachen:
 
 1. **Daten** – Produkt- und Preisdateien lesbar, vollständig übersetzt, Bilder vorhanden
 2. **HTML** – Titel, Beschreibung, genau eine Überschrift, keine kaputten Links/Bilder, alt-Texte
 3. **Browser** – keine Fehler, kein seitliches Scrollen am Handy, keine abgeschnittenen
    Tabellen, Menü einzeilig, Darkmode, Sprachumschalter, Handy-Menü
-4. **Sprachen** – en/sl/uk haben dieselben Tabellen, Links und Preise wie Deutsch
+4. **Sprachen** – Alle Übersetzungen haben dieselben Tabellen, Links und Preise wie Deutsch
 5. **Schnappschuss** – der sichtbare Text jeder Seite wird mit `tests/snapshots/` verglichen.
    Jede Text- oder Preisänderung fällt so auf. War sie gewollt: `npm run test:update`
    ausführen und die geänderten Schnappschüsse mit committen – im Git-Verlauf sieht man

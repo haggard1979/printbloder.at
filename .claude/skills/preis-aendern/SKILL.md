@@ -5,7 +5,7 @@ description: Preise auf printbloder.at ändern – Produktpreise, Staffelpreise,
 
 # Preis ändern
 
-Jeder Preis steht genau einmal in `site/data/` und gilt für alle vier Sprachen. Preise im HTML
+Jeder Preis steht genau einmal in `site/data/` und gilt für alle sieben Sprachen. Preise im HTML
 gibt es nicht – findest du dort einen, ist das ein Fehler (in die Daten verlagern).
 
 ## 1. Stelle finden
@@ -29,7 +29,7 @@ gibt es nicht – findest du dort einen, ist das ein Fehler (in die Daten verlag
 ## 3. Prüfen
 
 1. `npm test` – der Schnappschuss-Test zeigt jede geänderte Zeile (`-` alt, `+` neu),
-   je geänderter Seite einmal pro Sprache (de, en, sl, uk).
+   je geänderter Seite einmal pro Sprache (de, en, sl, uk, hu, it, hr).
 2. Jede gemeldete Zeile mit der gewollten Änderung abgleichen. Taucht etwas anderes auf: stoppen
    und klären.
 3. `npm run test:update`, danach `npm test` → muss grün sein.
