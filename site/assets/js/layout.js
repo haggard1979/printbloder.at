@@ -221,8 +221,8 @@
                 '  <div class="wrap topbar__inner">' +
                 '    <span>' + SHOP.location + '</span>' +
                 '    <span class="topbar__contact">' +
-                '      <a href="' + SHOP.phoneHref + '">' + SHOP.phone + '</a>' +
-                '      <a href="mailto:' + SHOP.email + '">' + SHOP.email + '</a>' +
+                '      <a class="topbar__phone" href="' + SHOP.phoneHref + '">' + SHOP.phone + '</a>' +
+                '      <a class="topbar__email" href="mailto:' + SHOP.email + '">' + SHOP.email + '</a>' +
                 '    </span>' +
                 '  </div>' +
                 '</div>' +

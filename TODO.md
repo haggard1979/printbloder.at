@@ -18,7 +18,7 @@ Pull Request entfernen. Neue Punkte unten anfügen.
   - `tools/seo.js` und `tests/run.js` haben eigene Sprachlisten – mit anpassen
   - Muttersprachler zum Gegenlesen einplanen
 
-- [ ] **Telefonnummer und E-Mail im Header auf Mobilgeräten tauschen und zentrieren**
+- [x] **Telefonnummer und E-Mail im Header auf Mobilgeräten tauschen und zentrieren**
   - obere Leiste am Handy: Reihenfolge tauschen (E-Mail vor Telefon) und zentriert
     darstellen (`.topbar` in `site.css`, Inhalt in `layout.js`); Desktop bleibt wie bisher
 

@@ -1069,8 +1069,19 @@ main.wrap {
     font-size: .8125rem;
 }
 
+/* Handy: ohne Standort, E-Mail vor Telefon, zentriert */
 @media (max-width: 600px) {
     .topbar__inner > span:first-child {
         display: none;
+    }
+
+    .topbar__inner,
+    .topbar__contact {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .topbar__email {
+        order: -1;
     }
 }
