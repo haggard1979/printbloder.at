@@ -8,8 +8,8 @@ Pull Request entfernen. Neue Punkte unten anfügen.
 - [ ] **Impressum und Datenschutzerklärung: Angaben vervollständigen und prüfen lassen**
   - Seiten `impressum.html` und `datenschutz.html` (alle sieben Sprachen) sind angelegt und in
     Fußzeile und Handy-Menü verlinkt
-  - **UID-Nummer:** Platzhalter `ATU XXXXXXXX` in allen sieben `impressum.html` ersetzen
-    (suchen nach `ATU XXXXXXXX`; danach `npm test`, `npm run test:update`)
+  - **UID-Nummer:** ATU64692247 stammt aus dem alten Impressum – vom Inhaber bestätigen lassen,
+    dass sie noch gültig ist (steht in allen sieben `impressum.html`)
   - **Fehlende Pflichtangaben vom Inhaber** (stehen noch nicht im Impressum): Name des Inhabers bzw.
     Firmenwortlaut und Rechtsform, ggf. Firmenbuchnummer und -gericht, Gewerbe (Gewerbewortlaut),
     Mitgliedschaft Wirtschaftskammer, Gewerbebehörde (§ 5 ECG, § 14 UGB, § 63 GewO)

@@ -32,8 +32,8 @@ site/
                           600 px) – <sub-nav category="stempel">
   assets/js/products.js   Produktkarten aus window.PRODUCTS (#product-list), Sortierung,
                           Anfrage-Mail; Übersetzung der Datenbezeichnungen (TEXT[lang].words)
-  impressum.html          Impressum und Datenschutzerklärung (Rechtstexte, alle Sprachen); Platzhalter
-  datenschutz.html        `ATU XXXXXXXX` für die UID-Nummer, Link in Fußzeile/Menü (layout.js)
+  impressum.html          Impressum und Datenschutzerklärung (Rechtstexte, alle Sprachen; UID-Nummer
+  datenschutz.html        steht nur im Impressum), Links in Fußzeile/Menü (layout.js)
   assets/js/map.js        Karte auf kontakt.html: Google-Maps-Einbettung erst nach Klick (Datenschutz),
                           Adresse/Texte stehen im HTML (data-map-src, data-map-title)
   assets/js/prices.js     Preistabellen aus window.PRICE_TABLES in <table data-table="N">,
