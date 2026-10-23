@@ -25,6 +25,9 @@
             skip: 'Zum Inhalt springen',
             menu: 'Menü',
             mainNav: 'Hauptnavigation',
+            subNav: 'Weitere Seiten dieser Kategorie',
+            prevPage: 'Vorherige Seite',
+            nextPage: 'Nächste Seite',
             language: 'Sprache',
             home: 'Startseite',
             light: 'Helle Darstellung',
@@ -40,6 +43,9 @@
             skip: 'Skip to content',
             menu: 'Menu',
             mainNav: 'Main navigation',
+            subNav: 'More in this category',
+            prevPage: 'Previous page',
+            nextPage: 'Next page',
             language: 'Language',
             home: 'Home',
             light: 'Light mode',
@@ -55,6 +61,9 @@
             skip: 'Preskoči na vsebino',
             menu: 'Meni',
             mainNav: 'Glavna navigacija',
+            subNav: 'Več v tej kategoriji',
+            prevPage: 'Prejšnja stran',
+            nextPage: 'Naslednja stran',
             language: 'Jezik',
             home: 'Domača stran',
             light: 'Svetel prikaz',
@@ -70,6 +79,9 @@
             skip: 'Перейти до вмісту',
             menu: 'Меню',
             mainNav: 'Головна навігація',
+            subNav: 'Більше в цій категорії',
+            prevPage: 'Попередня сторінка',
+            nextPage: 'Наступна сторінка',
             language: 'Мова',
             home: 'Головна сторінка',
             light: 'Світла тема',
@@ -104,6 +116,47 @@
         {href: 'plakate.html', match: ['plakate']},
         {href: 'geschenke.html', match: ['geschenke']}
     ];
+
+
+    /*
+     * Unterseiten je Kategorie für die Reiter im Seitenkopf (<sub-nav category="...">).
+     * Neue Unterseite: hier eintragen UND auf der Kategorieseite verlinken (der Test
+     * vergleicht beides). Reihenfolge wie auf der Kategorieseite.
+     */
+    var SUBNAV = {
+        visitkarten: [
+        {page: 'psVisitkarten', label: {de: 'Standard-Visitenkarten', en: 'Standard business cards', sl: 'Standardne vizitke', uk: 'Стандартні візитки'}},
+        {page: 'firmenVisitkarten', label: {de: 'Firmenvisitkarten', en: 'Company business cards', sl: 'Poslovne vizitke', uk: 'Фірмові візитки'}}
+        ],
+        stempel: [
+        {page: 'stempelPrinty', label: {de: 'Trodat Printy', en: 'Trodat Printy', sl: 'Trodat Printy', uk: 'Trodat Printy'}},
+        {page: 'stempelProfessional', label: {de: 'Trodat Professional', en: 'Trodat Professional', sl: 'Trodat Professional', uk: 'Trodat Professional'}},
+        {page: 'stempelKulis', label: {de: 'Stempelkugelschreiber', en: 'Stamp pens', sl: 'Žig s kemičnim svinčnikom', uk: 'Печатка-ручка'}},
+        {page: 'stempelFarben', label: {de: 'Zubehör und Farben', en: 'Accessories and inks', sl: 'Dodatki in barve', uk: 'Аксесуари та фарби'}}
+        ],
+        textildruck: [
+        {page: 'textildruckTransfer', label: {de: 'Transferdruck', en: 'Transfer printing', sl: 'Transferni tisk', uk: 'Трансферний друк'}},
+        {page: 'textildruckFlock', label: {de: 'Flex- und Flockdruck', en: 'Flex and flock printing', sl: 'Fleks in flok tisk', uk: 'Флекс- і флок-друк'}}
+        ],
+        digitaldruck: [
+        {page: 'digitaldruckFarb', label: {de: 'Farbdruck', en: 'Colour printing', sl: 'Barvni tisk', uk: 'Кольоровий друк'}},
+        {page: 'digitaldruckSW', label: {de: 'Schwarz-Weiss Druck', en: 'Black-and-white printing', sl: 'Črno-beli tisk', uk: 'Чорно-білий друк'}},
+        {page: 'digitaldruckSWHQ', label: {de: 'Schwarz-Weiss High Quality', en: 'Black-and-white High Quality', sl: 'Črno-beli visoke kakovosti', uk: 'Чорно-білий висока якість'}}
+        ],
+        schilder: [
+        {page: 'schilderHaus', label: {de: 'Hausschilder', en: 'House signs', sl: 'Hišne tablice', uk: 'Таблички з номером будинку'}},
+        {page: 'schilderAlu', label: {de: 'Alu-Dibond-Schilder', en: 'Alu-Dibond signs', sl: 'Table Alu-Dibond', uk: 'Таблички Alu-Dibond'}},
+        {page: 'geschenkeFunschilder', label: {de: 'Funschilder', en: 'Fun signs', sl: 'Zabavne table', uk: 'Жартівливі таблички'}}
+        ],
+        geschenke: [
+        {page: 'geschenkeFotopolster', label: {de: 'Fotopolster', en: 'Photo cushion', sl: 'Foto blazina', uk: 'Фотоподушка'}},
+        {page: 'geschenkeMousepad', label: {de: 'Mousepad', en: 'Mouse pad', sl: 'Podloga za miško', uk: 'Килимок для миші'}},
+        {page: 'geschenkeFototasse', label: {de: 'Fototasse', en: 'Photo mug', sl: 'Foto skodelica', uk: 'Фоточашка'}},
+        {page: 'geschenkeTeddies', label: {de: 'Teddybär', en: 'Teddy bear', sl: 'Medvedek', uk: 'Плюшевий ведмедик'}},
+        {page: 'geschenkeFotokappe', label: {de: 'Kappe mit Aufdruck', en: 'Cap with print', sl: 'Kapa s potiskom', uk: 'Кепка з принтом'}},
+        {page: 'geschenkeFunschilder', label: {de: 'Funschilder', en: 'Fun signs', sl: 'Zabavne table', uk: 'Жартівливі таблички'}}
+        ]
+    };
 
     window.SHOP = SHOP;
     window.SITE = {lang: LANG, root: ROOT};
@@ -328,6 +381,53 @@
         }
     }
 
+    /*
+     * Wechsel zwischen den Unterseiten einer Kategorie, z. B.
+     * <sub-nav category="stempel"></sub-nav> direkt unter dem Brotkrümelpfad.
+     * Große Bildschirme: Reiter mit allen Seiten. Handy (CSS, bis 600 px): Karussell mit
+     * Pfeilen links und rechts, in der Mitte die aktuelle Seite; blättert im Kreis.
+     */
+    class SubNav extends HTMLElement {
+        connectedCallback() {
+            var entries = SUBNAV[this.getAttribute('category')];
+            if (!entries) {
+                return;
+            }
+            var page = currentPage();
+            var name = function (entry) {
+                return entry.label[LANG] || entry.label.de;
+            };
+            var chips = '<ul class="subnav__chips">' + entries.map(function (entry) {
+                var current = entry.page === page ? ' aria-current="page"' : '';
+                return '<li><a href="' + entry.page + '.html"' + current + '>' + name(entry) + '</a></li>';
+            }).join('') + '</ul>';
+
+            var index = entries.findIndex(function (entry) {
+                return entry.page === page;
+            });
+            var carousel = '';
+            if (index >= 0 && entries.length > 1) {
+                var prev = entries[(index - 1 + entries.length) % entries.length];
+                var next = entries[(index + 1) % entries.length];
+                var arrow = function (entry, label, rel, path) {
+                    return '<a class="subnav__arrow" href="' + entry.page + '.html" rel="' + rel + '" aria-label="' + label + ': '
+                        + name(entry) + '"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="' + path
+                        + '" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';
+                };
+                carousel = '<div class="subnav__carousel">'
+                    + arrow(prev, T.prevPage, 'prev', 'M15 5l-7 7 7 7')
+                    + '<div class="subnav__current"><span class="subnav__name">' + name(entries[index]) + '</span>'
+                    + '<span class="subnav__dots" aria-hidden="true">' + entries.map(function (_, i) {
+                        return '<span class="subnav__dot' + (i === index ? ' subnav__dot--active' : '') + '"></span>';
+                    }).join('') + '</span></div>'
+                    + arrow(next, T.nextPage, 'next', 'M9 5l7 7-7 7')
+                    + '</div>';
+            }
+            this.innerHTML = '<nav class="subnav" aria-label="' + T.subNav + '">' + chips + carousel + '</nav>';
+        }
+    }
+
     customElements.define('site-header', SiteHeader);
     customElements.define('site-footer', SiteFooter);
+    customElements.define('sub-nav', SubNav);
 })();

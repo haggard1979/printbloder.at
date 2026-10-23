@@ -38,7 +38,10 @@ Bilder nach `site/img/…`, mit `alt` und echten `width`/`height` (`file bild.pn
 
 ## 3. Verlinken
 
-- Unterseite: auf der Kategorieseite als `.sub-item` – in allen vier Sprachen.
+- Unterseite: auf der Kategorieseite als `.sub-item` – in allen vier Sprachen – **und** in
+  `site/assets/js/layout.js` unter `SUBNAV` mit kurzem Namen in vier Sprachen eintragen; auf
+  der neuen Seite (alle Sprachen) `<sub-nav category="…"></sub-nav>` direkt unter dem
+  Brotkrümelpfad einfügen. Der Test meldet Abweichungen zwischen Reitern und Kategorieseite.
 - Neue Hauptkategorie: in `site/assets/js/layout.js` `NAV` und `TEXT[lang].nav` (alle
   Sprachen), Karte auf `home.html` (alle Sprachen); prüfen, ob das Menü noch passt
   (Test „Menü einzeilig“).

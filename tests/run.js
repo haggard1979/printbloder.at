@@ -270,7 +270,22 @@ async function inspect(page) {
                 .filter(b => b.scrollWidth > b.clientWidth + 1)
                 .map(b => (b.querySelector('caption') || {}).textContent || 'ohne Überschrift'),
             overflow: document.documentElement.scrollWidth > window.innerWidth,
-            headerHeight: header ? header.offsetHeight : 0
+            headerHeight: header ? header.offsetHeight : 0,
+            subnav: (() => {
+                const el = document.querySelector('sub-nav');
+                if (!el) return null;
+                const links = [...el.querySelectorAll('.subnav__chips a')];
+                const href = sel => { const a = el.querySelector(sel); return a ? a.getAttribute('href') : null; };
+                const name = el.querySelector('.subnav__name');
+                return {
+                    category: el.getAttribute('category'),
+                    links: links.map(a => a.getAttribute('href')),
+                    labels: links.map(a => a.textContent.trim()),
+                    current: links.filter(a => a.getAttribute('aria-current') === 'page').map(a => a.getAttribute('href')),
+                    currentLabel: links.filter(a => a.getAttribute('aria-current') === 'page').map(a => a.textContent.trim())[0] || null,
+                    carousel: {prev: href('.subnav__arrow[rel="prev"]'), next: href('.subnav__arrow[rel="next"]'), name: name ? name.textContent.trim() : null}
+                };
+            })()
         };
     });
 }
@@ -375,6 +390,37 @@ async function checkBrowser(browser, base) {
             fail(S, `Sprachumschalter ${lang}: landet auf ${now[0]} (lang=${now[1]})`);
         }
     }
+    // Wechsel zwischen Unterseiten – Handy: Karussell mit Pfeilen (Reiter ausgeblendet)
+    await p.goto(base + 'stempelPrinty.html');
+    if (!(await p.isVisible('.subnav__carousel')) || (await p.isVisible('.subnav__chips'))) {
+        fail(S, 'Unterseitenwechsel am Handy: Karussell muss sichtbar und Reiter ausgeblendet sein');
+    }
+    const arrows = await p.evaluate(() => {
+        const r = sel => document.querySelector(sel).getBoundingClientRect();
+        const prev = r('.subnav__arrow[rel="prev"]'), next = r('.subnav__arrow[rel="next"]');
+        return {prevLeft: prev.left, nextRight: innerWidth - next.right, size: Math.min(prev.width, prev.height, next.width, next.height)};
+    });
+    if (arrows.size < 44) fail(S, `Karussell-Pfeile am Handy zu klein (${Math.round(arrows.size)} px, mindestens 44 px)`);
+    if (arrows.prevLeft > 40 || arrows.nextRight > 40) fail(S, 'Karussell-Pfeile sitzen nicht links und rechts am Rand');
+    await p.click('.subnav__arrow[rel="next"]');
+    await p.waitForURL('**/stempelProfessional.html');
+    if ((await p.textContent('.subnav__name')).trim() !== 'Trodat Professional') fail(S, 'Karussell: nach „weiter“ steht nicht die neue Seite in der Mitte');
+    await p.click('.subnav__arrow[rel="prev"]');
+    await p.waitForURL('**/stempelPrinty.html');
+    await p.click('.subnav__arrow[rel="prev"]');   // von der ersten Seite zurück: zur letzten (im Kreis)
+    await p.waitForURL('**/stempelFarben.html');
+    // Wechsel zwischen Unterseiten – große Bildschirme: Reiter (Karussell ausgeblendet)
+    await resize(p, 1280, 900);
+    await p.goto(base + 'stempelPrinty.html');
+    if ((await p.isVisible('.subnav__carousel')) || !(await p.isVisible('.subnav__chips'))) {
+        fail(S, 'Unterseitenwechsel am Desktop: Reiter müssen sichtbar und Karussell ausgeblendet sein');
+    }
+    await p.click('.subnav__chips a[href="stempelProfessional.html"]');
+    await p.waitForURL('**/stempelProfessional.html');
+    if ((await p.getAttribute('.subnav__chips a[aria-current="page"]', 'href')) !== 'stempelProfessional.html') {
+        fail(S, 'Unterseitenwechsel: nach dem Klick ist nicht der neue Reiter markiert');
+    }
+    await resize(p, 390, 800);
     await p.goto(base + 'home.html');
     // Obere Leiste am Handy: E-Mail vor Telefon, zentriert
     const bar = await p.evaluate(() => {
@@ -412,6 +458,54 @@ async function checkBrowser(browser, base) {
 /* ------------------------------------------------------------- 4. Sprachen */
 
 const GERMAN = /\b(und|für|inkl\.|Preis|Preise|Stk\.|Zeilen|Jetzt|Menge|einseitig|beidseitig|Anfrage|oder|Ihre?)\b/;
+
+// Reiter zum Wechseln zwischen Unterseiten (<sub-nav>): vollständig, richtig markiert und
+// deckungsgleich mit der Liste auf der Kategorieseite
+function checkSubnav(results) {
+    const S = 'Unterseiten';
+    for (const lang of LANGS) {
+        const listed = {};   // Kategorieseite -> Unterseiten laut Kategorieseite
+        for (const page of PAGES) {
+            const src = read(pageFile(lang, page));
+            const links = [...src.matchAll(/class="sub-item" href="([^"]+)"/g)].map(m => m[1]);
+            if (links.length) listed[page] = links;
+        }
+        const withNav = PAGES.filter(page => results[lang + '/' + page].subnav);
+        for (const page of withNav) {
+            const r = results[lang + '/' + page].subnav;
+            const label = `${langDir(lang)}${page}.html`;
+            const file = page + '.html';
+            if (!listed[r.category]) {
+                fail(S, `${label}: Kategorie "${r.category}" unbekannt`);
+                continue;
+            }
+            if (r.links.join() !== listed[r.category].join()) {
+                fail(S, `${label}: Reiter weichen von der Liste auf ${r.category}.html ab\n      Reiter: ${r.links.join(', ')}\n      Liste:  ${listed[r.category].join(', ')}`);
+            }
+            if (r.current.join() !== file) fail(S, `${label}: aktueller Reiter ist ${r.current.join() || 'keiner'}, erwartet ${file}`);
+            if (new Set(r.labels).size !== r.labels.length || r.labels.some(t => !t)) fail(S, `${label}: Reiter ohne oder mit doppelter Beschriftung`);
+            // Karussell (Handy): Pfeile führen zur vorherigen/nächsten Seite, im Kreis; Mitte = aktuelle Seite
+            const i = r.links.indexOf(file);
+            const expected = {prev: r.links[(i - 1 + r.links.length) % r.links.length], next: r.links[(i + 1) % r.links.length]};
+            if (r.carousel.prev !== expected.prev || r.carousel.next !== expected.next) {
+                fail(S, `${label}: Karussell-Pfeile führen zu ${r.carousel.prev} / ${r.carousel.next}, erwartet ${expected.prev} / ${expected.next}`);
+            }
+            if (r.carousel.name !== r.currentLabel) fail(S, `${label}: Karussell zeigt "${r.carousel.name}", aktueller Reiter heißt "${r.currentLabel}"`);
+            for (const link of r.links) {
+                if (!fs.existsSync(path.join(ROOT, langDir(lang), link))) fail(S, `${label}: Reiter verlinkt auf fehlende Seite ${link}`);
+            }
+        }
+        // jede Unterseite einer Kategorie hat selbst Reiter
+        for (const [category, links] of Object.entries(listed)) {
+            for (const link of links) {
+                const page = link.replace(/\.html$/, '');
+                if (!results[lang + '/' + page] || !results[lang + '/' + page].subnav) {
+                    fail(S, `${langDir(lang)}${link}: auf ${category}.html verlinkt, hat aber keine <sub-nav>`);
+                }
+            }
+        }
+    }
+}
 
 function checkTranslations(results) {
     const S = 'Sprachen';
@@ -493,7 +587,8 @@ function checkSnapshots(results) {
         const results = await checkBrowser(browser, site.url);
         done('3. Browser');
         checkTranslations(results);
-        done('4. Sprachen');
+        checkSubnav(results);
+        done('4. Sprachen und Unterseiten');
         checkSnapshots(results);
         done(UPDATE ? '5. Schnappschuss (neu gespeichert)' : '5. Schnappschuss');
     } finally {
