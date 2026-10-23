@@ -156,6 +156,25 @@ function checkData() {
     }
 }
 
+// Breite und Höhe eines JPEG (aus dem SOF-Block); null, wenn kein JPEG
+function jpegSize(buf) {
+    if (buf[0] !== 0xff || buf[1] !== 0xd8) {
+        return null;
+    }
+    let i = 2;
+    while (i + 9 < buf.length) {
+        if (buf[i] !== 0xff) {
+            return null;
+        }
+        const marker = buf[i + 1];
+        if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) {
+            return {height: buf.readUInt16BE(i + 5), width: buf.readUInt16BE(i + 7)};
+        }
+        i += 2 + buf.readUInt16BE(i + 2);
+    }
+    return null;
+}
+
 /* ----------------------------------------------------------------- 2. HTML */
 
 function checkHtml() {
@@ -164,6 +183,19 @@ function checkHtml() {
     if (stale.length) {
         fail(S, `Suchmaschinen-Angaben veraltet – "npm run seo" ausführen: ${stale.slice(0, 5).join(', ')}`
             + (stale.length > 5 ? ` und ${stale.length - 5} weitere` : ''));
+    }
+    // Vorschaubild für geteilte Links: 1200 × 630, unter 300 KB (WhatsApp lädt größere nicht)
+    const previewFile = path.join(ROOT, 'img', 'vorschau.jpg');
+    if (!fs.existsSync(previewFile)) {
+        fail(S, 'img/vorschau.jpg fehlt – "npm run vorschau" ausführen');
+    } else {
+        const size = jpegSize(fs.readFileSync(previewFile));
+        if (!size || size.width !== 1200 || size.height !== 630) {
+            fail(S, `img/vorschau.jpg: ${size ? size.width + ' × ' + size.height : 'kein JPEG'}, erwartet 1200 × 630`);
+        }
+        if (fs.statSync(previewFile).size > 300 * 1024) {
+            fail(S, 'img/vorschau.jpg: größer als 300 KB');
+        }
     }
     for (const dir of LANGS.filter(l => l !== 'de')) {
         for (const f of fs.readdirSync(path.join(ROOT, dir)).filter(f => f.endsWith('.html'))) {
@@ -187,6 +219,12 @@ function checkHtml() {
             check(/<meta name="viewport"/.test(src), 'meta viewport fehlt');
             check(/<title>[^<]+<\/title>/.test(src), 'title fehlt');
             check(/<meta name="description" content="[^"]+"/.test(src), 'meta description fehlt');
+            for (const prop of ['og:title', 'og:description', 'og:url', 'og:image']) {
+                check(new RegExp(`<meta property="${prop}" content="[^"]+"`).test(src), `${prop} fehlt (Link-Vorschau)`);
+            }
+            check(src.includes('<meta name="twitter:card" content="summary_large_image">'), 'twitter:card fehlt');
+            check(src.includes(`<meta property="og:url" content="${seo.BASE}${langDir(lang)}${page}.html">`),
+                'og:url weicht von der eigenen Adresse ab');
             check((src.match(/<h1[\s>]/g) || []).length === 1, 'nicht genau ein <h1>');
             check(src.includes('<site-header></site-header>') && src.includes('<site-footer></site-footer>'),
                 'site-header/site-footer fehlt');

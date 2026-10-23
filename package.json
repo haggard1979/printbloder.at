@@ -5,7 +5,8 @@
   "scripts": {
     "test": "node tests/run.js",
     "test:update": "node tests/run.js --update-snapshots",
-    "seo": "node tools/seo.js"
+    "seo": "node tools/seo.js",
+    "vorschau": "node tools/vorschau.js"
   },
   "devDependencies": {
     "playwright": "1.56.1"
