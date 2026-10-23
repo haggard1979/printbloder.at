@@ -36,14 +36,15 @@ Pull Request entfernen. Neue Punkte unten anfügen.
   - am besten zentral erzeugen (Liste der Unterseiten je Kategorie an einer Stelle), damit
     nicht 7 Sprachen × viele Seiten von Hand gepflegt werden müssen
 
-- [ ] **Bilder gegen modernere Varianten austauschen** (teilweise erledigt)
+- [x] **Bilder gegen modernere Varianten austauschen** (alle Fotos durch SVG-Kacheln ersetzt)
   - [x] Kategorie- und Unterseiten-Kacheln: einheitliche SVG-Motive in `site/img/icons/`
     (kein eingebrannter Text, scharf auf jedem Display, passend zum Darkmode)
   - [x] Produktbilder der Stempel: 30 SVG-Illustrationen in `site/img/artikel/stempel/` (Textfeld im
     echten Größenverhältnis zur Druckfläche); Symbolbilder, keine exakten Trodat-Modelle
+  - [x] Hausschild-/Straßenschild-Bilder (`site/img/artikel/schilder/`): SVG im gleichen Maßstab
+  - Es gibt jetzt keine Fotos mehr auf der Website (Logo `pslogo.gif` und Anfahrtsplan bleiben)
   - [ ] Optional: echte Produktfotos statt Illustrationen – Trodat-Händlerfotos (Lizenz über
-    Händlerzugang klären) oder eigene Fotos als WebP
-  - [ ] Optional: Kacheln durch eigene Fotos ersetzen (Geschenke, Schilder, Plakate)
+    Händlerzugang klären) oder eigene Fotos als WebP (Geschenke, Schilder, Plakate, Stempel)
   - [x] Ungenutzte Bilder entfernt (alter Ordner `img/buttons/` und `farbkissen.png`; Fototasche,
     Fotoshirt, Flexkappe waren nie als Seiten vorhanden – bei Bedarf in der Git-Historie)
 
