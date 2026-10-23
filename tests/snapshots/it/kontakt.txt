@@ -14,3 +14,10 @@ Austria
 Telefono: +43 316 24 35 77
 E-mail: shop@printbloder.at
 Posta: all’indirizzo sopra indicato
+Mappa e percorso
+
+La mappa viene caricata da Google Maps solo dopo il Suo clic. In tal caso vengono trasmessi a Google dati come il Suo indirizzo IP.
+
+Mostra la mappa
+Pianifica il percorso con Google Maps
+Apri in OpenStreetMap

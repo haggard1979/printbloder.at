@@ -489,6 +489,15 @@ async function checkBrowser(browser, base) {
     await p.setViewportSize({width: 1440, height: 900});
     await p.goto(base + 'home.html');
     if (await p.isVisible('.nav__extra a')) fail(S, 'Kontakt-Link erscheint am Desktop im Menü');
+    // Karte (Anfahrt): vor dem Klick kein Fremdinhalt, nach dem Klick eingebettete Karte
+    const external = [];
+    await p.route(/^https?:\/\/(?!127\.0\.0\.1|localhost)/, route => { external.push(route.request().url()); route.fulfill({body: ''}); });
+    await p.goto(base + 'kontakt.html');
+    if (external.length || await p.$('.map iframe')) fail(S, 'Karte lädt ohne Klick Inhalte von Drittanbietern');
+    await p.click('.map [data-map-load]');
+    const frame = await p.getAttribute('.map iframe', 'src');
+    if (!frame || !frame.startsWith('https://maps.google.com/maps?q=')) fail(S, `Karte: nach dem Klick fehlt die eingebettete Karte (src=${frame})`);
+    await p.unroute(/^https?:\/\/(?!127\.0\.0\.1|localhost)/);
     await p.close();
     return results;
 }

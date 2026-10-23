@@ -14,3 +14,10 @@ Ausztria
 Telefon: +43 316 24 35 77
 E-mail: shop@printbloder.at
 Posta: a fent megadott címen
+Térkép és útvonal
+
+A térkép csak a kattintás után töltődik be a Google Térképről. Ennek során adatok, például az Ön IP-címe is átkerülnek a Google-hoz.
+
+Térkép megjelenítése
+Útvonaltervezés a Google Térképen
+Megnyitás az OpenStreetMapen

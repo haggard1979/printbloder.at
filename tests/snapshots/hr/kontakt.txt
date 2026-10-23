@@ -14,3 +14,10 @@ Austrija
 Telefon: +43 316 24 35 77
 E-pošta: shop@printbloder.at
 Pošta: na gore navedenu adresu
+Karta i ruta
+
+Karta se učitava s Google Karata tek nakon Vašeg klika. Pritom se Googleu prenose podaci poput Vaše IP adrese.
+
+Prikaži kartu
+Isplanirajte rutu u Google Kartama
+Otvori u OpenStreetMapu

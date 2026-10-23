@@ -33,6 +33,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="../assets/css/site.css">
     <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/map.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -67,6 +68,18 @@
             </div>
             <img src="../img/allgemein/anfahrt.png" alt="Megközelítési térkép a Shopping City Seiersberghez: Seiersberg lehajtó (188-as kijárat) a Graz-Webling csomópont és a Graz-West csomópont között">
         </div>
+
+        <h2 class="map-title">Térkép és útvonal</h2>
+        <div class="map" data-map-src="https://maps.google.com/maps?q=Shopping+City+Seiersberg%2C+Seiersberg-Pirka&amp;hl=hu&amp;output=embed" data-map-title="Térkép: Shopping City Seiersberg">
+            <div class="map__placeholder">
+                <p>A térkép csak a kattintás után töltődik be a Google Térképről. Ennek során adatok, például az Ön IP-címe is átkerülnek a Google-hoz.</p>
+                <button class="btn btn--primary" type="button" data-map-load>Térkép megjelenítése</button>
+            </div>
+        </div>
+        <ul class="map-links">
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Shopping+City+Seiersberg%2C+Seiersberg-Pirka" target="_blank" rel="noopener">Útvonaltervezés a Google Térképen</a></li>
+            <li><a href="https://www.openstreetmap.org/search?query=Shopping%20City%20Seiersberg" target="_blank" rel="noopener">Megnyitás az OpenStreetMapen</a></li>
+        </ul>
     </section>
 </main>
 

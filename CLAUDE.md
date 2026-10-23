@@ -32,6 +32,8 @@ site/
                           600 px) – <sub-nav category="stempel">
   assets/js/products.js   Produktkarten aus window.PRODUCTS (#product-list), Sortierung,
                           Anfrage-Mail; Übersetzung der Datenbezeichnungen (TEXT[lang].words)
+  assets/js/map.js        Karte auf kontakt.html: Google-Maps-Einbettung erst nach Klick (Datenschutz),
+                          Adresse/Texte stehen im HTML (data-map-src, data-map-title)
   assets/js/prices.js     Preistabellen aus window.PRICE_TABLES in <table data-table="N">,
                           Einzelpreise aus window.PRICE_VALUES in <span data-price="name">
   data/*.js               Produktkataloge (Stempel, Hausschilder) → window.PRODUCTS

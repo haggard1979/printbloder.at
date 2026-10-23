@@ -14,3 +14,10 @@ Avstrija
 Telefon: +43 316 24 35 77
 E-pošta: shop@printbloder.at
 Pošta: na zgoraj navedeni naslov
+Zemljevid in pot
+
+Zemljevid se naloži iz Google Zemljevidov šele po vašem kliku. Pri tem se Googlu posredujejo podatki, kot je vaš naslov IP.
+
+Prikaži zemljevid
+Načrtujte pot v Google Zemljevidih
+Odpri v OpenStreetMap

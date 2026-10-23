@@ -33,6 +33,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="../assets/css/site.css">
     <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/map.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -66,6 +67,18 @@
             </div>
             <img src="../img/allgemein/anfahrt.png" alt="Directions map to Shopping City Seiersberg: exit Seiersberg (exit 188) between the Graz-Webling and Graz-West junctions">
         </div>
+
+        <h2 class="map-title">Map &amp; directions</h2>
+        <div class="map" data-map-src="https://maps.google.com/maps?q=Shopping+City+Seiersberg%2C+Seiersberg-Pirka&amp;hl=en&amp;output=embed" data-map-title="Map: Shopping City Seiersberg">
+            <div class="map__placeholder">
+                <p>The map is only loaded from Google Maps after you click. Data such as your IP address is then sent to Google.</p>
+                <button class="btn btn--primary" type="button" data-map-load>Show map</button>
+            </div>
+        </div>
+        <ul class="map-links">
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Shopping+City+Seiersberg%2C+Seiersberg-Pirka" target="_blank" rel="noopener">Plan your route in Google Maps</a></li>
+            <li><a href="https://www.openstreetmap.org/search?query=Shopping%20City%20Seiersberg" target="_blank" rel="noopener">Open in OpenStreetMap</a></li>
+        </ul>
     </section>
 </main>
 
