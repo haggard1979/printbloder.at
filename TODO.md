@@ -39,8 +39,10 @@ Pull Request entfernen. Neue Punkte unten anfügen.
 - [ ] **Bilder gegen modernere Varianten austauschen** (teilweise erledigt)
   - [x] Kategorie- und Unterseiten-Kacheln: einheitliche SVG-Motive in `site/img/icons/`
     (kein eingebrannter Text, scharf auf jedem Display, passend zum Darkmode)
-  - [ ] Produktbilder der Stempel (`site/img/artikel/`, klein und unscharf): Herstellerbilder
-    von Trodat (Lizenz über Händlerzugang klären) oder eigene Fotos als WebP mit `width`/`height`
+  - [x] Produktbilder der Stempel: 30 SVG-Illustrationen in `site/img/artikel/stempel/` (Textfeld im
+    echten Größenverhältnis zur Druckfläche); Symbolbilder, keine exakten Trodat-Modelle
+  - [ ] Optional: echte Produktfotos statt Illustrationen – Trodat-Händlerfotos (Lizenz über
+    Händlerzugang klären) oder eigene Fotos als WebP
   - [ ] Optional: Kacheln durch eigene Fotos ersetzen (Geschenke, Schilder, Plakate)
   - [x] Ungenutzte Bilder entfernt (alter Ordner `img/buttons/` und `farbkissen.png`; Fototasche,
     Fotoshirt, Flexkappe waren nie als Seiten vorhanden – bei Bedarf in der Git-Historie)

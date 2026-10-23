@@ -60,7 +60,7 @@ Seitentypen (als Vorlage für neue Seiten kopieren):
 
 `data/*.js` (Produkte):
 ```js
-{name: 'Trodat Printy 4910' /* oder {de, en, sl, uk, hu, it, hr} */, image: 'img/…png',
+{name: 'Trodat Printy 4910' /* oder {de, en, sl, uk, hu, it, hr} */, image: 'img/artikel/stempel/….svg' /* oder .png/.webp */,
  specs: {'Druckfläche': '26 × 9 mm', 'Zeilen': 'max. 3'}, price: 30.10,
  extras: {'Nur Stempelplatte': 18.20}, from: true /* "ab" */, note: '…'}
 ```
