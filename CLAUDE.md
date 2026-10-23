@@ -25,7 +25,8 @@ site/
   assets/css/site.css     gesamtes Design; Farben als Variablen in :root
   assets/js/layout.js     <site-header>/<site-footer>: Kopfzeile, Menü, Fußzeile, Kontaktdaten,
                           Sprachauswahl (Flaggen als SVG, Deutsch = Österreich), Darkmode-
-                          Umschalter, UI-Texte je Sprache (TEXT)
+                          Umschalter, UI-Texte je Sprache (TEXT); SUBNAV = Unterseiten je
+                          Kategorie für die Reiter (<sub-nav category="stempel">)
   assets/js/products.js   Produktkarten aus window.PRODUCTS (#product-list), Sortierung,
                           Anfrage-Mail; Übersetzung der Datenbezeichnungen (TEXT[lang].words)
   assets/js/prices.js     Preistabellen aus window.PRICE_TABLES in <table data-table="N">,
@@ -77,6 +78,11 @@ UI-Texte (Menü, Fußzeile, Knöpfe) in `layout.js`/`products.js` je Sprache.
 Startseite verlinken (ggf. Menü in `layout.js`: `NAV` + `TEXT[lang].nav`), `npm run seo`,
 `npm test`, `npm run test:update`.
 
+**Neue Unterseite einer Kategorie:** zusätzlich (1) als `.sub-item` auf der Kategorieseite
+verlinken (alle vier Sprachen), (2) in `layout.js` unter `SUBNAV` mit Namen in vier Sprachen
+eintragen, (3) auf der neuen Seite (alle Sprachen) `<sub-nav category="…"></sub-nav>` direkt
+unter dem Brotkrümelpfad einfügen. Der Test vergleicht Reiter und Kategorieseite.
+
 **Telefon, E-Mail, Adresse:** nur in `layout.js` (`SHOP`, `TEXT[lang].location`).
 
 ## Skills (`.claude/skills/`)
@@ -109,7 +115,8 @@ verwenden:
 2. HTML (Pflichtangaben, Links/Bilder existieren, Platzhalter ↔ Daten, SEO-Angaben aktuell)
 3. Browser (keine Fehler, kein seitliches Scrollen bei 390 px, Tabellen nicht abgeschnitten
    bei 1280/1024/768 px, Menü einzeilig, Darkmode, Sprachumschalter, Handy-Menü)
-4. Sprachen (gleiche Tabellen, Links, Preise wie Deutsch; Hinweis bei deutschen Resten)
+4. Sprachen und Unterseiten (gleiche Tabellen, Links, Preise wie Deutsch; Reiter der
+   Unterseiten == Liste der Kategorieseite, aktueller Reiter markiert, Wechsel per Klick)
 5. Schnappschuss (sichtbarer Text == `tests/snapshots/`)
 
 Fehlschlag nie durch Abschwächen der Tests beheben. Schnappschüsse nur nach geprüfter,

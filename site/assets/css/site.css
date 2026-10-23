@@ -683,6 +683,67 @@ main.wrap {
     list-style: none;
 }
 
+/* Reiter zum Wechseln zwischen den Unterseiten einer Kategorie */
+
+sub-nav {
+    display: block;
+    margin-top: 16px;
+}
+
+.subnav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.subnav a {
+    display: block;
+    padding: 8px 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: .9375rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.subnav a:hover {
+    border-color: var(--link);
+    color: var(--link);
+}
+
+.subnav a[aria-current="page"] {
+    border-color: var(--brand);
+    background: var(--brand);
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Handy: eine Zeile, waagerecht scrollbar (der nächste Reiter ragt an den Rand) */
+@media (max-width: 600px) {
+    .subnav ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin: 0 -16px;
+        padding: 2px 16px 6px;
+        scrollbar-width: none;
+    }
+
+    .subnav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .subnav li {
+        flex: none;
+    }
+}
+
 /* Produktseite: Kopf */
 
 .product-intro {

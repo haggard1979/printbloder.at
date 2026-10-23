@@ -25,6 +25,7 @@
             skip: 'Zum Inhalt springen',
             menu: 'Menü',
             mainNav: 'Hauptnavigation',
+            subNav: 'Weitere Seiten dieser Kategorie',
             language: 'Sprache',
             home: 'Startseite',
             light: 'Helle Darstellung',
@@ -40,6 +41,7 @@
             skip: 'Skip to content',
             menu: 'Menu',
             mainNav: 'Main navigation',
+            subNav: 'More in this category',
             language: 'Language',
             home: 'Home',
             light: 'Light mode',
@@ -55,6 +57,7 @@
             skip: 'Preskoči na vsebino',
             menu: 'Meni',
             mainNav: 'Glavna navigacija',
+            subNav: 'Več v tej kategoriji',
             language: 'Jezik',
             home: 'Domača stran',
             light: 'Svetel prikaz',
@@ -70,6 +73,7 @@
             skip: 'Перейти до вмісту',
             menu: 'Меню',
             mainNav: 'Головна навігація',
+            subNav: 'Більше в цій категорії',
             language: 'Мова',
             home: 'Головна сторінка',
             light: 'Світла тема',
@@ -104,6 +108,47 @@
         {href: 'plakate.html', match: ['plakate']},
         {href: 'geschenke.html', match: ['geschenke']}
     ];
+
+
+    /*
+     * Unterseiten je Kategorie für die Reiter im Seitenkopf (<sub-nav category="...">).
+     * Neue Unterseite: hier eintragen UND auf der Kategorieseite verlinken (der Test
+     * vergleicht beides). Reihenfolge wie auf der Kategorieseite.
+     */
+    var SUBNAV = {
+        visitkarten: [
+        {page: 'psVisitkarten', label: {de: 'Standard-Visitenkarten', en: 'Standard business cards', sl: 'Standardne vizitke', uk: 'Стандартні візитки'}},
+        {page: 'firmenVisitkarten', label: {de: 'Firmenvisitkarten', en: 'Company business cards', sl: 'Poslovne vizitke', uk: 'Фірмові візитки'}}
+        ],
+        stempel: [
+        {page: 'stempelPrinty', label: {de: 'Trodat Printy', en: 'Trodat Printy', sl: 'Trodat Printy', uk: 'Trodat Printy'}},
+        {page: 'stempelProfessional', label: {de: 'Trodat Professional', en: 'Trodat Professional', sl: 'Trodat Professional', uk: 'Trodat Professional'}},
+        {page: 'stempelKulis', label: {de: 'Stempelkugelschreiber', en: 'Stamp pens', sl: 'Žig s kemičnim svinčnikom', uk: 'Печатка-ручка'}},
+        {page: 'stempelFarben', label: {de: 'Zubehör und Farben', en: 'Accessories and inks', sl: 'Dodatki in barve', uk: 'Аксесуари та фарби'}}
+        ],
+        textildruck: [
+        {page: 'textildruckTransfer', label: {de: 'Transferdruck', en: 'Transfer printing', sl: 'Transferni tisk', uk: 'Трансферний друк'}},
+        {page: 'textildruckFlock', label: {de: 'Flex- und Flockdruck', en: 'Flex and flock printing', sl: 'Fleks in flok tisk', uk: 'Флекс- і флок-друк'}}
+        ],
+        digitaldruck: [
+        {page: 'digitaldruckFarb', label: {de: 'Farbdruck', en: 'Colour printing', sl: 'Barvni tisk', uk: 'Кольоровий друк'}},
+        {page: 'digitaldruckSW', label: {de: 'Schwarz-Weiss Druck', en: 'Black-and-white printing', sl: 'Črno-beli tisk', uk: 'Чорно-білий друк'}},
+        {page: 'digitaldruckSWHQ', label: {de: 'Schwarz-Weiss High Quality', en: 'Black-and-white High Quality', sl: 'Črno-beli visoke kakovosti', uk: 'Чорно-білий висока якість'}}
+        ],
+        schilder: [
+        {page: 'schilderHaus', label: {de: 'Hausschilder', en: 'House signs', sl: 'Hišne tablice', uk: 'Таблички з номером будинку'}},
+        {page: 'schilderAlu', label: {de: 'Alu-Dibond-Schilder', en: 'Alu-Dibond signs', sl: 'Table Alu-Dibond', uk: 'Таблички Alu-Dibond'}},
+        {page: 'geschenkeFunschilder', label: {de: 'Funschilder', en: 'Fun signs', sl: 'Zabavne table', uk: 'Жартівливі таблички'}}
+        ],
+        geschenke: [
+        {page: 'geschenkeFotopolster', label: {de: 'Fotopolster', en: 'Photo cushion', sl: 'Foto blazina', uk: 'Фотоподушка'}},
+        {page: 'geschenkeMousepad', label: {de: 'Mousepad', en: 'Mouse pad', sl: 'Podloga za miško', uk: 'Килимок для миші'}},
+        {page: 'geschenkeFototasse', label: {de: 'Fototasse', en: 'Photo mug', sl: 'Foto skodelica', uk: 'Фоточашка'}},
+        {page: 'geschenkeTeddies', label: {de: 'Teddybär', en: 'Teddy bear', sl: 'Medvedek', uk: 'Плюшевий ведмедик'}},
+        {page: 'geschenkeFotokappe', label: {de: 'Kappe mit Aufdruck', en: 'Cap with print', sl: 'Kapa s potiskom', uk: 'Кепка з принтом'}},
+        {page: 'geschenkeFunschilder', label: {de: 'Funschilder', en: 'Fun signs', sl: 'Zabavne table', uk: 'Жартівливі таблички'}}
+        ]
+    };
 
     window.SHOP = SHOP;
     window.SITE = {lang: LANG, root: ROOT};
@@ -328,6 +373,34 @@
         }
     }
 
+    /*
+     * Reiter zum Wechseln zwischen den Unterseiten einer Kategorie, z. B.
+     * <sub-nav category="stempel"></sub-nav> direkt unter dem Brotkrümelpfad.
+     */
+    class SubNav extends HTMLElement {
+        connectedCallback() {
+            var entries = SUBNAV[this.getAttribute('category')];
+            if (!entries) {
+                return;
+            }
+            var page = currentPage();
+            this.innerHTML = '<nav class="subnav" aria-label="' + T.subNav + '"><ul>' + entries.map(function (entry) {
+                var current = entry.page === page ? ' aria-current="page"' : '';
+                return '<li><a href="' + entry.page + '.html"' + current + '>' + (entry.label[LANG] || entry.label.de) + '</a></li>';
+            }).join('') + '</ul></nav>';
+
+            // schmale Bildschirme: Reiter scrollen waagerecht, der aktuelle wird in die Mitte gerückt
+            var list = this.querySelector('ul');
+            var active = list.querySelector('[aria-current]');
+            if (active) {
+                requestAnimationFrame(function () {
+                    list.scrollLeft = active.offsetLeft - (list.clientWidth - active.offsetWidth) / 2;
+                });
+            }
+        }
+    }
+
     customElements.define('site-header', SiteHeader);
     customElements.define('site-footer', SiteFooter);
+    customElements.define('sub-nav', SubNav);
 })();

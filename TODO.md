@@ -22,7 +22,7 @@ Pull Request entfernen. Neue Punkte unten anfügen.
   - obere Leiste am Handy: Reihenfolge tauschen (E-Mail vor Telefon) und zentriert
     darstellen (`.topbar` in `site.css`, Inhalt in `layout.js`); Desktop bleibt wie bisher
 
-- [ ] **Wechsel zwischen Unterseiten einer Kategorie ermöglichen**
+- [x] **Wechsel zwischen Unterseiten einer Kategorie ermöglichen**
   - z. B. von Trodat Printy direkt zu Trodat Professional, Stempelkulis, Zubehör
   - Steuerelemente im oberen Bereich der Seite (Kopfbereich mit Titel), z. B. als
     Reiter/Chips mit den Geschwisterseiten; gilt für alle Kategorien mit Unterseiten
