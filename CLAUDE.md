@@ -24,6 +24,7 @@ site/
   *.html                  deutsche Seiten (home.html = Startseite, index.html leitet weiter)
   en/ sl/ uk/             Übersetzungen, Ressourcen dort mit ../ (../assets/…, ../img/…)
   assets/css/site.css     gesamtes Design; Farben als Variablen in :root
+  img/icons/*.svg         Kacheln der Kategorie-/Unterseiten (selbstständige SVG, helle Fläche)
   assets/js/layout.js     <site-header>/<site-footer>: Kopfzeile, Menü, Fußzeile, Kontaktdaten,
                           Sprachauswahl (Flaggen als SVG, Deutsch = Österreich), Darkmode-
                           Umschalter, UI-Texte je Sprache (TEXT); SUBNAV = Unterseiten je
