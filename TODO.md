@@ -42,7 +42,7 @@ Pull Request entfernen. Neue Punkte unten anfügen.
   - [x] Produktbilder der Stempel: 30 SVG-Illustrationen in `site/img/artikel/stempel/` (Textfeld im
     echten Größenverhältnis zur Druckfläche); Symbolbilder, keine exakten Trodat-Modelle
   - [x] Hausschild-/Straßenschild-Bilder (`site/img/artikel/schilder/`): SVG im gleichen Maßstab
-  - Es gibt jetzt keine Fotos mehr auf der Website (Logo `pslogo.gif` und Anfahrtsplan bleiben)
+  - Es gibt jetzt keine Fotos mehr auf der Website; der Anfahrtsplan ist ein SVG (`img/allgemein/anfahrt.svg`), nur das Logo `pslogo.gif` ist noch ein Rasterbild
   - [ ] Optional: echte Produktfotos statt Illustrationen – Trodat-Händlerfotos (Lizenz über
     Händlerzugang klären) oder eigene Fotos als WebP (Geschenke, Schilder, Plakate, Stempel)
   - [x] Ungenutzte Bilder entfernt (alter Ordner `img/buttons/` und `farbkissen.png`; Fototasche,
