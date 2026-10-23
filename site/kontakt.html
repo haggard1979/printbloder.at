@@ -33,6 +33,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="assets/css/site.css">
     <script src="assets/js/layout.js"></script>
+    <script src="assets/js/map.js" defer></script>
 </head>
 <body>
 <site-header></site-header>
@@ -67,6 +68,18 @@
             </div>
             <img src="img/allgemein/anfahrt.png" alt="Anfahrtsplan zur Shopping City Seiersberg: Abfahrt Seiersberg (Exit 188) zwischen Knoten Graz-Webling und Knoten Graz-West">
         </div>
+
+        <h2 class="map-title">Karte &amp; Route</h2>
+        <div class="map" data-map-src="https://maps.google.com/maps?q=Shopping+City+Seiersberg%2C+Seiersberg-Pirka&amp;hl=de&amp;output=embed" data-map-title="Karte: Shopping City Seiersberg">
+            <div class="map__placeholder">
+                <p>Die Karte wird erst nach Ihrem Klick von Google Maps geladen. Dabei werden Daten wie Ihre IP-Adresse an Google übertragen.</p>
+                <button class="btn btn--primary" type="button" data-map-load>Karte anzeigen</button>
+            </div>
+        </div>
+        <ul class="map-links">
+            <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Shopping+City+Seiersberg%2C+Seiersberg-Pirka" target="_blank" rel="noopener">Route in Google Maps planen</a></li>
+            <li><a href="https://www.openstreetmap.org/search?query=Shopping%20City%20Seiersberg" target="_blank" rel="noopener">In OpenStreetMap öffnen</a></li>
+        </ul>
     </section>
 </main>
 

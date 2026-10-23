@@ -39,11 +39,12 @@ Pull Request entfernen. Neue Punkte unten anfügen.
   - [ ] Ungenutzte Bilder in `site/img/buttons/` (Dater, Dark-Folie, Plakat A0–A2, Flexkappe,
     Fotoshirt, Fototasche) entfernen oder verwenden
 
-- [ ] **Anfahrt: echte Karte einbinden bzw. ergänzen**
-  - z. B. OpenStreetMap-Einbettung oder Link zu Google Maps/OSM mit Routenplanung
-  - Datenschutz beachten: eingebettete Karten laden Inhalte von Drittanbietern
-    (ggf. erst nach Klick laden) – Hinweis in Datenschutzerklärung nötig
-  - bestehender Anfahrtsplan (`img/allgemein/anfahrt.png`) kann zusätzlich bleiben
+- [x] **Anfahrt: echte Karte einbinden bzw. ergänzen**
+  - `kontakt.html` (alle Sprachen): Google-Maps-Karte wird erst nach Klick geladen, dazu Links
+    „Route in Google Maps planen“ und „In OpenStreetMap öffnen“; Anfahrtsplan bleibt
+  - **Offen:** Datenschutzerklärung nötig (Google Maps nach Klick, Übertragung der IP-Adresse) –
+    gehört zum Punkt „Impressum erstellen“; Pin im Browser kontrollieren (Suche nach
+    „Shopping City Seiersberg“); auf Wunsch OpenStreetMap-Karte mit genauen Koordinaten statt Google
 
 - [x] **Ansprechende Link-Vorschau beim Teilen (Messenger, soziale Netzwerke)**
   - Open-Graph-/Twitter-Card-Angaben in allen Seiten (erzeugt von `tools/seo.js`), Vorschaubild

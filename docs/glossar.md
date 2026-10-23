@@ -66,3 +66,5 @@ Regeln:
 | Runden (Ecken) | Rounded corners | Zaobljenje vogalov | Заокруглення кутів | Sarokgömbölés | Angoli arrotondati | Zaobljeni kutovi |
 | Satzkosten | set-up costs | stroški priprave | вартість підготовки макета | Előkészítési költség | Costi di preparazione | Troškovi pripreme |
 | Anfahrt, Kontakt & Impressum | Directions, contact & legal notice | Dostop, kontakt in impresum | Як дістатися, контакти та вихідні дані | Megközelítés, kapcsolat és impresszum | Come raggiungerci, contatti e note legali | Kako do nas, kontakt i impressum |
+| Karte anzeigen | Show map | Prikaži zemljevid | Показати карту | Térkép megjelenítése | Mostra la mappa | Prikaži kartu |
+| Karte & Route | Map & directions | Zemljevid in pot | Карта й маршрут | Térkép és útvonal | Mappa e percorso | Karta i ruta |

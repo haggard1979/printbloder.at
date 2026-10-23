@@ -14,3 +14,10 @@ SCS Seiersberg
 Telefon: +43 316 24 35 77
 E-Mail: shop@printbloder.at
 Post: unter oben angeführter Anschrift
+Karte & Route
+
+Die Karte wird erst nach Ihrem Klick von Google Maps geladen. Dabei werden Daten wie Ihre IP-Adresse an Google übertragen.
+
+Karte anzeigen
+Route in Google Maps planen
+In OpenStreetMap öffnen
