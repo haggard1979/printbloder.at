@@ -42,8 +42,8 @@ Pull Request entfernen. Neue Punkte unten anfügen.
   - [ ] Produktbilder der Stempel (`site/img/artikel/`, klein und unscharf): Herstellerbilder
     von Trodat (Lizenz über Händlerzugang klären) oder eigene Fotos als WebP mit `width`/`height`
   - [ ] Optional: Kacheln durch eigene Fotos ersetzen (Geschenke, Schilder, Plakate)
-  - [ ] Ungenutzte Bilder in `site/img/buttons/` (Dater, Dark-Folie, Plakat A0–A2, Flexkappe,
-    Fotoshirt, Fototasche) entfernen oder verwenden
+  - [x] Ungenutzte Bilder entfernt (alter Ordner `img/buttons/` und `farbkissen.png`; Fototasche,
+    Fotoshirt, Flexkappe waren nie als Seiten vorhanden – bei Bedarf in der Git-Historie)
 
 - [x] **Anfahrt: echte Karte einbinden bzw. ergänzen**
   - `kontakt.html` (alle Sprachen): Google-Maps-Karte wird erst nach Klick geladen, dazu Links
@@ -63,5 +63,3 @@ Pull Request entfernen. Neue Punkte unten anfügen.
 
 - [ ] Übersetzungen (v. a. Slowenisch, Ukrainisch, Ungarisch, Italienisch, Kroatisch) von Muttersprachlern gegenlesen lassen
 - [ ] Öffnungszeiten ergänzen (Angaben vom Inhaber nötig)
-- [ ] Ungenutzte Produktbilder (Fototasche, Fotoshirt, Flexkappe) – frühere oder geplante
-      Produkte? Entweder Seiten ergänzen oder Bilder entfernen
