@@ -37,8 +37,12 @@ site/
   data/*.js               Produktkataloge (Stempel, Hausschilder) → window.PRODUCTS
   data/preise/<seite>.js  Staffelpreise je Seite → PRICE_TABLES (+ optional PRICE_VALUES)
   sitemap.xml robots.txt  von tools/seo.js erzeugt – nicht von Hand ändern
+  img/vorschau.jpg        Vorschaubild für WhatsApp & Co. (unter 300 KB, 1200 × 630)
 tests/run.js              npm test (siehe unten); tests/snapshots/ = erwarteter Seitentext
-tools/seo.js              npm run seo: canonical/hreflang in jeder Seite + sitemap.xml
+tools/seo.js              npm run seo: canonical/hreflang/Link-Vorschau (Open Graph) in jeder Seite
+                          + sitemap.xml
+tools/vorschau.*          npm run vorschau: erzeugt site/img/vorschau.jpg (1200 × 630) für
+                          geteilte Links aus tools/vorschau.html
 docs/glossar.md           feste Begriffe für Übersetzungen
 .github/workflows/website.yml  Prüfen bei jedem Push/PR; Push auf master → Veröffentlichung
 ```
@@ -100,7 +104,8 @@ verwenden:
 ## Konventionen
 
 - Kopf jeder Seite: `charset`, `viewport`, eigener `<title>`, eigene `meta description`,
-  danach die von `npm run seo` verwalteten `canonical`/`alternate`-Links, dann CSS + layout.js.
+  danach die von `npm run seo` verwalteten `canonical`/`alternate`-Links und Link-Vorschau
+  (`og:`/`twitter:`-Angaben, aus Titel und Beschreibung erzeugt), dann CSS + layout.js.
 - Genau ein `<h1>`; Bilder mit `alt` (dekorativ: `alt=""`) und `width`/`height`.
 - Keine Inline-Styles; neues CSS in `site.css` mit den vorhandenen Variablen.
 - Farben nur über Variablen. Darkmode: die dunkle Palette steht in **zwei identischen

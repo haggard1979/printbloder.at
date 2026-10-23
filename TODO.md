@@ -45,15 +45,12 @@ Pull Request entfernen. Neue Punkte unten anfügen.
     (ggf. erst nach Klick laden) – Hinweis in Datenschutzerklärung nötig
   - bestehender Anfahrtsplan (`img/allgemein/anfahrt.png`) kann zusätzlich bleiben
 
-- [ ] **Ansprechende Link-Vorschau beim Teilen (Messenger, soziale Netzwerke)**
-  - Open-Graph- und Twitter-Card-Angaben im `<head>` jeder Seite (`og:title`, `og:description`,
-    `og:image`, `og:url`, `og:type`, `og:locale`, `twitter:card`) – am besten von
-    `tools/seo.js` erzeugen lassen, damit sie in allen sieben Sprachen aktuell bleiben
-    (Titel/Beschreibung aus `<title>` und `meta description`, `og:url` = canonical)
-  - Vorschaubild 1200 × 630 px (JPG/PNG, unter 1 MB), mit Logo und Schriftzug; ggf. je
-    Kategorie ein eigenes Bild; absolute Adresse unter `https://www.printbloder.at/`
-  - Tests: Pflichtangaben und Bild vorhanden; Ansicht mit Vorschau-Prüfern kontrollieren
-    (WhatsApp, Facebook Sharing Debugger, LinkedIn Post Inspector)
+- [x] **Ansprechende Link-Vorschau beim Teilen (Messenger, soziale Netzwerke)**
+  - Open-Graph-/Twitter-Card-Angaben in allen Seiten (erzeugt von `tools/seo.js`), Vorschaubild
+    `site/img/vorschau.jpg` (neu erzeugen mit `npm run vorschau`)
+  - Nach dem Veröffentlichen mit WhatsApp, Facebook Sharing Debugger bzw. LinkedIn Post Inspector
+    prüfen; die Messenger merken sich Vorschauen oft lange (Cache), ggf. im Debugger erneuern
+  - Optional: eigene Vorschaubilder je Kategorie
 
 ## Weitere offene Punkte
 
