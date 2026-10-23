@@ -11,9 +11,10 @@ Kommunikation mit dem Inhaber auf **Deutsch**. Die Website ist live unter
 - **Die Website ist der Ordner `site/`** – nur dieser wird veröffentlicht. Alles außerhalb
   (Tests, Werkzeuge, Doku) gehört nicht zur Website.
 - **Jeder Preis steht genau einmal** – in `site/data/`, nie im HTML. Gilt für alle Sprachen.
-- **Vier Sprachen**: Deutsch (`site/`), Englisch (`site/en/`), Slowenisch (`site/sl/`),
-  Ukrainisch (`site/uk/`) – gleiche Dateinamen, gleiche Struktur. Jede Textänderung in
-  allen vier Sprachen machen.
+- **Sieben Sprachen**: Deutsch (`site/`), Englisch (`site/en/`), Slowenisch (`site/sl/`),
+  Ukrainisch (`site/uk/`), Ungarisch (`site/hu/`), Italienisch (`site/it/`), Kroatisch
+  (`site/hr/`) – gleiche Dateinamen, gleiche Struktur. Jede Textänderung in allen sieben
+  Sprachen machen.
 - **Vor jedem Commit `npm test`** – muss grün sein.
 
 ## Aufbau
@@ -50,18 +51,18 @@ Seitentypen (als Vorlage für neue Seiten kopieren):
 
 `data/*.js` (Produkte):
 ```js
-{name: 'Trodat Printy 4910' /* oder {de, en, sl, uk} */, image: 'img/…png',
+{name: 'Trodat Printy 4910' /* oder {de, en, sl, uk, hu, it, hr} */, image: 'img/…png',
  specs: {'Druckfläche': '26 × 9 mm', 'Zeilen': 'max. 3'}, price: 30.10,
  extras: {'Nur Stempelplatte': 18.20}, from: true /* "ab" */, note: '…'}
 ```
 Spezifikations-Bezeichnungen und -Werte sind deutsch; ihre Übersetzungen stehen in
-`products.js` (`TEXT.en.words` usw.). Neue Bezeichnung → dort für en/sl/uk ergänzen.
+`products.js` (`TEXT.en.words` usw.). Neue Bezeichnung → dort für en/sl/uk/hu/it/hr ergänzen.
 
 `data/preise/<seite>.js` (Tabellen) – Zeile = `[Zeilenbeschriftung, Wert, Wert, …]`:
 - `0.9` Preis · `{"p": 0.15, "plus": true}` Aufpreis „+0,15 €“ ·
   `{"p": 59.9, "unit": {de,en,sl,uk}}` Preis mit Einheit · `null` = „–“
 - `"A4"` Text in allen Sprachen gleich · `{"de": …, "en": …, "sl": …, "uk": …}` übersetzt
-  (immer alle vier Sprachen, sonst schlägt der Test fehl)
+  (immer alle sieben Sprachen, sonst schlägt der Test fehl)
 - Preise im Fließtext: `<span data-price="name"></span>` + `PRICE_VALUES = {name: 2}`
 
 Preisformat wird automatisch je Sprache erzeugt: de/sl/uk `0,90 €`, en `€0.90`.
@@ -72,15 +73,15 @@ Preisformat wird automatisch je Sprache erzeugt: de/sl/uk `0,90 €`, en `€0.9
 Schnappschuss → prüfen, ob nur das Gewollte geändert ist → `npm run test:update` →
 Schnappschüsse mitcommitten.
 
-**Text ändern:** in allen vier Sprachversionen der Seite (Begriffe aus `docs/glossar.md`).
+**Text ändern:** in allen sieben Sprachversionen der Seite (Begriffe aus `docs/glossar.md`).
 UI-Texte (Menü, Fußzeile, Knöpfe) in `layout.js`/`products.js` je Sprache.
 
-**Neue Seite:** Vorlage kopieren, in allen vier Sprachen anlegen, von der Kategorie- bzw.
+**Neue Seite:** Vorlage kopieren, in allen sieben Sprachen anlegen, von der Kategorie- bzw.
 Startseite verlinken (ggf. Menü in `layout.js`: `NAV` + `TEXT[lang].nav`), `npm run seo`,
 `npm test`, `npm run test:update`.
 
 **Neue Unterseite einer Kategorie:** zusätzlich (1) als `.sub-item` auf der Kategorieseite
-verlinken (alle vier Sprachen), (2) in `layout.js` unter `SUBNAV` mit Namen in vier Sprachen
+verlinken (alle sieben Sprachen), (2) in `layout.js` unter `SUBNAV` mit Namen in sieben Sprachen
 eintragen, (3) auf der neuen Seite (alle Sprachen) `<sub-nav category="…"></sub-nav>` direkt
 unter dem Brotkrümelpfad einfügen. Der Test vergleicht Reiter und Kategorieseite.
 
@@ -91,8 +92,8 @@ unter dem Brotkrümelpfad einfügen. Der Test vergleicht Reiter und Kategoriesei
 Für wiederkehrende Aufgaben gibt es Schritt-für-Schritt-Anleitungen – bei passender Aufgabe
 verwenden:
 - `preis-aendern` – Preise ändern, Auswirkung prüfen, Schnappschüsse erneuern
-- `neue-seite` – neue Produkt-/Kategorieseite in allen vier Sprachen
-- `uebersetzen` – Texte in en/sl/uk übertragen bzw. nachziehen
+- `neue-seite` – neue Produkt-/Kategorieseite in allen sieben Sprachen
+- `uebersetzen` – Texte in en/sl/uk/hu/it/hr übertragen bzw. nachziehen
 - `veroeffentlichen` – Pull Request, Prüfungen abwarten, zusammenführen, Veröffentlichung kontrollieren
 
 ## Konventionen
@@ -111,7 +112,7 @@ verwenden:
 ## Prüfungen
 
 `npm test` (einmalig `npm install`, lokal ggf. `npx playwright install chromium`) prüft alle
-29 Seiten × 4 Sprachen in ~20 s:
+29 Seiten × 7 Sprachen in ~20 s:
 1. Daten (Format, Übersetzungen vollständig, Bilder vorhanden)
 2. HTML (Pflichtangaben, Links/Bilder existieren, Platzhalter ↔ Daten, SEO-Angaben aktuell)
 3. Browser (keine Fehler, kein seitliches Scrollen bei 390 px, Tabellen nicht abgeschnitten

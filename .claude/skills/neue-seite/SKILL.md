@@ -1,6 +1,6 @@
 ---
 name: neue-seite
-description: Neue Produkt- oder Kategorieseite für printbloder.at anlegen – in allen vier Sprachen, verlinkt, mit Preisen als Daten, Suchmaschinen-Angaben und Tests. Verwenden bei „neues Produkt“, „neue Seite“, „neue Kategorie“, „Angebot ergänzen“.
+description: Neue Produkt- oder Kategorieseite für printbloder.at anlegen – in allen sieben Sprachen, verlinkt, mit Preisen als Daten, Suchmaschinen-Angaben und Tests. Verwenden bei „neues Produkt“, „neue Seite“, „neue Kategorie“, „Angebot ergänzen“.
 ---
 
 # Neue Seite
@@ -28,9 +28,9 @@ anpassen – das macht `npm run seo`.
 
 Daten:
 - Produktkarten: neue `site/data/<name>.js`; Produktnamen mit deutschen Wörtern als
-  `{de, en, sl, uk}`; neue Eigenschafts-Bezeichnungen in `products.js` unter
+  `{de, en, sl, uk, hu, it, hr}`; neue Eigenschafts-Bezeichnungen in `products.js` unter
   `TEXT[lang].words` übersetzen.
-- Preistabellen: `site/data/preise/<seite>.js`, Beschriftungen immer in allen vier Sprachen;
+- Preistabellen: `site/data/preise/<seite>.js`, Beschriftungen immer in allen sieben Sprachen;
   im HTML `<table class="price-table" data-table="0"></table>` (Nummern ab 0) und die
   Skripte `data/preise/<seite>.js` und `assets/js/prices.js` mit `defer` einbinden.
 
@@ -38,8 +38,8 @@ Bilder nach `site/img/…`, mit `alt` und echten `width`/`height` (`file bild.pn
 
 ## 3. Verlinken
 
-- Unterseite: auf der Kategorieseite als `.sub-item` – in allen vier Sprachen – **und** in
-  `site/assets/js/layout.js` unter `SUBNAV` mit kurzem Namen in vier Sprachen eintragen; auf
+- Unterseite: auf der Kategorieseite als `.sub-item` – in allen sieben Sprachen – **und** in
+  `site/assets/js/layout.js` unter `SUBNAV` mit kurzem Namen in sieben Sprachen eintragen; auf
   der neuen Seite (alle Sprachen) `<sub-nav category="…"></sub-nav>` direkt unter dem
   Brotkrümelpfad einfügen. Der Test meldet Abweichungen zwischen Reitern und Kategorieseite.
 - Neue Hauptkategorie: in `site/assets/js/layout.js` `NAV` und `TEXT[lang].nav` (alle
@@ -48,7 +48,7 @@ Bilder nach `site/img/…`, mit `alt` und echten `width`/`height` (`file bild.pn
 
 ## 4. Übersetzen
 
-Seite nach `site/en/`, `site/sl/`, `site/uk/` mit gleichem Dateinamen übertragen – siehe
+Seite nach `site/en/`, `site/sl/`, `site/uk/`, `site/hu/`, `site/it/`, `site/hr/` mit gleichem Dateinamen übertragen – siehe
 Skill `uebersetzen` (Glossar `docs/glossar.md`, Pfade mit `../`).
 
 ## 5. Prüfen

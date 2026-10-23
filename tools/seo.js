@@ -1,6 +1,6 @@
 /*
  * Suchmaschinen-Angaben für alle Seiten in site/:
- *   - im <head> jeder Seite: canonical (eigene Adresse) und hreflang (die vier
+ *   - im <head> jeder Seite: canonical (eigene Adresse) und hreflang (alle sieben
  *     Sprachversionen + x-default = Deutsch)
  *   - site/sitemap.xml mit allen Seiten und ihren Sprachversionen
  *   - site/robots.txt mit Verweis auf die Sitemap
@@ -14,7 +14,7 @@ const path = require('path');
 
 const BASE = 'https://www.printbloder.at/';
 const SITE = path.resolve(__dirname, '..', 'site');
-const LANGS = ['de', 'en', 'sl', 'uk'];
+const LANGS = ['de', 'en', 'sl', 'uk', 'hu', 'it', 'hr'];
 const dir = lang => (lang === 'de' ? '' : lang + '/');
 const url = (lang, page) => BASE + dir(lang) + page + '.html';
 

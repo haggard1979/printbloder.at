@@ -18,7 +18,7 @@
         return LANG === 'en' ? '€' + amount : amount.replace('.', ',') + ' €';
     }
 
-    // Text: "..." (überall gleich) oder {de: ..., en: ..., sl: ..., uk: ...}
+    // Text: "..." (überall gleich) oder {de: ..., en: ..., sl: ..., uk: ..., hu: ..., it: ..., hr: ...}
     function localText(text) {
         return typeof text === 'string' ? text : (text[LANG] || text.de);
     }

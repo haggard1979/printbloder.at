@@ -11,7 +11,7 @@
  *                   Suchmaschinen-Angaben (canonical, hreflang, sitemap.xml) aktuell
  *   3. Browser      keine Fehler, kein seitliches Scrollen, Tabellen nicht abgeschnitten,
  *                   Kopfzeile einzeilig, Darkmode, Sprachumschalter, Menü
- *   4. Sprachen     en/sl/uk haben gleiche Tabellen, Links und Preise wie Deutsch
+ *   4. Sprachen     alle Übersetzungen haben gleiche Tabellen, Links und Preise wie Deutsch
  *   5. Schnappschuss sichtbarer Text jeder Seite == tests/snapshots/
  *
  * Voraussetzung: npm install (einmalig), lokal ggf. npx playwright install chromium
@@ -25,7 +25,7 @@ const seo = require('../tools/seo');
 
 // Die Website selbst liegt in site/
 const ROOT = path.resolve(__dirname, '..', 'site');
-const LANGS = ['de', 'en', 'sl', 'uk'];
+const LANGS = ['de', 'en', 'sl', 'uk', 'hu', 'it', 'hr'];
 const SNAPSHOTS = path.join(__dirname, 'snapshots');
 const UPDATE = process.argv.includes('--update-snapshots');
 

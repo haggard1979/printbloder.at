@@ -8,13 +8,13 @@
  *
  * Navigation oder Kontaktdaten ändern: nur hier.
  *
- * Sprachen: Deutsch liegt im Hauptordner, Englisch in en/, Slowenisch in sl/,
- * Ukrainisch in uk/ (gleiche Dateinamen). Die Sprache kommt aus <html lang="...">.
+ * Sprachen: Deutsch liegt im Hauptordner, die Übersetzungen in en/, sl/, uk/, hu/, it/
+ * und hr/ (gleiche Dateinamen). Die Sprache kommt aus <html lang="...">.
  */
 (function () {
-    var LANGS = ['de', 'en', 'sl', 'uk'];
+    var LANGS = ['de', 'en', 'sl', 'uk', 'hu', 'it', 'hr'];
     // Sprachnamen in der eigenen Sprache (Sprachauswahl in der Kopfzeile)
-    var LANG_NAMES = {de: 'Deutsch', en: 'English', sl: 'Slovenščina', uk: 'Українська'};
+    var LANG_NAMES = {de: 'Deutsch', en: 'English', sl: 'Slovenščina', uk: 'Українська', hu: 'Magyar', it: 'Italiano', hr: 'Hrvatski'};
     var LANG = LANGS.indexOf(document.documentElement.lang) >= 0 ? document.documentElement.lang : 'de';
     // Pfad zum Hauptordner (für Bilder, CSS, Daten und den Sprachwechsel)
     var ROOT = LANG === 'de' ? '' : '../';
@@ -91,6 +91,60 @@
             infoLink: 'Як дістатися, контакти та вихідні дані',
             prices: 'Усі ціни в євро з ПДВ 20&nbsp;%.',
             nav: ['Візитки', 'Печатки', 'Друк на текстилі', 'Цифровий друк', 'Таблички', 'Написи', 'Плакати', 'Подарунки']
+        },
+        hu: {
+            location: 'Shopping City Seiersberg, az 1. emeleten a Primark felett',
+            skip: 'Ugrás a tartalomhoz',
+            menu: 'Menü',
+            mainNav: 'Főnavigáció',
+            subNav: 'További oldalak ebben a kategóriában',
+            prevPage: 'Előző oldal',
+            nextPage: 'Következő oldal',
+            language: 'Nyelv',
+            home: 'Főoldal',
+            light: 'Világos megjelenítés',
+            dark: 'Sötét megjelenítés',
+            contact: 'Kapcsolat',
+            info: 'Információ',
+            infoLink: 'Megközelítés, kapcsolat és impresszum',
+            prices: 'Minden ár euróban, 20&nbsp;% ÁFÁ-val együtt.',
+            nav: ['Névjegykártyák', 'Bélyegzők', 'Textilnyomás', 'Digitális nyomtatás', 'Táblák', 'Feliratok', 'Plakátok', 'Ajándékok']
+        },
+        it: {
+            location: 'Shopping City Seiersberg, 1° piano sopra Primark',
+            skip: 'Vai al contenuto',
+            menu: 'Menu',
+            mainNav: 'Navigazione principale',
+            subNav: 'Altre pagine di questa categoria',
+            prevPage: 'Pagina precedente',
+            nextPage: 'Pagina successiva',
+            language: 'Lingua',
+            home: 'Pagina iniziale',
+            light: 'Tema chiaro',
+            dark: 'Tema scuro',
+            contact: 'Contatti',
+            info: 'Informazioni',
+            infoLink: 'Come raggiungerci, contatti e note legali',
+            prices: 'Tutti i prezzi in euro, IVA del 20&nbsp;% inclusa.',
+            nav: ['Biglietti da visita', 'Timbri', 'Stampa su tessuto', 'Stampa digitale', 'Targhe', 'Scritte', 'Poster', 'Regali']
+        },
+        hr: {
+            location: 'Shopping City Seiersberg, 1. kat iznad trgovine Primark',
+            skip: 'Preskoči na sadržaj',
+            menu: 'Izbornik',
+            mainNav: 'Glavna navigacija',
+            subNav: 'Više u ovoj kategoriji',
+            prevPage: 'Prethodna stranica',
+            nextPage: 'Sljedeća stranica',
+            language: 'Jezik',
+            home: 'Početna stranica',
+            light: 'Svijetli prikaz',
+            dark: 'Tamni prikaz',
+            contact: 'Kontakt',
+            info: 'Informacije',
+            infoLink: 'Kako do nas, kontakt i impressum',
+            prices: 'Sve cijene u eurima, PDV od 20&nbsp;% uključen.',
+            nav: ['Posjetnice', 'Pečati', 'Tisak na tekstil', 'Digitalni tisak', 'Ploče', 'Natpisi', 'Plakati', 'Pokloni']
         }
     };
     var T = TEXT[LANG];
@@ -125,36 +179,36 @@
      */
     var SUBNAV = {
         visitkarten: [
-        {page: 'psVisitkarten', label: {de: 'Standard-Visitenkarten', en: 'Standard business cards', sl: 'Standardne vizitke', uk: 'Стандартні візитки'}},
-        {page: 'firmenVisitkarten', label: {de: 'Firmenvisitkarten', en: 'Company business cards', sl: 'Poslovne vizitke', uk: 'Фірмові візитки'}}
+        {page: 'psVisitkarten', label: {de: 'Standard-Visitenkarten', en: 'Standard business cards', sl: 'Standardne vizitke', uk: 'Стандартні візитки', hu: 'Standard névjegykártyák', it: 'Biglietti da visita standard', hr: 'Standardne posjetnice'}},
+        {page: 'firmenVisitkarten', label: {de: 'Firmenvisitkarten', en: 'Company business cards', sl: 'Poslovne vizitke', uk: 'Фірмові візитки', hu: 'Céges névjegykártyák', it: 'Biglietti da visita aziendali', hr: 'Poslovne posjetnice'}}
         ],
         stempel: [
-        {page: 'stempelPrinty', label: {de: 'Trodat Printy', en: 'Trodat Printy', sl: 'Trodat Printy', uk: 'Trodat Printy'}},
-        {page: 'stempelProfessional', label: {de: 'Trodat Professional', en: 'Trodat Professional', sl: 'Trodat Professional', uk: 'Trodat Professional'}},
-        {page: 'stempelKulis', label: {de: 'Stempelkugelschreiber', en: 'Stamp pens', sl: 'Žig s kemičnim svinčnikom', uk: 'Печатка-ручка'}},
-        {page: 'stempelFarben', label: {de: 'Zubehör und Farben', en: 'Accessories and inks', sl: 'Dodatki in barve', uk: 'Аксесуари та фарби'}}
+        {page: 'stempelPrinty', label: {de: 'Trodat Printy', en: 'Trodat Printy', sl: 'Trodat Printy', uk: 'Trodat Printy', hu: 'Trodat Printy', it: 'Trodat Printy', hr: 'Trodat Printy'}},
+        {page: 'stempelProfessional', label: {de: 'Trodat Professional', en: 'Trodat Professional', sl: 'Trodat Professional', uk: 'Trodat Professional', hu: 'Trodat Professional', it: 'Trodat Professional', hr: 'Trodat Professional'}},
+        {page: 'stempelKulis', label: {de: 'Stempelkugelschreiber', en: 'Stamp pens', sl: 'Žig s kemičnim svinčnikom', uk: 'Печатка-ручка', hu: 'Bélyegzős golyóstollak', it: 'Penne con timbro', hr: 'Kemijske olovke s pečatom'}},
+        {page: 'stempelFarben', label: {de: 'Zubehör und Farben', en: 'Accessories and inks', sl: 'Dodatki in barve', uk: 'Аксесуари та фарби', hu: 'Tartozékok és festékek', it: 'Accessori e inchiostri', hr: 'Pribor i boje'}}
         ],
         textildruck: [
-        {page: 'textildruckTransfer', label: {de: 'Transferdruck', en: 'Transfer printing', sl: 'Transferni tisk', uk: 'Трансферний друк'}},
-        {page: 'textildruckFlock', label: {de: 'Flex- und Flockdruck', en: 'Flex and flock printing', sl: 'Fleks in flok tisk', uk: 'Флекс- і флок-друк'}}
+        {page: 'textildruckTransfer', label: {de: 'Transferdruck', en: 'Transfer printing', sl: 'Transferni tisk', uk: 'Трансферний друк', hu: 'Transzfernyomás', it: 'Stampa a trasferimento', hr: 'Transfer tisak'}},
+        {page: 'textildruckFlock', label: {de: 'Flex- und Flockdruck', en: 'Flex and flock printing', sl: 'Fleks in flok tisk', uk: 'Флекс- і флок-друк', hu: 'Flex és flock nyomás', it: 'Stampa flex e flock', hr: 'Flex i flock tisak'}}
         ],
         digitaldruck: [
-        {page: 'digitaldruckFarb', label: {de: 'Farbdruck', en: 'Colour printing', sl: 'Barvni tisk', uk: 'Кольоровий друк'}},
-        {page: 'digitaldruckSW', label: {de: 'Schwarz-Weiss Druck', en: 'Black-and-white printing', sl: 'Črno-beli tisk', uk: 'Чорно-білий друк'}},
-        {page: 'digitaldruckSWHQ', label: {de: 'Schwarz-Weiss High Quality', en: 'Black-and-white High Quality', sl: 'Črno-beli visoke kakovosti', uk: 'Чорно-білий висока якість'}}
+        {page: 'digitaldruckFarb', label: {de: 'Farbdruck', en: 'Colour printing', sl: 'Barvni tisk', uk: 'Кольоровий друк', hu: 'Színes nyomtatás', it: 'Stampa a colori', hr: 'Tisak u boji'}},
+        {page: 'digitaldruckSW', label: {de: 'Schwarz-Weiss Druck', en: 'Black-and-white printing', sl: 'Črno-beli tisk', uk: 'Чорно-білий друк', hu: 'Fekete-fehér nyomtatás', it: 'Stampa in bianco e nero', hr: 'Crno-bijeli tisak'}},
+        {page: 'digitaldruckSWHQ', label: {de: 'Schwarz-Weiss High Quality', en: 'Black-and-white High Quality', sl: 'Črno-beli visoke kakovosti', uk: 'Чорно-білий висока якість', hu: 'Fekete-fehér High Quality', it: 'Bianco e nero High Quality', hr: 'Crno-bijeli High Quality'}}
         ],
         schilder: [
-        {page: 'schilderHaus', label: {de: 'Hausschilder', en: 'House signs', sl: 'Hišne tablice', uk: 'Таблички з номером будинку'}},
-        {page: 'schilderAlu', label: {de: 'Alu-Dibond-Schilder', en: 'Alu-Dibond signs', sl: 'Table Alu-Dibond', uk: 'Таблички Alu-Dibond'}},
-        {page: 'geschenkeFunschilder', label: {de: 'Funschilder', en: 'Fun signs', sl: 'Zabavne table', uk: 'Жартівливі таблички'}}
+        {page: 'schilderHaus', label: {de: 'Hausschilder', en: 'House signs', sl: 'Hišne tablice', uk: 'Таблички з номером будинку', hu: 'Házszámtáblák', it: 'Targhe per la casa', hr: 'Kućne pločice'}},
+        {page: 'schilderAlu', label: {de: 'Alu-Dibond-Schilder', en: 'Alu-Dibond signs', sl: 'Table Alu-Dibond', uk: 'Таблички Alu-Dibond', hu: 'Alu-Dibond táblák', it: 'Targhe Alu-Dibond', hr: 'Ploče Alu-Dibond'}},
+        {page: 'geschenkeFunschilder', label: {de: 'Funschilder', en: 'Fun signs', sl: 'Zabavne table', uk: 'Жартівливі таблички', hu: 'Vicces táblák', it: 'Targhe divertenti', hr: 'Zabavne ploče'}}
         ],
         geschenke: [
-        {page: 'geschenkeFotopolster', label: {de: 'Fotopolster', en: 'Photo cushion', sl: 'Foto blazina', uk: 'Фотоподушка'}},
-        {page: 'geschenkeMousepad', label: {de: 'Mousepad', en: 'Mouse pad', sl: 'Podloga za miško', uk: 'Килимок для миші'}},
-        {page: 'geschenkeFototasse', label: {de: 'Fototasse', en: 'Photo mug', sl: 'Foto skodelica', uk: 'Фоточашка'}},
-        {page: 'geschenkeTeddies', label: {de: 'Teddybär', en: 'Teddy bear', sl: 'Medvedek', uk: 'Плюшевий ведмедик'}},
-        {page: 'geschenkeFotokappe', label: {de: 'Kappe mit Aufdruck', en: 'Cap with print', sl: 'Kapa s potiskom', uk: 'Кепка з принтом'}},
-        {page: 'geschenkeFunschilder', label: {de: 'Funschilder', en: 'Fun signs', sl: 'Zabavne table', uk: 'Жартівливі таблички'}}
+        {page: 'geschenkeFotopolster', label: {de: 'Fotopolster', en: 'Photo cushion', sl: 'Foto blazina', uk: 'Фотоподушка', hu: 'Fotópárna', it: 'Cuscino con foto', hr: 'Jastuk s fotografijom'}},
+        {page: 'geschenkeMousepad', label: {de: 'Mousepad', en: 'Mouse pad', sl: 'Podloga za miško', uk: 'Килимок для миші', hu: 'Egérpad', it: 'Tappetino per mouse', hr: 'Podloga za miš'}},
+        {page: 'geschenkeFototasse', label: {de: 'Fototasse', en: 'Photo mug', sl: 'Foto skodelica', uk: 'Фоточашка', hu: 'Fotóbögre', it: 'Tazza con foto', hr: 'Šalica s fotografijom'}},
+        {page: 'geschenkeTeddies', label: {de: 'Teddybär', en: 'Teddy bear', sl: 'Medvedek', uk: 'Плюшевий ведмедик', hu: 'Plüssmackó', it: 'Orsacchiotto', hr: 'Medvjedić'}},
+        {page: 'geschenkeFotokappe', label: {de: 'Kappe mit Aufdruck', en: 'Cap with print', sl: 'Kapa s potiskom', uk: 'Кепка з принтом', hu: 'Nyomtatott sapka', it: 'Cappellino stampato', hr: 'Kapa s tiskom'}},
+        {page: 'geschenkeFunschilder', label: {de: 'Funschilder', en: 'Fun signs', sl: 'Zabavne table', uk: 'Жартівливі таблички', hu: 'Vicces táblák', it: 'Targhe divertenti', hr: 'Zabavne ploče'}}
         ]
     };
 
@@ -227,7 +281,23 @@
                 + '<path d="M6.6,8.6l1.1-1.9l.6.8l.7-1.3l.7,1.3l.6-.8l1.1,1.9q-1.2,1.6-2.4,2q-1.2-.4-2.4-2z" fill="#fff"/>'
                 + '<circle cx="7.9" cy="4.4" r=".5" fill="#ffdd00"/><circle cx="10.1" cy="4.4" r=".5" fill="#ffdd00"/>'
                 + '<circle cx="9" cy="5.6" r=".5" fill="#ffdd00"/>',
-            uk: '<rect width="30" height="10" fill="#0057b7"/><rect y="10" width="30" height="10" fill="#ffd700"/>'
+            uk: '<rect width="30" height="10" fill="#0057b7"/><rect y="10" width="30" height="10" fill="#ffd700"/>',
+            hu: '<rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#ce2939"/>'
+                + '<rect y="13.33" width="30" height="6.67" fill="#477050"/>',
+            it: '<rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#009246"/>'
+                + '<rect x="20" width="10" height="20" fill="#ce2b37"/>',
+            hr: '<rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#f00"/>'
+                + '<rect y="13.33" width="30" height="6.67" fill="#171796"/>'
+                + '<clipPath id="' + id + 'h"><path d="M11.5,5.8h7v6.1q0,2.7-3.5,3.9q-3.5-1.2-3.5-3.9z"/></clipPath>'
+                + '<g clip-path="url(#' + id + 'h)"><rect x="11.5" y="5.8" width="7" height="10" fill="#fff"/>'
+                + [0, 1, 2, 3, 4, 5, 6].map(function (r) {
+                    return [0, 1, 2, 3, 4].filter(function (c) {
+                        return (r + c) % 2 === 0;
+                    }).map(function (c) {
+                        return '<rect x="' + (11.5 + c * 1.4) + '" y="' + (5.8 + r * 1.4) + '" width="1.4" height="1.4" fill="#f00"/>';
+                    }).join('');
+                }).join('') + '</g>'
+                + '<path d="M11.5,5.8l.6-2l1.2,1l1.7-1.6l1.7,1.6l1.2-1l.6,2z" fill="#fff" stroke="#171796" stroke-width=".35"/>'
         }[lang];
         return '<svg class="flag" viewBox="0 0 30 20" width="24" height="16" aria-hidden="true">' + body
             + '<rect width="30" height="20" fill="none" stroke="rgba(0,0,0,.2)" stroke-width="1"/></svg>';
