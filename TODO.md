@@ -30,10 +30,14 @@ Pull Request entfernen. Neue Punkte unten anfügen.
   - am besten zentral erzeugen (Liste der Unterseiten je Kategorie an einer Stelle), damit
     nicht 7 Sprachen × viele Seiten von Hand gepflegt werden müssen
 
-- [ ] **Bilder gegen modernere Varianten austauschen**
-  - Kategorie- und Kopfbilder (`site/img/buttons/…`) enthalten eingebrannten Text und
-    Verläufe; neue Fotos ohne Text, als WebP, mit `width`/`height`
-  - Herkunft klären: eigene Fotos, Herstellerbilder (Trodat) oder Bildagentur (Lizenz!)
+- [ ] **Bilder gegen modernere Varianten austauschen** (teilweise erledigt)
+  - [x] Kategorie- und Unterseiten-Kacheln: einheitliche SVG-Motive in `site/img/icons/`
+    (kein eingebrannter Text, scharf auf jedem Display, passend zum Darkmode)
+  - [ ] Produktbilder der Stempel (`site/img/artikel/`, klein und unscharf): Herstellerbilder
+    von Trodat (Lizenz über Händlerzugang klären) oder eigene Fotos als WebP mit `width`/`height`
+  - [ ] Optional: Kacheln durch eigene Fotos ersetzen (Geschenke, Schilder, Plakate)
+  - [ ] Ungenutzte Bilder in `site/img/buttons/` (Dater, Dark-Folie, Plakat A0–A2, Flexkappe,
+    Fotoshirt, Fototasche) entfernen oder verwenden
 
 - [ ] **Anfahrt: echte Karte einbinden bzw. ergänzen**
   - z. B. OpenStreetMap-Einbettung oder Link zu Google Maps/OSM mit Routenplanung
