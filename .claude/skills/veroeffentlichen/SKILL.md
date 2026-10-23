@@ -17,8 +17,8 @@ Veröffentlicht wird automatisch, sobald etwas auf `master` landet: GitHub Actio
    Themen gegliedert (was ändert sich für Besucher, Preise, Projekt).
 3. **Prüfungen abwarten:** PR-Ereignisse abonnieren, wenn möglich; sonst Status über die
    GitHub-Werkzeuge abfragen. Nicht mit `sleep` warten.
-4. **Rot?** Protokoll holen, Fehler lokal nachstellen (die Tests messen mit „DejaVu Sans“ wie
-   auf GitHub), Ursache beheben, `npm test`, pushen. Tests nie abschwächen oder überspringen.
+4. **Rot?** Protokoll holen, Fehler lokal nachstellen (die Tests messen mit der Testschrift aus
+   `tests/fonts/`, daher gleiche Ergebnisse wie auf GitHub), Ursache beheben, `npm test`, pushen. Tests nie abschwächen oder überspringen.
 5. **Zusammenführen** nur mit Auftrag des Nutzers und nur bei grünem Stand:
    Merge-Commit (kein Squash), `expectedHeadSha` = geprüfter Stand.
 6. **Veröffentlichung kontrollieren:** Lauf „Prüfen und veröffentlichen“ auf `master` –

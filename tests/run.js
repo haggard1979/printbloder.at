@@ -269,12 +269,26 @@ async function inspect(page) {
             truncatedTables: [...document.querySelectorAll('.price-box')]
                 .filter(b => b.scrollWidth > b.clientWidth + 1)
                 .map(b => (b.querySelector('caption') || {}).textContent || 'ohne Überschrift'),
-            overflow: document.documentElement.scrollWidth > window.innerWidth
+            overflow: document.documentElement.scrollWidth > window.innerWidth,
+            headerHeight: header ? header.offsetHeight : 0
         };
     });
 }
 
-const WIDE_FONT = '* { font-family: "DejaVu Sans", Verdana, sans-serif !important; }';
+// Testschrift liegt im Projekt (tests/fonts/), damit das Ergebnis nicht von den
+// auf dem Rechner installierten Schriften abhängt
+const WIDE_FONT = '@font-face { font-family: TestWide; src: url(/__tests/fonts/DejaVuSans.ttf); }'
+    + '@font-face { font-family: TestWide; font-weight: 600 900; src: url(/__tests/fonts/DejaVuSans-Bold.ttf); }'
+    + '* { font-family: TestWide !important; }';
+
+async function useWideFont(page) {
+    await page.addStyleTag({content: WIDE_FONT});
+    const loaded = await page.evaluate(() => Promise.all([document.fonts.load('16px TestWide'), document.fonts.load('bold 16px TestWide')])
+        .then(r => r.every(list => list.length > 0)));
+    if (!loaded) {
+        throw new Error('Testschrift tests/fonts/DejaVuSans*.ttf konnte nicht geladen werden');
+    }
+}
 
 // Größenänderung abwarten (der Browser meldet sie erst beim nächsten Bildaufbau)
 async function resize(page, width, height) {
@@ -301,7 +315,7 @@ async function checkBrowser(browser, base) {
             await page.goto(base + label, {waitUntil: 'load'});
             // Breiten immer mit einer breiten Schrift messen (ungünstigster Fall),
             // damit das Ergebnis nicht von den installierten Schriften abhängt
-            await page.addStyleTag({content: WIDE_FONT});
+            await useWideFont(page);
             const r = await inspect(page);
             results[lang + '/' + name] = r;
             if (r.emptyTables) problems.push(`${r.emptyTables} Preistabelle(n) leer`);
@@ -316,8 +330,12 @@ async function checkBrowser(browser, base) {
                 if (t.truncatedTables.length) problems.push(`Tabelle abgeschnitten bei ${width} px: ${t.truncatedTables.join(', ')}`);
                 if (t.navWrapped) problems.push(`Menü bricht bei ${width} px um`);
             }
-            await resize(page, 390, 800);
-            if ((await inspect(page)).overflow) problems.push('seitliches Scrollen bei 390 px (Handy)');
+            for (const phone of [390, 360]) {
+                await resize(page, phone, 800);
+                const t = await inspect(page);
+                if (t.overflow) problems.push(`seitliches Scrollen bei ${phone} px (Handy)`);
+                if (t.headerHeight > 72) problems.push(`Kopfzeile zweizeilig bei ${phone} px (${t.headerHeight} px hoch)`);
+            }
             problems.forEach(p => fail(S, `${label}: ${p}`));
         }
     }

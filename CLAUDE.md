@@ -114,7 +114,10 @@ verwenden:
 
 Fehlschlag nie durch Abschwächen der Tests beheben. Schnappschüsse nur nach geprüfter,
 gewollter Änderung mit `npm run test:update` erneuern. Die Browser-Prüfung misst Breiten
-mit „DejaVu Sans“ (breite Schrift, wie auf GitHub) – lokal grün heißt dann auch dort grün.
+mit der Testschrift aus `tests/fonts/` (DejaVu Sans, breit) – unabhängig von installierten
+Schriften; lokal grün heißt dann auch auf GitHub grün. Auf GitHub laufen die Tests im
+Docker-Paket `mcr.microsoft.com/playwright:v<Version>-noble`; beim Aktualisieren von
+Playwright die Version in `package.json` und `.github/workflows/website.yml` gleich halten.
 
 ## Veröffentlichen
 
@@ -132,9 +135,7 @@ automatisch auf GitHub Pages veröffentlicht (nur wenn `npm test` grün ist). Pa
   Tabellen ab 3 Preisspalten nehmen die ganze Zeile (`.price-box:has(...)`).
 - `index.html` ist nur eine Weiterleitung auf `home.html`.
 
-## Offene Punkte
+## Offene Aufgaben
 
-- Impressum fehlt (Link „Kontakt & Impressum“ existiert) – Angaben vom Inhaber nötig.
-- Übersetzungen (v. a. sl, uk) von Muttersprachlern gegenlesen lassen.
-- Öffnungszeiten fehlen; Kategoriebilder enthalten eingebrannten Text (neue Fotos wären besser).
-- Ungenutzte Produktbilder (Fototasche, Fotoshirt, Flexkappe) – evtl. frühere/geplante Produkte.
+Stehen in **`TODO.md`** – dort pflegen (abhaken, ergänzen). Vor neuer Arbeit kurz
+hineinschauen; Erledigtes im selben Pull Request abhaken.
