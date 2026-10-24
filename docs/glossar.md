@@ -74,3 +74,7 @@ Regeln:
 | UID-Nummer | VAT ID | ID za DDV | ІПН для ПДВ (UID) | Közösségi adószám (UID) | Partita IVA (UID) | PDV identifikacijski broj (UID) |
 | Karte anzeigen | Show map | Prikaži zemljevid | Показати карту | Térkép megjelenítése | Mostra la mappa | Prikaži kartu |
 | Karte & Route | Map & directions | Zemljevid in pot | Карта й маршрут | Térkép és útvonal | Mappa e percorso | Karta i ruta |
+| Knoten (Autobahn) | Interchange | Razcep | Розв’язка | Csomópont | Svincolo | Čvor |
+| Abfahrt (Autobahn) | Exit | Izvoz | З’їзд | Lehajtó | Uscita | Izlaz |
+| Kärnten / Wien (Richtung) | Carinthia / Vienna | Koroška / Dunaj | Каринтія / Відень | Karintia / Bécs | Carinzia / Vienna | Koruška / Beč |
+| Slowenien / Kroatien | Slovenia / Croatia | Slovenija / Hrvaška | Словенія / Хорватія | Szlovénia / Horvátország | Slovenia / Croazia | Slovenija / Hrvatska |

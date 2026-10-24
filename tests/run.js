@@ -223,6 +223,11 @@ function checkHtml() {
                 check(new RegExp(`<meta property="${prop}" content="[^"]+"`).test(src), `${prop} fehlt (Link-Vorschau)`);
             }
             check(src.includes('<meta name="twitter:card" content="summary_large_image">'), 'twitter:card fehlt');
+            // Anfahrtsplan: je Sprache eine eigene Beschriftung (anfahrt.svg = Deutsch, anfahrt-<sprache>.svg)
+            if (/allgemein\/anfahrt/.test(src)) {
+                const plan = lang === 'de' ? 'allgemein/anfahrt.svg' : `allgemein/anfahrt-${lang}.svg`;
+                check(src.includes(plan + '"'), `Anfahrtsplan nicht in der Sprachversion (${plan})`);
+            }
             check(src.includes(`<meta property="og:url" content="${seo.BASE}${langDir(lang)}${page}.html">`),
                 'og:url weicht von der eigenen Adresse ab');
             check((src.match(/<h1[\s>]/g) || []).length === 1, 'nicht genau ein <h1>');

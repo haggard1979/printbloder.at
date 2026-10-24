@@ -34,6 +34,8 @@ site/
                           Anfrage-Mail; Übersetzung der Datenbezeichnungen (TEXT[lang].words)
   impressum.html          Impressum und Datenschutzerklärung (Rechtstexte, alle Sprachen; UID-Nummer
   datenschutz.html        steht nur im Impressum), Links in Fußzeile/Menü (layout.js)
+  img/allgemein/anfahrt*.svg  Anfahrtsplan je Sprache (anfahrt.svg = de, anfahrt-en.svg …); Beschriftung
+                          als <text> in der SVG, Routen und Straßen gleich in allen Sprachen
   assets/js/map.js        Karte auf kontakt.html: Google-Maps-Einbettung erst nach Klick (Datenschutz),
                           Adresse/Texte stehen im HTML (data-map-src, data-map-title)
   assets/js/prices.js     Preistabellen aus window.PRICE_TABLES in <table data-table="N">,
