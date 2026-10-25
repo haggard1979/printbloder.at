@@ -13,10 +13,10 @@ Telephone: +43 316 24 35 77
 Email: shop@printbloder.at
 Visiting the website and hosting
 
-This website is hosted by GitHub Pages (GitHub Inc., a subsidiary of Microsoft, USA). When a page is accessed, the hosting provider processes technically necessary connection data, in particular your IP address, the date and time, the page requested and information about your browser, in order to deliver the page and to prevent misuse. We ourselves do not carry out any analysis of this data.
+This website is hosted by Host Europe GmbH (Hansestraße 111, 51149 Köln, Germany). When a page is accessed, the hosting provider processes technically necessary connection data, in particular your IP address, the date and time, the page requested and information about your browser, in order to deliver the page and to prevent misuse. We ourselves do not carry out any analysis of this data.
 
 Legal basis: legitimate interest in the secure and efficient operation of the website (Art. 6(1)(f) GDPR).
-This may involve a transfer to the USA. The provider relies for this on the EU-U.S. Data Privacy Framework or on the standard contractual clauses of the European Commission.
+The data is processed on servers in the European Union.
 No cookies, no analytics, no advertising
 
 We do not use cookies, analytics or tracking tools, or advertising. Fonts and libraries are not loaded from external servers.
