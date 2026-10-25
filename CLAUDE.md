@@ -140,6 +140,9 @@ mit der Testschrift aus `tests/fonts/` (DejaVu Sans, breit) – unabhängig von 
 Schriften; lokal grün heißt dann auch auf GitHub grün. Auf GitHub laufen die Tests im
 Docker-Paket `mcr.microsoft.com/playwright:v<Version>-noble`; beim Aktualisieren von
 Playwright die Version in `package.json` und `.github/workflows/website.yml` gleich halten.
+In Claude-Cloud-Sitzungen führt `.claude/hooks/session-start.sh` beim Start `npm install` aus
+und setzt `CHROMIUM_PATH` auf den vorinstallierten Chromium, falls dessen Version nicht zu
+Playwright passt (`tests/run.js` und `tools/vorschau.js` verwenden ihn dann).
 
 ## Veröffentlichen
 

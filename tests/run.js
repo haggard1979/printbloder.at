@@ -15,6 +15,7 @@
  *   5. Schnappschuss sichtbarer Text jeder Seite == tests/snapshots/
  *
  * Voraussetzung: npm install (einmalig), lokal ggf. npx playwright install chromium
+ * Anderer Chromium (z. B. Claude-Cloud-Sitzung): Pfad in CHROMIUM_PATH
  */
 const fs = require('fs');
 const path = require('path');
@@ -634,7 +635,7 @@ function checkSnapshots(results) {
     done('2. HTML');
 
     const site = await server.start(ROOT);
-    const browser = await chromium.launch();
+    const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || undefined});
     try {
         const results = await checkBrowser(browser, site.url);
         done('3. Browser');

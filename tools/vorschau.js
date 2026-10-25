@@ -8,7 +8,8 @@ const path = require('path');
 const {chromium} = require('playwright');
 
 (async () => {
-    const browser = await chromium.launch();
+    // CHROMIUM_PATH: anderer Chromium als der von Playwright (siehe tests/run.js)
+    const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || undefined});
     const page = await browser.newPage({viewport: {width: 1200, height: 630}});
     await page.goto('file://' + path.join(__dirname, 'vorschau.html'));
     await page.screenshot({path: path.join(__dirname, '..', 'site', 'img', 'vorschau.jpg'), type: 'jpeg', quality: 90});
