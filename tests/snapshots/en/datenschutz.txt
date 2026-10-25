@@ -13,10 +13,10 @@ Telephone: +43 316 24 35 77
 Email: shop@printbloder.at
 Visiting the website and hosting
 
-This website is hosted by Host Europe GmbH (Hansestraße 111, 51149 Köln, Germany). When a page is accessed, the hosting provider processes technically necessary connection data, in particular your IP address, the date and time, the page requested and information about your browser, in order to deliver the page and to prevent misuse. We ourselves do not carry out any analysis of this data.
+This website is hosted by Host Europe GmbH (c/o Spaces, Gertrudenstraße 30-36, 50667 Köln, Germany). When a page is accessed, the hosting provider processes technically necessary connection data, in particular your IP address, the date and time, the page requested and information about your browser, in order to deliver the page and to prevent misuse. We ourselves do not carry out any analysis of this data.
 
 Legal basis: legitimate interest in the secure and efficient operation of the website (Art. 6(1)(f) GDPR).
-The data is processed on servers in the European Union.
+The data is processed on servers in Europe.
 No cookies, no analytics, no advertising
 
 We do not use cookies, analytics or tracking tools, or advertising. Fonts and libraries are not loaded from external servers.

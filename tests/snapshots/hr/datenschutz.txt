@@ -13,10 +13,10 @@ Telefon: +43 316 24 35 77
 E-pošta: shop@printbloder.at
 Posjet web-stranici i hosting
 
-Ova web-stranica nalazi se na poslužitelju tvrtke Host Europe GmbH (Hansestraße 111, 51149 Köln, Njemačka). Prilikom otvaranja stranice pružatelj usluge hostinga obrađuje tehnički nužne podatke o vezi, osobito Vašu IP adresu, datum i vrijeme, otvorenu stranicu i podatke o Vašem pregledniku, kako bi stranicu isporučio i spriječio zlouporabu. Mi sami ne izrađujemo nikakve analize tih podataka.
+Ova web-stranica nalazi se na poslužitelju tvrtke Host Europe GmbH (c/o Spaces, Gertrudenstraße 30-36, 50667 Köln, Njemačka). Prilikom otvaranja stranice pružatelj usluge hostinga obrađuje tehnički nužne podatke o vezi, osobito Vašu IP adresu, datum i vrijeme, otvorenu stranicu i podatke o Vašem pregledniku, kako bi stranicu isporučio i spriječio zlouporabu. Mi sami ne izrađujemo nikakve analize tih podataka.
 
 Pravna osnova: legitimni interes za siguran i učinkovit rad web-stranice (čl. 6. st. 1. toč. f GDPR-a).
-Podaci se obrađuju na poslužiteljima u Europskoj uniji.
+Podaci se obrađuju na poslužiteljima u Europi.
 Bez kolačića, bez analitike, bez oglašavanja
 
 Ne koristimo kolačiće, alate za analitiku ili praćenje niti oglašavanje. Fontovi i biblioteke ne učitavaju se s tuđih poslužitelja.

@@ -15,9 +15,9 @@ Pull Request entfernen. Neue Punkte unten anfügen.
     bestätigt)
   - **Noch prüfen:** Gewerbewortlaut laut Gewerbeschein (steht noch nicht im Impressum);
     Firmenbuchnummer nur falls eingetragen (bei einem nicht eingetragenen Einzelunternehmen entfällt sie)
-  - **Hosting:** Datenschutzerklärung nennt Host Europe GmbH (Köln) mit Servern in der EU – Serverstandort
-    im Host-Europe-Kundenbereich bestätigen und dort den Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO)
-    abschließen bzw. ablegen
+  - **Hosting:** Host Europe GmbH (c/o Spaces, Gertrudenstraße 30-36, 50667 Köln), Server in Europa (vom
+    Inhaber bestätigt) – im Host-Europe-Kundenbereich den Vertrag zur Auftragsverarbeitung
+    (Art. 28 DSGVO) abschließen bzw. ablegen
   - Beide Texte (v. a. Datenschutz: Hosting Host Europe, Karte Google Maps, E-Mail-Kontakt) von
     einer fachkundigen Stelle prüfen lassen (z. B. Wirtschaftskammer, Rechtsanwalt); ändert sich
     etwas an der Website (neue Dienste, Formulare), die Datenschutzerklärung anpassen

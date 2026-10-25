@@ -13,10 +13,10 @@ Telefon: +43 316 24 35 77
 E-mail: shop@printbloder.at
 A weboldal meglátogatása és tárhelyszolgáltatás
 
-Ennek a weboldalnak a tárhelyét a Host Europe GmbH (Hansestraße 111, 51149 Köln, Németország) biztosítja. Egy oldal megnyitásakor a tárhelyszolgáltató technikailag szükséges kapcsolati adatokat kezel, különösen az Ön IP-címét, a dátumot és az időpontot, a megnyitott oldalt és a böngészőjére vonatkozó adatokat, hogy kiszolgálhassa az oldalt és megelőzhesse a visszaéléseket. Mi magunk nem végzünk értékelést ezekkel az adatokkal.
+Ennek a weboldalnak a tárhelyét a Host Europe GmbH (c/o Spaces, Gertrudenstraße 30-36, 50667 Köln, Németország) biztosítja. Egy oldal megnyitásakor a tárhelyszolgáltató technikailag szükséges kapcsolati adatokat kezel, különösen az Ön IP-címét, a dátumot és az időpontot, a megnyitott oldalt és a böngészőjére vonatkozó adatokat, hogy kiszolgálhassa az oldalt és megelőzhesse a visszaéléseket. Mi magunk nem végzünk értékelést ezekkel az adatokkal.
 
 Jogalap: a weboldal biztonságos és hatékony működtetéséhez fűződő jogos érdek (GDPR 6. cikk (1) bekezdés f) pont).
-Az adatok kezelése az Európai Unióban található szervereken történik.
+Az adatok kezelése Európában található szervereken történik.
 Nincsenek sütik, elemzés és reklám
 
 Nem használunk sütiket, elemző vagy nyomkövető eszközöket, és reklámot sem. A betűtípusokat és programkönyvtárakat nem külső szerverekről töltjük be.
