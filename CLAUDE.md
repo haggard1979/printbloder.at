@@ -50,7 +50,7 @@ tools/seo.js              npm run seo: canonical/hreflang/Link-Vorschau (Open Gr
 tools/vorschau.*          npm run vorschau: erzeugt site/img/vorschau.jpg (1200 × 630) für
                           geteilte Links aus tools/vorschau.html
 docs/glossar.md           feste Begriffe für Übersetzungen
-.github/workflows/website.yml  Prüfen bei jedem Push/PR; Push auf master → Veröffentlichung
+.github/workflows/website.yml  Prüfen bei jedem Push/PR; Push auf master → GitHub Pages + FTP
 ```
 
 Seitentypen (als Vorlage für neue Seiten kopieren):
@@ -140,11 +140,15 @@ mit der Testschrift aus `tests/fonts/` (DejaVu Sans, breit) – unabhängig von 
 Schriften; lokal grün heißt dann auch auf GitHub grün. Auf GitHub laufen die Tests im
 Docker-Paket `mcr.microsoft.com/playwright:v<Version>-noble`; beim Aktualisieren von
 Playwright die Version in `package.json` und `.github/workflows/website.yml` gleich halten.
+In Claude-Cloud-Sitzungen führt `.claude/hooks/session-start.sh` beim Start `npm install` aus
+und setzt `CHROMIUM_PATH` auf den vorinstallierten Chromium, falls dessen Version nicht zu
+Playwright passt (`tests/run.js` und `tools/vorschau.js` verwenden ihn dann).
 
 ## Veröffentlichen
 
 Branch → Pull Request auf `master` → GitHub Actions prüft → nach dem Merge wird `site/`
-automatisch auf GitHub Pages veröffentlicht (nur wenn `npm test` grün ist). Pages-Quelle ist
+automatisch auf GitHub Pages veröffentlicht und per FTPS auf den Webserver hochgeladen (Job
+`ftp`, Zugangsdaten als Secrets `FTP_SERVER`/`FTP_USER`/`FTP_PASSWORD`; nur wenn `npm test` grün ist). Pages-Quelle ist
 „GitHub Actions“. Für `www.printbloder.at` muss die Domain in den Pages-Einstellungen
 (*Custom domain*) eingetragen sein und per DNS-CNAME auf `haggard1979.github.io` zeigen.
 

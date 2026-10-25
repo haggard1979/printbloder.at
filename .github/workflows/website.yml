@@ -1,8 +1,21 @@
 name: Prüfen und veröffentlichen
 
 # Bei jedem Push und Pull Request: Prüfungen (npm test).
-# Bei Push auf master: danach den Ordner site/ auf GitHub Pages veröffentlichen –
-# aber nur, wenn alle Prüfungen bestanden sind.
+# Bei Push auf master: danach den Ordner site/ auf GitHub Pages veröffentlichen und
+# per FTPS auf den Webserver hochladen – aber nur, wenn alle Prüfungen bestanden sind.
+#
+# FTP-Zugangsdaten als GitHub Secrets (Settings → Secrets and variables → Actions
+# oder im Environment "production"):
+#   FTP_SERVER    Adresse des Servers, z. B. ftps://printbloder.at/ oder nur printbloder.at.
+#                 Ein Pfad in der Adresse (ftps://printbloder.at/htdocs/) ist der
+#                 Zielordner; ohne Pfad der Startordner des FTP-Zugangs.
+#   FTP_USER      Benutzername
+#   FTP_PASSWORD  Passwort
+#
+# Übertragen werden nur geänderte Dateien. Die Action merkt sich den Stand in
+# .ftp-deploy-sync-state.json auf dem Server; Dateien, die aus site/ entfernt wurden,
+# löscht sie dort ebenfalls. Von Hand abgelegte Dateien bleiben unberührt. Beim ersten
+# Lauf wird alles hochgeladen.
 
 on:
   push:
@@ -14,7 +27,8 @@ permissions:
 
 concurrency:
   group: website-${{ github.ref }}
-  cancel-in-progress: true
+  # Auf master nie abbrechen (sonst bricht ein Upload mittendrin ab), nachfolgende warten
+  cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
 
 jobs:
   test:
@@ -48,3 +62,66 @@ jobs:
           path: site
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  ftp:
+    needs: test
+    if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: production
+      url: https://www.printbloder.at/
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Zugangsdaten lesen
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          missing=""
+          [ -n "$FTP_SERVER" ] || missing="$missing FTP_SERVER"
+          [ -n "$FTP_USER" ] || missing="$missing FTP_USER"
+          [ -n "$FTP_PASSWORD" ] || missing="$missing FTP_PASSWORD"
+          if [ -n "$missing" ]; then
+            echo "::error::Fehlende Secrets:$missing"
+            exit 1
+          fi
+          # ftps://host[:port]/pfad/ in Protokoll, Host, Port und Zielordner zerlegen
+          url="$FTP_SERVER"
+          protocol=ftps
+          case "$url" in
+            *://*) protocol="${url%%://*}"; url="${url#*://}" ;;
+          esac
+          case "$protocol" in
+            ftps|ftp) ;;
+            *) echo "::error::FTP_SERVER: Protokoll \"$protocol\" nicht unterstützt (ftps oder ftp)"; exit 1 ;;
+          esac
+          hostport="${url%%/*}"
+          dir="${url#"$hostport"}"
+          dir="${dir#/}"
+          dir="${dir%/}"
+          if [ -n "$dir" ]; then dir="/$dir/"; else dir="./"; fi
+          host="${hostport%%:*}"
+          port=21
+          [ "$hostport" != "$host" ] && port="${hostport#*:}"
+          {
+            echo "FTP_PROTOCOL=$protocol"
+            echo "FTP_HOST=$host"
+            echo "FTP_PORT=$port"
+            echo "FTP_DIR=$dir"
+          } >> "$GITHUB_ENV"
+
+      - name: Per FTPS hochladen
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ env.FTP_HOST }}
+          port: ${{ env.FTP_PORT }}
+          protocol: ${{ env.FTP_PROTOCOL }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./site/
+          server-dir: ${{ env.FTP_DIR }}
