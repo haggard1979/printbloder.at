@@ -2,7 +2,7 @@
 
 Website von Printshop Bloder (Copy- und Printshop in der Shopping City Seiersberg bei Graz).
 Kommunikation mit dem Inhaber auf **Deutsch**. Die Website ist live unter
-**https://www.printbloder.at/** (GitHub Pages).
+**https://www.printbloder.at/** (eigener Webserver, Upload per FTPS).
 
 ## Grundsätze
 
@@ -50,7 +50,7 @@ tools/seo.js              npm run seo: canonical/hreflang/Link-Vorschau (Open Gr
 tools/vorschau.*          npm run vorschau: erzeugt site/img/vorschau.jpg (1200 × 630) für
                           geteilte Links aus tools/vorschau.html
 docs/glossar.md           feste Begriffe für Übersetzungen
-.github/workflows/website.yml  Prüfen bei jedem Push/PR; Push auf master → GitHub Pages + FTP
+.github/workflows/website.yml  Prüfen bei jedem Push/PR; Push auf master → Upload per FTPS
 ```
 
 Seitentypen (als Vorlage für neue Seiten kopieren):
@@ -147,10 +147,9 @@ Playwright passt (`tests/run.js` und `tools/vorschau.js` verwenden ihn dann).
 ## Veröffentlichen
 
 Branch → Pull Request auf `master` → GitHub Actions prüft → nach dem Merge wird `site/`
-automatisch auf GitHub Pages veröffentlicht und per FTPS auf den Webserver hochgeladen (Job
-`ftp`, Zugangsdaten als Secrets `FTP_SERVER`/`FTP_USER`/`FTP_PASSWORD`; nur wenn `npm test` grün ist). Pages-Quelle ist
-„GitHub Actions“. Für `www.printbloder.at` muss die Domain in den Pages-Einstellungen
-(*Custom domain*) eingetragen sein und per DNS-CNAME auf `haggard1979.github.io` zeigen.
+automatisch per FTPS auf den Webserver hochgeladen (Job `ftp`, nur wenn `npm test` grün ist).
+Zugangsdaten als Secrets `FTP_SERVER`/`FTP_USER`/`FTP_PASSWORD`. GitHub Pages wird nicht
+verwendet (Repository ist privat); die DNS-Einträge zeigen auf den Webserver.
 
 ## Bekannte Stolperfallen
 

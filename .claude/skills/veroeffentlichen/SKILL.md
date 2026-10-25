@@ -1,13 +1,13 @@
 ---
 name: veroeffentlichen
-description: Änderungen an printbloder.at online stellen – Pull Request erstellen, Prüfungen auf GitHub abwarten, zusammenführen und die Veröffentlichung auf GitHub Pages kontrollieren. Verwenden bei „veröffentlichen“, „online stellen“, „live schalten“, „Pull Request erstellen und mergen“.
+description: Änderungen an printbloder.at online stellen – Pull Request erstellen, Prüfungen auf GitHub abwarten, zusammenführen und die Veröffentlichung auf dem Webserver kontrollieren. Verwenden bei „veröffentlichen“, „online stellen“, „live schalten“, „Pull Request erstellen und mergen“.
 ---
 
 # Veröffentlichen
 
 Veröffentlicht wird automatisch, sobald etwas auf `master` landet: GitHub Actions
-(`.github/workflows/website.yml`) führt `npm test` aus und lädt danach `site/` auf GitHub Pages
-(https://www.printbloder.at/) und per FTPS auf den Webserver (Job `ftp`). Ist ein Test rot, wird nichts veröffentlicht.
+(`.github/workflows/website.yml`) führt `npm test` aus und lädt danach `site/` per FTPS auf den Webserver (Job `ftp`,
+https://www.printbloder.at/). Ist ein Test rot, wird nichts veröffentlicht.
 
 ## Ablauf
 
@@ -22,7 +22,7 @@ Veröffentlicht wird automatisch, sobald etwas auf `master` landet: GitHub Actio
 5. **Zusammenführen** nur mit Auftrag des Nutzers und nur bei grünem Stand:
    Merge-Commit (kein Squash), `expectedHeadSha` = geprüfter Stand.
 6. **Veröffentlichung kontrollieren:** Lauf „Prüfen und veröffentlichen“ auf `master` –
-   `test`, `deploy` und `ftp` müssen erfolgreich sein. Ergebnis und Adresse dem Nutzer melden.
+   `test` und `ftp` müssen erfolgreich sein. Ergebnis und Adresse dem Nutzer melden.
    Auf `master` wird kein Lauf abgebrochen, ein neuerer wartet. `ftp` meldet fehlende
    Secrets (`FTP_SERVER`, `FTP_USER`, `FTP_PASSWORD`) – die kann nur der Nutzer eintragen.
 7. **Danach:** Für weitere Arbeit den Branch neu von `master` beginnen
@@ -31,6 +31,7 @@ Veröffentlicht wird automatisch, sobald etwas auf `master` landet: GitHub Actio
 
 ## Wenn die Seite nicht erreichbar ist
 
-- Settings → Pages: Source muss „GitHub Actions“ sein.
-- Custom domain `www.printbloder.at` eingetragen, DNS-CNAME `www` → `haggard1979.github.io`.
-- Diese Einstellungen kann nur der Nutzer ändern – ihm die genauen Schritte nennen.
+- Protokoll des Jobs `ftp` ansehen (fehlende Secrets, Anmeldung, Zielordner).
+- Zielordner: Pfad in `FTP_SERVER` (z. B. `ftps://printbloder.at/htdocs/`), sonst Startordner
+  des FTP-Zugangs.
+- Secrets und DNS kann nur der Nutzer ändern – ihm die genauen Schritte nennen.
