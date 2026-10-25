@@ -8,7 +8,8 @@ Alles andere (Prüfungen, README, Projektdateien) gehört nicht zur Website.
 ## Veröffentlichen
 
 Bei jedem Push auf `master` prüft GitHub die Website (siehe „Prüfungen“) und
-veröffentlicht `site/` danach automatisch auf GitHub Pages – nur wenn alle Prüfungen
+veröffentlicht `site/` danach automatisch auf GitHub Pages und lädt es per FTPS auf den
+Webserver (Zugangsdaten als Secrets, siehe `.github/workflows/website.yml`) – nur wenn alle Prüfungen
 bestanden sind. Fortschritt und Ergebnis: Reiter „Actions“ auf GitHub.
 
 Einmalig nötig: GitHub → Settings → Pages → *Build and deployment* → Source:
