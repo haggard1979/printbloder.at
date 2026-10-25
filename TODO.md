@@ -10,9 +10,11 @@ Pull Request entfernen. Neue Punkte unten anfügen.
     Fußzeile und Handy-Menü verlinkt
   - **UID-Nummer:** ATU64692247 stammt aus dem alten Impressum – vom Inhaber bestätigen lassen,
     dass sie noch gültig ist (steht in allen sieben `impressum.html`)
-  - **Fehlende Pflichtangaben vom Inhaber** (stehen noch nicht im Impressum): Name des Inhabers bzw.
-    Firmenwortlaut und Rechtsform, ggf. Firmenbuchnummer und -gericht, Gewerbe (Gewerbewortlaut),
-    Mitgliedschaft Wirtschaftskammer, Gewerbebehörde (§ 5 ECG, § 14 UGB, § 63 GewO)
+  - Eingetragen: Inhaber Engelbert Bloder (Einzelunternehmen, Rechtsform wird nicht genannt),
+    Mitglied der Wirtschaftskammer Steiermark, Gewerbebehörde BH Graz-Umgebung (vom Inhaber
+    bestätigt)
+  - **Noch prüfen:** Gewerbewortlaut laut Gewerbeschein (steht noch nicht im Impressum);
+    Firmenbuchnummer nur falls eingetragen (bei einem nicht eingetragenen Einzelunternehmen entfällt sie)
   - Beide Texte (v. a. Datenschutz: Hosting GitHub Pages, Karte Google Maps, E-Mail-Kontakt) von
     einer fachkundigen Stelle prüfen lassen (z. B. Wirtschaftskammer, Rechtsanwalt); ändert sich
     etwas an der Website (neue Dienste, Formulare), die Datenschutzerklärung anpassen
