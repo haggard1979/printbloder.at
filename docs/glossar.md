@@ -78,3 +78,6 @@ Regeln:
 | Abfahrt (Autobahn) | Exit | Izvoz | З’їзд | Lehajtó | Uscita | Izlaz |
 | Kärnten / Wien (Richtung) | Carinthia / Vienna | Koroška / Dunaj | Каринтія / Відень | Karintia / Bécs | Carinzia / Vienna | Koruška / Beč |
 | Slowenien / Kroatien | Slovenia / Croatia | Slovenija / Hrvaška | Словенія / Хорватія | Szlovénia / Horvátország | Slovenia / Croazia | Slovenija / Hrvatska |
+| Inhaber | Owner | Lastnik | Власник | Tulajdonos | Titolare | Vlasnik |
+| Wirtschaftskammer Steiermark | Styrian Economic Chamber | Gospodarska zbornica Štajerske | Господарська палата Штирії | Stájerországi Gazdasági Kamara | Camera dell’economia della Stiria | Gospodarska komora Štajerske |
+| Gewerbebehörde | Trade authority | Obrtni organ | Промисловий орган | Iparhatóság | Autorità per l’attività commerciale | Obrtnička vlast |
